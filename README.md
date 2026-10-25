@@ -32,41 +32,41 @@ The plan uses a conservative decimal ten-billion-byte ceiling and a provisional 
 
 ## Read and execute
 
-1. Read EVIDENCE.md for verified observations and access gaps.
-2. Read ARCHITECTURE.md and CONTRACTS.md for fixed engineering decisions.
-3. Read CAPABILITIES.md for official GitHub behavior and the exact action pin.
-4. Read CACHE_BUDGET.md for complete repository accounting.
-5. Read WORKFLOWS.md for event paths and publication states.
-6. Read ACCEPTANCE.md for all 22 qualification cases and performance gates.
-7. Use GOAL.md as the copyable implementation prompt.
-8. Use TASKS.json for scheduling and TASKS.md for complete task cards.
-9. Use MIGRATION.md for generator and consumer activation order.
-10. Apply CONSTRAINT_REVIEW.md before qualification closure.
+1. Read [EVIDENCE.md](EVIDENCE.md) for verified observations and access gaps.
+2. Read [ARCHITECTURE.md](ARCHITECTURE.md) and [CONTRACTS.md](CONTRACTS.md) for fixed engineering decisions.
+3. Read [CAPABILITIES.md](CAPABILITIES.md) for official GitHub behavior and the exact action pin.
+4. Read [CACHE_BUDGET.md](CACHE_BUDGET.md) for complete repository accounting.
+5. Read [WORKFLOWS.md](WORKFLOWS.md) for event paths and publication states.
+6. Read [ACCEPTANCE.md](ACCEPTANCE.md) for all 22 qualification cases and performance gates.
+7. Use [GOAL.md](GOAL.md) as the copyable implementation prompt.
+8. Use [TASKS.json](TASKS.json) for scheduling and [TASKS.md](TASKS.md) for complete task cards.
+9. Use [MIGRATION.md](MIGRATION.md) for generator and consumer activation order.
+10. Apply [CONSTRAINT_REVIEW.md](CONSTRAINT_REVIEW.md) before qualification closure.
 
 ## Files
 
 | File | Purpose |
 |---|---|
-| GOAL.md | Complete copyable `/goal` prompt in simplified technical English. |
-| ARCHITECTURE.md | Selected small architecture, identities, storage, lifecycle, security, and caller decisions. |
-| CONTRACTS.md | Exact proposed shared records and one owner per interface. |
-| TASKS.md | Every bounded task, source scope, steps, models, tests, evidence, and blocking conditions. |
-| TASKS.json | Machine-readable task graph, command contracts, and model assignments. |
-| CAPABILITIES.md | Cited current GitHub restrictions and exact pinned-action behavior. |
-| CACHE_BUDGET.md | Accounting, archive/disk measurement, per-repository capacity models, and conflict handling. |
-| CACHE_BUDGET.json | Machine-readable nine-repository model with explicit null measurements. |
-| WORKFLOWS.md | Event-specific graphs and the publication/recovery state machine. |
-| ACCEPTANCE.md | Cold/warm baselines, all 22 cases, actual-work metrics, and baseline-derived thresholds. |
-| MIGRATION.md | Candidate, controller, retirement, regeneration, and fleet qualification order. |
-| CONSTRAINT_REVIEW.md | Final hard-boundary review and explicit pending runtime gates. |
-| EVIDENCE.md | Repository access, exact revisions, current findings, and all selected pipelines. |
-| REPOSITORY_FINDINGS.md | Detailed ChainArgos commands, products, native inputs, and observed workflows. |
-| RUST_RESEARCH.md | Rust, Cargo, MBX, tool-home, and source reuse research. |
-| RUST_SECURITY_REVIEW.md | Independent archive, private-input, compiler, and authority review. |
-| CAPACITY_REVIEW.md | Independent stored-byte, overlap, and runner-disk analysis. |
-| PLAN_VALIDATION.json | Mechanical graph, task scope, model, test guard, and sentence-length checks. |
-| evidence/ | Machine-readable source revisions, generator headers, pipelines, all jobs, and observed counters. |
-| reviews/ | Independent review findings and final planning dispositions. |
+| [GOAL.md](GOAL.md) | Complete copyable `/goal` prompt in simplified technical English. |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | Selected small architecture, identities, storage, lifecycle, security, and caller decisions. |
+| [CONTRACTS.md](CONTRACTS.md) | Exact proposed shared records and one owner per interface. |
+| [TASKS.md](TASKS.md) | Every bounded task, source scope, steps, tests, evidence, and blocking conditions. |
+| [TASKS.json](TASKS.json) | Machine-readable task graph, command contracts, and subagent assignments. |
+| [CAPABILITIES.md](CAPABILITIES.md) | Cited current GitHub restrictions and exact pinned-action behavior. |
+| [CACHE_BUDGET.md](CACHE_BUDGET.md) | Accounting, archive/disk measurement, per-repository capacity models, and conflict handling. |
+| [CACHE_BUDGET.json](CACHE_BUDGET.json) | Machine-readable nine-repository model with explicit null measurements. |
+| [WORKFLOWS.md](WORKFLOWS.md) | Event-specific graphs and the publication/recovery state machine. |
+| [ACCEPTANCE.md](ACCEPTANCE.md) | Cold/warm baselines, all 22 cases, actual-work metrics, and baseline-derived thresholds. |
+| [MIGRATION.md](MIGRATION.md) | Candidate, controller, retirement, regeneration, and fleet qualification order. |
+| [CONSTRAINT_REVIEW.md](CONSTRAINT_REVIEW.md) | Final hard-boundary review and explicit pending runtime gates. |
+| [EVIDENCE.md](EVIDENCE.md) | Repository access, exact revisions, current findings, and all selected pipelines. |
+| [REPOSITORY_FINDINGS.md](REPOSITORY_FINDINGS.md) | Detailed ChainArgos commands, products, native inputs, and observed workflows. |
+| [RUST_RESEARCH.md](RUST_RESEARCH.md) | Rust, Cargo, MBX, tool-home, and source reuse research. |
+| [RUST_SECURITY_REVIEW.md](RUST_SECURITY_REVIEW.md) | Independent archive, private-input, compiler, and authority review. |
+| [CAPACITY_REVIEW.md](CAPACITY_REVIEW.md) | Independent stored-byte, overlap, and runner-disk analysis. |
+| [PLAN_VALIDATION.json](PLAN_VALIDATION.json) | Mechanical graph, task scope, subagent assignments, test guard, and sentence-length checks. |
+| [evidence/](evidence/) | Machine-readable source revisions, generator headers, pipelines, all jobs, and observed counters. |
+| [reviews/](reviews/) | Independent review findings and final planning dispositions. |
 
 ## Execution subagents
 

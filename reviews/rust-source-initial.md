@@ -1,6 +1,6 @@
 # Independent Rust review of architecture and task cards
 
-Reviewed the draft ARCHITECTURE.md and TASKS.json with 67 cards on 2026-10-25. This is a review of the draft, not implementation or runtime qualification. The parent has accepted the stable external execution-state root, qualified-tool hydration correction, direct rustdoc observation, empty MBX replay store, and precise timestamp restoration findings. The parent also selected fixed rendered data-only image authority operations, replacing the previously considered helper-API release route.
+Reviewed the draft [ARCHITECTURE.md](../ARCHITECTURE.md) and [TASKS.json](../TASKS.json) with 67 cards on 2026-10-25. This is a review of the draft, not implementation or runtime qualification. The parent has accepted the stable external execution-state root, qualified-tool hydration correction, direct rustdoc observation, empty MBX replay store, and precise timestamp restoration findings. The parent also selected fixed rendered data-only image authority operations, replacing the previously considered helper-API release route.
 
 ## Task-specific findings and minimal corrections
 

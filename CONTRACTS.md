@@ -4,7 +4,7 @@ Status: proposed interfaces. No replacement implementation or live qualification
 
 This file fixes the shared records used by the existing Velnor binary.
 It does not define a service, backend, plugin interface, or external runner.
-Use ARCHITECTURE.md for behavior, CACHE_BUDGET.md for limits, and ACCEPTANCE.md for qualification.
+Use [ARCHITECTURE.md](ARCHITECTURE.md) for behavior, [CACHE_BUDGET.md](CACHE_BUDGET.md) for limits, and [ACCEPTANCE.md](ACCEPTANCE.md) for qualification.
 Task names below are stable ownership labels. Numeric task IDs may change during review.
 
 ## 1. Encoding and ownership rules
@@ -46,7 +46,7 @@ Use existing report transport for evidence. Never transfer dependency payloads t
 | Existing orchestrator `merge.rs`, `merge_checks.rs`, `merge_request.rs`, `retrieve_reports.rs`, and `task_report.rs` | Bind effective group results and observations through the actual final-report path. |
 | Existing `scripts/hosted_phase_measurement/measure_support.py`, `report_events.py`, `report_counters.py`, and `report_builder.py` | Admit authenticated report members and aggregate actual lifecycle work. Preserve the current collector CLI. |
 
-The named new cache modules are already scoped by TASKS.json.
+The named new cache modules are already scoped by [TASKS.json](TASKS.json).
 Register each through its task-declared compiled parent before that task completes.
 Do not postpone compilation or public binding until the final integration review.
 

@@ -3,8 +3,8 @@
 <goal>
 
 - Replace Velnor Actions dependency caching with the GitHub-only design in this plan.
-- Use ARCHITECTURE.md, CONTRACTS.md, TASKS.json, TASKS.md, CACHE_BUDGET.md, and ACCEPTANCE.md as the implementation contract.
-- Read EVIDENCE.md before changing a recorded finding.
+- Use [ARCHITECTURE.md](ARCHITECTURE.md), [CONTRACTS.md](CONTRACTS.md), [TASKS.json](TASKS.json), [TASKS.md](TASKS.md), [CACHE_BUDGET.md](CACHE_BUDGET.md), and [ACCEPTANCE.md](ACCEPTANCE.md) as the implementation contract.
+- Read [EVIDENCE.md](EVIDENCE.md) before changing a recorded finding.
 
 </goal>
 
@@ -124,7 +124,7 @@
 - Count every repository cache family, ref, version, generation, and migration entry.
 - Use actual GitHub stored bytes for final accounting.
 - Use the qualified outer archive envelope for admission.
-- Keep the minimum reserve and all pending-write charges defined in CACHE_BUDGET.md.
+- Keep the minimum reserve and all pending-write charges defined in [CACHE_BUDGET.md](CACHE_BUDGET.md).
 - Do not silently remove required coverage to fit the budget.
 - Report a capacity conflict when the full workload cannot fit.
 - Keep ordinary CI correct through bounded, visible cold recovery.
@@ -156,7 +156,7 @@
 
 <completion>
 
-- Inspect all nine repositories listed in EVIDENCE.md.
+- Inspect all nine repositories listed in [EVIDENCE.md](EVIDENCE.md).
 - Keep inaccessible measurements unknown.
 - Continue independent implementation when an access-dependent measurement is blocked.
 - Run live qualification only within an explicitly authorized run and fault-test budget.

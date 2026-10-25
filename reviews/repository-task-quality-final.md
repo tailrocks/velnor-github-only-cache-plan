@@ -8,8 +8,8 @@ No implementation, workflow dispatch, cache mutation, or compiler experiment was
 
 | Reviewed file | SHA-256 |
 |---|---|
-| TASKS.json | `1f521b23ea4c5bc4054dc3f52dd03b8c3e4bb02334f14e05f4f3d12631328683` |
-| TASKS.md | `025cc9e81b9abeae0e140a73e1e89f3546fcd57f7b5099d1a693998c594822fa` |
+| [TASKS.json](../TASKS.json) | `1f521b23ea4c5bc4054dc3f52dd03b8c3e4bb02334f14e05f4f3d12631328683` |
+| [TASKS.md](../TASKS.md) | `025cc9e81b9abeae0e140a73e1e89f3546fcd57f7b5099d1a693998c594822fa` |
 
 Retained copies are in `task-review/TASKS.final.json` and `task-review/TASKS.final.md`.
 Mechanical results are in `TASK_QUALITY_CHECKS.json`.
@@ -109,7 +109,7 @@ This resolves the stale-binary risk after obsolete-code removal.
 
 ## 5. Shared interfaces and architecture
 
-CONTRACTS.md is inherited by the cards.
+[CONTRACTS.md](../CONTRACTS.md) is inherited by the cards.
 Its records are proposed typed local records for the existing binary.
 They do not define a service, backend, dependency, or external runner.
 
@@ -212,7 +212,7 @@ They preserve historical unknowns instead of replacing them with unsupported num
 The existing collector already accepts artifact API JSON, artifact ID, and the final ZIP together.
 It verifies the API-bound size/digest and final-report identity.
 The new cards reuse those inputs without adding a CLI or tool.
-CONTRACTS.md now defines the versioned observation index within final-report.json and its bounded JSON members.
+[CONTRACTS.md](../CONTRACTS.md) now defines the versioned observation index within final-report.json and its bounded JSON members.
 Member digests, producer jobs, source, plans, and actual attempts remain bound to that verified artifact.
 Loose extracted reports do not become authenticated observations.
 No artifact carries cached source, tool, Cargo, or dependency archive payloads.
@@ -239,7 +239,7 @@ Its exception is explicit and limited to keeping definition, validation, and reg
 I read the regenerated cards and matched earlier findings to their stable task names.
 I compared paths with the current source tree.
 I inspected the CLI, module roots, test roots, and contradictory legacy assertions.
-I checked graph closure, edge equality, writer order, models, caps, and test guards mechanically.
+I checked graph closure, edge equality, writer order, subagent assignments, caps, and test guards mechanically.
 The script uses existing standard-library Python and is not a new Velnor linter.
 
 Pinned sources:

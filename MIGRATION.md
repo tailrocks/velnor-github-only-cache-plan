@@ -118,8 +118,8 @@ Do not delete unrelated caches, current active variants, or the only usable gene
 Record one final evidence set per repository.
 Separate measured guarantees, unsupported cases, access gaps, and capacity conflicts.
 Do not call an incomplete fleet qualified.
-Apply every row in CONSTRAINT_REVIEW.md.
+Apply every row in [CONSTRAINT_REVIEW.md](CONSTRAINT_REVIEW.md).
 Preserve the exact original source bindings of all retained measurements.
 
-The selected audit revisions and current product facts are cited in EVIDENCE.md and REPOSITORY_FINDINGS.md.
+The selected audit revisions and current product facts are cited in [EVIDENCE.md](EVIDENCE.md) and [REPOSITORY_FINDINGS.md](REPOSITORY_FINDINGS.md).
 They are starting points, not authority to ignore later repository changes.

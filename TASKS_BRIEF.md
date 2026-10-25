@@ -2,7 +2,7 @@
 
 
 
-This is a compact index of full executable cards in TASKS.md. TASKS.json supplies all inherited fields and commands.
+This is a compact index of full executable cards in [TASKS.md](TASKS.md). [TASKS.json](TASKS.json) supplies all inherited fields and commands.
 
 
 
@@ -70,7 +70,7 @@ Files: docs/hard-decisions.md; docs/proposed/cache-decisions.md; docs/proposed/c
 
 4. Retain credential and tool-integrity requirements.
 
-Pass: Normative policies agree with ARCHITECTURE.md and contain no obsolete mandatory cache path.
+Pass: Normative policies agree with [ARCHITECTURE.md](ARCHITECTURE.md) and contain no obsolete mandatory cache path.
 
 Exclude: Do not weaken tests, release authority, or input completeness.
 

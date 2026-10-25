@@ -4,7 +4,7 @@ Status: planned. No implementation or runtime qualification is claimed.
 
 Each card inherits the following rules. They are part of every task.
 
-* Use ARCHITECTURE.md and CONTRACTS.md as the fixed shared-interface inputs.
+* Use [ARCHITECTURE.md](ARCHITECTURE.md) and [CONTRACTS.md](CONTRACTS.md) as the fixed shared-interface inputs.
 * Use the exact permitted files or the named T01 ownership map.
 * Register new tests in the existing explicit test root.
 * Keep unknown measurements distinct from zero.
@@ -40,7 +40,7 @@ cargo nextest run --manifest-path crates/velnor-runner/Cargo.toml --locked --no-
 cargo deny --manifest-path crates/velnor-runner/Cargo.toml check
 ```
 
-Hosted command sets are defined in ACCEPTANCE.md.
+Hosted command sets are defined in [ACCEPTANCE.md](ACCEPTANCE.md).
 They remain blocked until exact workflow inputs, authorization, and run budgets are recorded.
 Do not replace them with arbitrary dispatches.
 
@@ -80,8 +80,8 @@ The final candidate must retain evidence for its actual source SHA.
 Only reviewed strict-removal equivalence can preserve earlier evidence without rerunning affected cases.
 
 `JACKIN_EXISTING_GATES` is the exact current gate list frozen by T01 from Jackin instructions and task manifests.
-`QUALIFY_REPOSITORY_MATRIX` uses that repository's frozen exact recipes and applicable ACCEPTANCE.md cases.
-`FINAL_CONSTRAINT_REVIEW` applies CONSTRAINT_REVIEW.md to code, generated output, actual storage, and all evidence.
+`QUALIFY_REPOSITORY_MATRIX` uses that repository's frozen exact recipes and applicable [ACCEPTANCE.md](ACCEPTANCE.md) cases.
+`FINAL_CONSTRAINT_REVIEW` applies [CONSTRAINT_REVIEW.md](CONSTRAINT_REVIEW.md) to code, generated output, actual storage, and all evidence.
 
 ## Cards
 
@@ -137,7 +137,7 @@ alint check --fail-on-warning
 
 **Objective:** Record inventories and baseline gaps.
 
-**Repository and source:** `tailrocks/velnor-new`. A1: Use each exact repository name in EVIDENCE.md. Use the existing approved gh installation.
+**Repository and source:** `tailrocks/velnor-new`. A1: Use each exact repository name in [EVIDENCE.md](EVIDENCE.md). Use the existing approved gh installation.
 
 **Prerequisites:** T01.
 
@@ -207,7 +207,7 @@ alint check --fail-on-warning
 git diff --check
 ```
 
-**Expected result and completion:** Normative policies agree with ARCHITECTURE.md and contain no obsolete mandatory cache path. Obtain review before integration.
+**Expected result and completion:** Normative policies agree with [ARCHITECTURE.md](ARCHITECTURE.md) and contain no obsolete mandatory cache path. Obtain review before integration.
 
 **Evidence:** Record the scoped diff, registered test names, command results, and independent review verdict.
 

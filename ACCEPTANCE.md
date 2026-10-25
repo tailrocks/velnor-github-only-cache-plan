@@ -1116,7 +1116,7 @@ They do not establish the replacement's runtime results.
 - [Root verification policy](https://github.com/tailrocks/velnor-new/blob/e851b39e3bedc664f8bd6470c629e7bac36c561c/docs/implemented/repo-verification.md).
 - [Rust test policy](https://github.com/tailrocks/velnor-new/blob/e851b39e3bedc664f8bd6470c629e7bac36c561c/docs/proposed/rust-test-policy.md).
 
-Use EVIDENCE.md for the actual nine-repository command and product inventory.
+Use [EVIDENCE.md](EVIDENCE.md) for the actual nine-repository command and product inventory.
 Keep earlier selected runs as historical evidence.
 Do not use them as a controlled replacement baseline.
 
