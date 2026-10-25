@@ -43,6 +43,11 @@ The plan uses a conservative decimal ten-billion-byte ceiling and a provisional 
 9. Use [MIGRATION.md](MIGRATION.md) for generator and consumer activation order.
 10. Apply [CONSTRAINT_REVIEW.md](CONSTRAINT_REVIEW.md) before qualification closure.
 
+## Workspace
+
+Prepare `~/velnor-workspace` before starting the goal.
+See [WORKSPACE.md](WORKSPACE.md) for the folder layout and clone map.
+
 ## Files
 
 | File | Purpose |
@@ -67,6 +72,7 @@ The plan uses a conservative decimal ten-billion-byte ceiling and a provisional 
 | [PLAN_VALIDATION.json](PLAN_VALIDATION.json) | Mechanical graph, task scope, subagent assignments, test guard, and sentence-length checks. |
 | [evidence/](evidence/) | Machine-readable source revisions, generator headers, pipelines, all jobs, and observed counters. |
 | [reviews/](reviews/) | Independent review findings and final planning dispositions. |
+| [WORKSPACE.md](WORKSPACE.md) | Workspace folder layout and clone map. Not part of the implementation contract. |
 
 ## Execution subagents
 

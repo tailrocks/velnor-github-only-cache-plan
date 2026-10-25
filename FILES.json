@@ -64,8 +64,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5923,
-      "sha256": "6b5bb37e69b93d91d62ce7510ed7b6c8f78419282cd2634c54ba5ddf41e3ebca"
+      "bytes": 6178,
+      "sha256": "51293c4f64efa102beffa2f835688945ef32644103eddfb800ef79ccdde207df"
     },
     {
       "path": "REPOSITORY_FINDINGS.md",
@@ -101,6 +101,11 @@
       "path": "WORKFLOWS.md",
       "bytes": 10306,
       "sha256": "4f36c47dc3d280700f5570c41f431b1a25850248882fa0857f2723e2db86ffe6"
+    },
+    {
+      "path": "WORKSPACE.md",
+      "bytes": 2560,
+      "sha256": "42069f8df6288db2ab9199d20e9eb4483b893625566afcd10176f986528d5a7d"
     },
     {
       "path": "evidence/cache-access-errors.json",
