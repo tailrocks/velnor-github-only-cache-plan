@@ -1,0 +1,4139 @@
+[
+  {
+    "repo": "bitcoin-grpc-server",
+    "head": "cd0a5bfb92538c230d1762b0ab7fafb52282fc33",
+    "head_date": "2026-10-23T01:39:20Z",
+    "generator": "0.1.41",
+    "head_url": "https://github.com/ChainArgos/bitcoin-grpc-server/commit/cd0a5bfb92538c230d1762b0ab7fafb52282fc33",
+    "total_available_runs": 41,
+    "fetched_run_count": 41,
+    "events_observed": [
+      "pull_request",
+      "push"
+    ],
+    "workflow_names_observed": [
+      "CI",
+      "Cache prune",
+      "Velnor Publish"
+    ],
+    "current_workflows": [
+      ".github/workflows/cache-prune.yml",
+      ".github/workflows/ci.yml"
+    ],
+    "root_package": "bitcoin-grpc-server",
+    "workspace_members": [
+      "crates/bitcoin-grpc-proto"
+    ],
+    "profiles": {
+      "dev": {
+        "debug": "line-tables-only",
+        "package": {
+          "*": {
+            "debug": false
+          }
+        }
+      }
+    },
+    "features": {},
+    "private_sources": {},
+    "tasks": {
+      "stack/rust/crates/bitcoin-grpc-proto/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-grpc-proto/Cargo.toml",
+          "--package",
+          "bitcoin-grpc-proto"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-grpc-proto/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-grpc-proto/Cargo.toml",
+          "--package",
+          "bitcoin-grpc-proto",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-grpc-proto/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-grpc-proto/Cargo.toml",
+          "--package",
+          "bitcoin-grpc-proto",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/crates/bitcoin-grpc-proto/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-grpc-proto/Cargo.toml",
+          "--package",
+          "bitcoin-grpc-proto",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-grpc-proto/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "crates/bitcoin-grpc-proto/Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-grpc-proto/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-grpc-proto/Cargo.toml",
+          "--package",
+          "bitcoin-grpc-proto",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "bitcoin-grpc-server"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "bitcoin-grpc-server",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "bitcoin-grpc-server",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/root/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "bitcoin-grpc-server",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "bitcoin-grpc-server",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      }
+    },
+    "cache_inventory": "unknown: connector allowlist rejects cache endpoints before repository permission check"
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "head": "d9115d1d42c881b23e6a5dd2f0dcd2dab5f3babd",
+    "head_date": "2026-10-23T01:37:22Z",
+    "generator": "0.1.41",
+    "head_url": "https://github.com/ChainArgos/bitcoin-processor-rust/commit/d9115d1d42c881b23e6a5dd2f0dcd2dab5f3babd",
+    "total_available_runs": 26,
+    "fetched_run_count": 26,
+    "events_observed": [
+      "pull_request",
+      "push"
+    ],
+    "workflow_names_observed": [
+      "CI",
+      "Cache prune"
+    ],
+    "current_workflows": [
+      ".github/workflows/cache-prune.yml",
+      ".github/workflows/ci.yml"
+    ],
+    "root_package": "bitcoin-processor-app",
+    "workspace_members": [
+      "crates/bitcoin-migration",
+      "crates/bitcoin-model-proto",
+      "crates/bitcoin-processor-fixtures"
+    ],
+    "profiles": {
+      "test": {
+        "debug": 0,
+        "incremental": false
+      }
+    },
+    "features": {},
+    "private_sources": {
+      "owner": "ChainArgos",
+      "app_id_variable": "VELNOR_DEPS_APP_ID",
+      "app_private_key_secret": "VELNOR_DEPS_APP_PRIVATE_KEY",
+      "release_assets": [
+        {
+          "id": "bitcoin-protos",
+          "repository": "ChainArgos/bitcoin-processor-java",
+          "tag": "bitcoin-protos-v1.0.0",
+          "asset": "bitcoin-protos-1.0.0.tar.gz",
+          "extract_to": "bitcoin-protos"
+        },
+        {
+          "id": "bitcoin-sql",
+          "repository": "ChainArgos/bitcoin-processor-java",
+          "tag": "bitcoin-sql-v1.0.0",
+          "asset": "bitcoin-sql-1.0.0.tar.gz",
+          "extract_to": "bitcoin-sql"
+        },
+        {
+          "id": "bitcoin-fixtures",
+          "repository": "ChainArgos/bitcoin-processor-java",
+          "tag": "bitcoin-fixtures-v1.0.0",
+          "asset": "bitcoin-fixtures-1.0.0.tar.gz",
+          "extract_to": "bitcoin-fixtures"
+        },
+        {
+          "id": "tailrocks-type-protos",
+          "repository": "ChainArgos/processor-shared-java",
+          "tag": "tailrocks-type-protos-v1.0.0",
+          "asset": "tailrocks-type-protos-1.0.0.tar.gz",
+          "extract_to": "tailrocks-type-protos"
+        }
+      ]
+    },
+    "tasks": {
+      "stack/rust/crates/bitcoin-migration/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-migration/Cargo.toml",
+          "--package",
+          "bitcoin-migration"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-migration/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-migration/Cargo.toml",
+          "--package",
+          "bitcoin-migration",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-migration/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-migration/Cargo.toml",
+          "--package",
+          "bitcoin-migration",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/crates/bitcoin-migration/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-migration/Cargo.toml",
+          "--package",
+          "bitcoin-migration",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-migration/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "crates/bitcoin-migration/Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-migration/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-migration/Cargo.toml",
+          "--package",
+          "bitcoin-migration",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-model-proto/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-model-proto/Cargo.toml",
+          "--package",
+          "bitcoin-model-proto"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-model-proto/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-model-proto/Cargo.toml",
+          "--package",
+          "bitcoin-model-proto",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-model-proto/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-model-proto/Cargo.toml",
+          "--package",
+          "bitcoin-model-proto",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/crates/bitcoin-model-proto/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-model-proto/Cargo.toml",
+          "--package",
+          "bitcoin-model-proto",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-model-proto/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "crates/bitcoin-model-proto/Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-model-proto/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-model-proto/Cargo.toml",
+          "--package",
+          "bitcoin-model-proto",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-processor-fixtures/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-processor-fixtures/Cargo.toml",
+          "--package",
+          "bitcoin-processor-fixtures"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-processor-fixtures/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-processor-fixtures/Cargo.toml",
+          "--package",
+          "bitcoin-processor-fixtures",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-processor-fixtures/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-processor-fixtures/Cargo.toml",
+          "--package",
+          "bitcoin-processor-fixtures",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/crates/bitcoin-processor-fixtures/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-processor-fixtures/Cargo.toml",
+          "--package",
+          "bitcoin-processor-fixtures",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-processor-fixtures/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "crates/bitcoin-processor-fixtures/Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/bitcoin-processor-fixtures/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/bitcoin-processor-fixtures/Cargo.toml",
+          "--package",
+          "bitcoin-processor-fixtures",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "bitcoin-processor-app"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "bitcoin-processor-app",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "bitcoin-processor-app",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/root/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "bitcoin-processor-app",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "bitcoin-processor-app",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      }
+    },
+    "cache_inventory": "unknown: connector allowlist rejects cache endpoints before repository permission check"
+  },
+  {
+    "repo": "blockchain-explorer",
+    "head": "4b9fc98f29705541d74e181dcc52c717c21e6075",
+    "head_date": "2026-10-23T02:04:19Z",
+    "generator": "0.1.41",
+    "head_url": "https://github.com/ChainArgos/blockchain-explorer/commit/4b9fc98f29705541d74e181dcc52c717c21e6075",
+    "total_available_runs": 25,
+    "fetched_run_count": 25,
+    "events_observed": [
+      "pull_request",
+      "push"
+    ],
+    "workflow_names_observed": [
+      "CI",
+      "Cache prune"
+    ],
+    "current_workflows": [
+      ".github/workflows/cache-prune.yml",
+      ".github/workflows/ci.yml"
+    ],
+    "root_package": "blockchain-explorer",
+    "workspace_members": [],
+    "profiles": {
+      "test": {
+        "debug": 0,
+        "incremental": false
+      }
+    },
+    "features": {},
+    "private_sources": {
+      "owner": "ChainArgos",
+      "app_id_variable": "VELNOR_DEPS_APP_ID",
+      "app_private_key_secret": "VELNOR_DEPS_APP_PRIVATE_KEY",
+      "release_assets": [
+        {
+          "id": "legacy-migrations",
+          "repository": "ChainArgos/legacy-java",
+          "tag": "legacy-migrations-v1.0.0",
+          "asset": "legacy-migrations-1.0.0.tar.gz",
+          "extract_to": "legacy-migrations"
+        },
+        {
+          "id": "eth-sql",
+          "repository": "ChainArgos/eth-processor-java",
+          "tag": "eth-sql-v1.0.1",
+          "asset": "eth-sql-1.0.1.tar.gz",
+          "extract_to": "eth-sql"
+        }
+      ]
+    },
+    "tasks": {
+      "stack/rust/root/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "blockchain-explorer"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "blockchain-explorer",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "blockchain-explorer",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/root/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "blockchain-explorer",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "blockchain-explorer",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      }
+    },
+    "cache_inventory": "unknown: connector allowlist rejects cache endpoints before repository permission check"
+  },
+  {
+    "repo": "eth-grpc-server",
+    "head": "4b97aa1a0cf8c15f7a2ab75435c7c6da270b2ea6",
+    "head_date": "2026-10-23T01:46:40Z",
+    "generator": "0.1.41",
+    "head_url": "https://github.com/ChainArgos/eth-grpc-server/commit/4b97aa1a0cf8c15f7a2ab75435c7c6da270b2ea6",
+    "total_available_runs": 28,
+    "fetched_run_count": 28,
+    "events_observed": [
+      "pull_request",
+      "push"
+    ],
+    "workflow_names_observed": [
+      "CI",
+      "Cache prune"
+    ],
+    "current_workflows": [
+      ".github/workflows/cache-prune.yml",
+      ".github/workflows/ci.yml"
+    ],
+    "root_package": "eth-grpc-server",
+    "workspace_members": [
+      "crates/eth-grpc-proto"
+    ],
+    "profiles": {
+      "test": {
+        "debug": 0,
+        "incremental": false
+      }
+    },
+    "features": {},
+    "private_sources": {
+      "owner": "ChainArgos",
+      "app_id_variable": "VELNOR_DEPS_APP_ID",
+      "app_private_key_secret": "VELNOR_DEPS_APP_PRIVATE_KEY",
+      "release_assets": [
+        {
+          "id": "eth-sql",
+          "repository": "ChainArgos/eth-processor-java",
+          "tag": "eth-sql-v1.0.1",
+          "asset": "eth-sql-1.0.1.tar.gz",
+          "extract_to": "eth-sql"
+        }
+      ]
+    },
+    "tasks": {
+      "stack/rust/crates/eth-grpc-proto/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-grpc-proto/Cargo.toml",
+          "--package",
+          "eth-grpc-proto"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-grpc-proto/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-grpc-proto/Cargo.toml",
+          "--package",
+          "eth-grpc-proto",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-grpc-proto/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-grpc-proto/Cargo.toml",
+          "--package",
+          "eth-grpc-proto",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/crates/eth-grpc-proto/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-grpc-proto/Cargo.toml",
+          "--package",
+          "eth-grpc-proto",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-grpc-proto/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "crates/eth-grpc-proto/Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-grpc-proto/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-grpc-proto/Cargo.toml",
+          "--package",
+          "eth-grpc-proto",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "eth-grpc-server"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "eth-grpc-server",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "eth-grpc-server",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/root/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "eth-grpc-server",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "eth-grpc-server",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      }
+    },
+    "cache_inventory": "unknown: connector allowlist rejects cache endpoints before repository permission check"
+  },
+  {
+    "repo": "eth-processor-rust",
+    "head": "c08aa7d5232e43466fcfd4fa6929ef7dec7bb76c",
+    "head_date": "2026-10-23T01:38:30Z",
+    "generator": "0.1.41",
+    "head_url": "https://github.com/ChainArgos/eth-processor-rust/commit/c08aa7d5232e43466fcfd4fa6929ef7dec7bb76c",
+    "total_available_runs": 25,
+    "fetched_run_count": 25,
+    "events_observed": [
+      "pull_request",
+      "push"
+    ],
+    "workflow_names_observed": [
+      "CI",
+      "Cache prune"
+    ],
+    "current_workflows": [
+      ".github/workflows/cache-prune.yml",
+      ".github/workflows/ci.yml"
+    ],
+    "root_package": "eth-processor-app",
+    "workspace_members": [
+      "crates/eth-migration",
+      "crates/eth-model-proto",
+      "crates/eth-processor-fixtures"
+    ],
+    "profiles": {
+      "test": {
+        "debug": 0,
+        "incremental": false
+      }
+    },
+    "features": {
+      "test-helpers": []
+    },
+    "private_sources": {
+      "owner": "ChainArgos",
+      "app_id_variable": "VELNOR_DEPS_APP_ID",
+      "app_private_key_secret": "VELNOR_DEPS_APP_PRIVATE_KEY",
+      "release_assets": [
+        {
+          "id": "eth-protos",
+          "repository": "ChainArgos/eth-processor-java",
+          "tag": "eth-protos-v1.0.0",
+          "asset": "eth-protos-1.0.0.tar.gz",
+          "extract_to": "eth-protos"
+        },
+        {
+          "id": "eth-sql",
+          "repository": "ChainArgos/eth-processor-java",
+          "tag": "eth-sql-v1.0.0",
+          "asset": "eth-sql-1.0.0.tar.gz",
+          "extract_to": "eth-sql"
+        },
+        {
+          "id": "eth-fixtures",
+          "repository": "ChainArgos/eth-processor-java",
+          "tag": "eth-fixtures-v1.0.1",
+          "asset": "eth-fixtures-1.0.1.tar.gz",
+          "extract_to": "eth-fixtures"
+        },
+        {
+          "id": "tailrocks-type-protos",
+          "repository": "ChainArgos/processor-shared-java",
+          "tag": "tailrocks-type-protos-v1.0.0",
+          "asset": "tailrocks-type-protos-1.0.0.tar.gz",
+          "extract_to": "tailrocks-type-protos"
+        }
+      ]
+    },
+    "tasks": {
+      "stack/rust/crates/eth-migration/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-migration/Cargo.toml",
+          "--package",
+          "eth-migration"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-migration/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-migration/Cargo.toml",
+          "--package",
+          "eth-migration",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-migration/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-migration/Cargo.toml",
+          "--package",
+          "eth-migration",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/crates/eth-migration/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-migration/Cargo.toml",
+          "--package",
+          "eth-migration",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-migration/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "crates/eth-migration/Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-migration/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-migration/Cargo.toml",
+          "--package",
+          "eth-migration",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-model-proto/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-model-proto/Cargo.toml",
+          "--package",
+          "eth-model-proto"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-model-proto/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-model-proto/Cargo.toml",
+          "--package",
+          "eth-model-proto",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-model-proto/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-model-proto/Cargo.toml",
+          "--package",
+          "eth-model-proto",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/crates/eth-model-proto/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-model-proto/Cargo.toml",
+          "--package",
+          "eth-model-proto",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-model-proto/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "crates/eth-model-proto/Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-model-proto/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-model-proto/Cargo.toml",
+          "--package",
+          "eth-model-proto",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-processor-fixtures/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-processor-fixtures/Cargo.toml",
+          "--package",
+          "eth-processor-fixtures"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-processor-fixtures/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-processor-fixtures/Cargo.toml",
+          "--package",
+          "eth-processor-fixtures",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-processor-fixtures/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-processor-fixtures/Cargo.toml",
+          "--package",
+          "eth-processor-fixtures",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/crates/eth-processor-fixtures/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-processor-fixtures/Cargo.toml",
+          "--package",
+          "eth-processor-fixtures",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-processor-fixtures/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "crates/eth-processor-fixtures/Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/eth-processor-fixtures/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/eth-processor-fixtures/Cargo.toml",
+          "--package",
+          "eth-processor-fixtures",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "eth-processor-app"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "eth-processor-app",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "eth-processor-app",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/root/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "eth-processor-app",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "eth-processor-app",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      }
+    },
+    "cache_inventory": "unknown: connector allowlist rejects cache endpoints before repository permission check"
+  },
+  {
+    "repo": "tron-grpc-server",
+    "head": "9143caa0321469ca6627a9feb638e20da714dcb5",
+    "head_date": "2026-10-23T01:46:46Z",
+    "generator": "0.1.41",
+    "head_url": "https://github.com/ChainArgos/tron-grpc-server/commit/9143caa0321469ca6627a9feb638e20da714dcb5",
+    "total_available_runs": 31,
+    "fetched_run_count": 31,
+    "events_observed": [
+      "pull_request",
+      "push"
+    ],
+    "workflow_names_observed": [
+      "CI",
+      "Cache prune"
+    ],
+    "current_workflows": [
+      ".github/workflows/cache-prune.yml",
+      ".github/workflows/ci.yml"
+    ],
+    "root_package": "tron-grpc-server",
+    "workspace_members": [
+      "crates/tron-grpc-proto"
+    ],
+    "profiles": {
+      "test": {
+        "debug": 0,
+        "incremental": false
+      }
+    },
+    "features": {},
+    "private_sources": {
+      "owner": "ChainArgos",
+      "app_id_variable": "VELNOR_DEPS_APP_ID",
+      "app_private_key_secret": "VELNOR_DEPS_APP_PRIVATE_KEY",
+      "release_assets": [
+        {
+          "id": "tron-sql",
+          "repository": "ChainArgos/tron-processor-java",
+          "tag": "tron-sql-v1.0.1",
+          "asset": "tron-sql-1.0.1.tar.gz",
+          "extract_to": "tron-sql"
+        }
+      ]
+    },
+    "tasks": {
+      "stack/rust/crates/tron-grpc-proto/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-grpc-proto/Cargo.toml",
+          "--package",
+          "tron-grpc-proto"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-grpc-proto/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-grpc-proto/Cargo.toml",
+          "--package",
+          "tron-grpc-proto",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-grpc-proto/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-grpc-proto/Cargo.toml",
+          "--package",
+          "tron-grpc-proto",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/crates/tron-grpc-proto/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-grpc-proto/Cargo.toml",
+          "--package",
+          "tron-grpc-proto",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-grpc-proto/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "crates/tron-grpc-proto/Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-grpc-proto/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-grpc-proto/Cargo.toml",
+          "--package",
+          "tron-grpc-proto",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "tron-grpc-server"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "tron-grpc-server",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "tron-grpc-server",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/root/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "tron-grpc-server",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "tron-grpc-server",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      }
+    },
+    "cache_inventory": "unknown: connector allowlist rejects cache endpoints before repository permission check"
+  },
+  {
+    "repo": "tron-processor-rust",
+    "head": "0e2a1050b34284530047a49d9a65fff333cecaed",
+    "head_date": "2026-10-23T01:38:36Z",
+    "generator": "0.1.41",
+    "head_url": "https://github.com/ChainArgos/tron-processor-rust/commit/0e2a1050b34284530047a49d9a65fff333cecaed",
+    "total_available_runs": 25,
+    "fetched_run_count": 25,
+    "events_observed": [
+      "pull_request",
+      "push"
+    ],
+    "workflow_names_observed": [
+      "CI",
+      "Cache prune"
+    ],
+    "current_workflows": [
+      ".github/workflows/cache-prune.yml",
+      ".github/workflows/ci.yml"
+    ],
+    "root_package": "tron-processor-app",
+    "workspace_members": [
+      "crates/tron-migration",
+      "crates/tron-model-proto",
+      "crates/tron-processor-fixtures"
+    ],
+    "profiles": {
+      "test": {
+        "debug": 0,
+        "incremental": false
+      }
+    },
+    "features": {
+      "test-helpers": []
+    },
+    "private_sources": {
+      "owner": "ChainArgos",
+      "app_id_variable": "VELNOR_DEPS_APP_ID",
+      "app_private_key_secret": "VELNOR_DEPS_APP_PRIVATE_KEY",
+      "release_assets": [
+        {
+          "id": "tron-protos",
+          "repository": "ChainArgos/tron-processor-java",
+          "tag": "tron-protos-v1.0.0",
+          "asset": "tron-protos-1.0.0.tar.gz",
+          "extract_to": "tron-protos"
+        },
+        {
+          "id": "tron-sql",
+          "repository": "ChainArgos/tron-processor-java",
+          "tag": "tron-sql-v1.0.0",
+          "asset": "tron-sql-1.0.0.tar.gz",
+          "extract_to": "tron-sql"
+        },
+        {
+          "id": "tron-fixtures",
+          "repository": "ChainArgos/tron-processor-java",
+          "tag": "tron-fixtures-v1.0.1",
+          "asset": "tron-fixtures-1.0.1.tar.gz",
+          "extract_to": "tron-fixtures"
+        },
+        {
+          "id": "tailrocks-type-protos",
+          "repository": "ChainArgos/processor-shared-java",
+          "tag": "tailrocks-type-protos-v1.0.0",
+          "asset": "tailrocks-type-protos-1.0.0.tar.gz",
+          "extract_to": "tailrocks-type-protos"
+        }
+      ]
+    },
+    "tasks": {
+      "stack/rust/crates/tron-migration/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-migration/Cargo.toml",
+          "--package",
+          "tron-migration"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-migration/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-migration/Cargo.toml",
+          "--package",
+          "tron-migration",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-migration/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-migration/Cargo.toml",
+          "--package",
+          "tron-migration",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/crates/tron-migration/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-migration/Cargo.toml",
+          "--package",
+          "tron-migration",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-migration/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "crates/tron-migration/Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-migration/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-migration/Cargo.toml",
+          "--package",
+          "tron-migration",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-model-proto/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-model-proto/Cargo.toml",
+          "--package",
+          "tron-model-proto"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-model-proto/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-model-proto/Cargo.toml",
+          "--package",
+          "tron-model-proto",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-model-proto/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-model-proto/Cargo.toml",
+          "--package",
+          "tron-model-proto",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/crates/tron-model-proto/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-model-proto/Cargo.toml",
+          "--package",
+          "tron-model-proto",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-model-proto/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "crates/tron-model-proto/Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-model-proto/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-model-proto/Cargo.toml",
+          "--package",
+          "tron-model-proto",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-processor-fixtures/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-processor-fixtures/Cargo.toml",
+          "--package",
+          "tron-processor-fixtures"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-processor-fixtures/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-processor-fixtures/Cargo.toml",
+          "--package",
+          "tron-processor-fixtures",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-processor-fixtures/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-processor-fixtures/Cargo.toml",
+          "--package",
+          "tron-processor-fixtures",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/crates/tron-processor-fixtures/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-processor-fixtures/Cargo.toml",
+          "--package",
+          "tron-processor-fixtures",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-processor-fixtures/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "crates/tron-processor-fixtures/Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/crates/tron-processor-fixtures/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "crates/tron-processor-fixtures/Cargo.toml",
+          "--package",
+          "tron-processor-fixtures",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/build/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "list",
+          "--profile",
+          "ci",
+          "--list-type",
+          "binaries-only",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "tron-processor-app"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/clippy/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "tron-processor-app",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-clippy",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/doc/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "doc",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "tron-processor-app",
+          "--no-deps"
+        ],
+        "env": {
+          "CARGO_TARGET_DIR": "target/velnor-doc",
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup",
+          "RUSTDOCFLAGS": "-D warnings"
+        }
+      },
+      "stack/rust/root/doctest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "test",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "tron-processor-app",
+          "--doc"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/fmt/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "fmt",
+          "--check",
+          "--manifest-path",
+          "Cargo.toml"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      },
+      "stack/rust/root/nextest/default": {
+        "argv": [
+          "mise",
+          "--no-config",
+          "--no-env",
+          "--no-hooks",
+          "exec",
+          "rust@${VELNOR_TOOL_RUST}",
+          "aqua:nextest-rs/nextest/cargo-nextest@${VELNOR_TOOL_NEXTEST}",
+          "--",
+          "mbx",
+          "nextest",
+          "run",
+          "--profile",
+          "ci",
+          "--locked",
+          "--offline",
+          "--manifest-path",
+          "Cargo.toml",
+          "--package",
+          "tron-processor-app",
+          "--no-tests",
+          "fail"
+        ],
+        "env": {
+          "MISE_AUTO_INSTALL": "false",
+          "MISE_CARGO_HOME": "${{ runner.temp }}/velnor/cargo",
+          "MISE_EXEC_AUTO_INSTALL": "false",
+          "MISE_LOCKFILE": "0",
+          "MISE_NO_CONFIG": "1",
+          "MISE_NO_ENV": "1",
+          "MISE_NO_HOOKS": "1",
+          "MISE_RUSTUP_HOME": "${{ runner.temp }}/velnor/rustup"
+        }
+      }
+    },
+    "cache_inventory": "unknown: connector allowlist rejects cache endpoints before repository permission check"
+  }
+]

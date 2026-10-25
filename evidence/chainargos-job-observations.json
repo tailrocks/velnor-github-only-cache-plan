@@ -1,0 +1,3231 @@
+[
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39512990012,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 118938309008,
+    "name": "Verify default branch authority",
+    "conclusion": "success",
+    "started_at": "2026-10-20T23:08:22Z",
+    "completed_at": "2026-10-20T23:14:02Z",
+    "seconds": 340.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39512990012/job/118938309008",
+    "log_file": "bitcoin-grpc-server/runs/39512990012/job-118938309008.log",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": []
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39512990012,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 118940441728,
+    "name": "Create tags and releases",
+    "conclusion": "failure",
+    "started_at": "2026-10-20T23:14:05Z",
+    "completed_at": "2026-10-20T23:14:19Z",
+    "seconds": 14.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39512990012/job/118940441728",
+    "log_file": "bitcoin-grpc-server/runs/39512990012/job-118940441728.log",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": []
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39884632686,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120189808683,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:33:07Z",
+    "completed_at": "2026-10-23T01:34:13Z",
+    "seconds": 66.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39884632686/job/120189808683",
+    "log_file": "bitcoin-grpc-server/runs/39884632686/job-120189808683.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T01:33:58.8838821Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:33:58.8839747Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352153758
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e593bc9dc312591bec0b1b67a2f968c4b71fad5eb380178ebe8aff8c129ff735",
+        "archive_bytes": 132583887
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39884632686,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120189808859,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:33:08Z",
+    "completed_at": "2026-10-23T01:33:21Z",
+    "seconds": 13.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39884632686/job/120189808859",
+    "log_file": "bitcoin-grpc-server/runs/39884632686/job-120189808859.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64914952
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39884632686,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120190156654,
+    "name": "Rust / bitcoin-grpc-proto",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:34:14Z",
+    "completed_at": "2026-10-23T01:35:20Z",
+    "seconds": 66.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39884632686/job/120190156654",
+    "log_file": "bitcoin-grpc-server/runs/39884632686/job-120190156654.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:35:10.3208929Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 6.9 MiB stored locally",
+      "2026-10-23T01:35:11.1277647Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:35:11.2544687Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 9.7 KiB stored locally",
+      "2026-10-23T01:35:11.2829746Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 29.6 KiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:35:09.1966626Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:35:09.1966949Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359018236
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e593bc9dc312591bec0b1b67a2f968c4b71fad5eb380178ebe8aff8c129ff735",
+        "archive_bytes": 132583887
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39884632686,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120190156731,
+    "name": "Rust / bitcoin-grpc-server",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:34:15Z",
+    "completed_at": "2026-10-23T01:37:58Z",
+    "seconds": 223.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39884632686/job/120190156731",
+    "log_file": "bitcoin-grpc-server/runs/39884632686/job-120190156731.log.gz",
+    "compiling_message_count": 503,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:36:45.9277985Z mbx[cache]: object cache: 0 hits, 0 misses, 354 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 757.7 MiB stored locally",
+      "2026-10-23T01:36:47.1113973Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:37:42.6934421Z mbx[cache]: object cache: 226 hits, 28 misses, 107 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 78.9 MiB stored locally",
+      "2026-10-23T01:37:43.7588211Z mbx[cache]: object cache: 212 hits, 30 misses, 122 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 102.8 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:35:14.8635307Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:35:14.8636349Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359018236
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e593bc9dc312591bec0b1b67a2f968c4b71fad5eb380178ebe8aff8c129ff735",
+        "archive_bytes": 132583887
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39884632686,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120190158239,
+    "name": "Dependency seed",
+    "conclusion": "skipped",
+    "started_at": "2026-10-23T01:34:13Z",
+    "completed_at": "2026-10-23T01:34:13Z",
+    "seconds": 0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39884632686/job/120190158239",
+    "log_file": null
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39884632686,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120191305520,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:00Z",
+    "completed_at": "2026-10-23T01:38:10Z",
+    "seconds": 10.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39884632686/job/120191305520",
+    "log_file": null
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39884632686,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120191362212,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:12Z",
+    "completed_at": "2026-10-23T01:38:15Z",
+    "seconds": 3.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39884632686/job/120191362212",
+    "log_file": null
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39885224739,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191733471,
+    "name": "Prune superseded cache entries",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:39:26Z",
+    "completed_at": "2026-10-23T01:39:31Z",
+    "seconds": 5.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39885224739/job/120191733471",
+    "log_file": "bitcoin-grpc-server/runs/39885224739/job-120191733471.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": []
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39885224758,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191733682,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:39:26Z",
+    "completed_at": "2026-10-23T01:39:41Z",
+    "seconds": 15.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39885224758/job/120191733682",
+    "log_file": "bitcoin-grpc-server/runs/39885224758/job-120191733682.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64914952
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39885224758,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191734027,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:39:26Z",
+    "completed_at": "2026-10-23T01:40:24Z",
+    "seconds": 58.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39885224758/job/120191734027",
+    "log_file": "bitcoin-grpc-server/runs/39885224758/job-120191734027.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T01:40:13.3833134Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:40:13.3834031Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352153758
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e593bc9dc312591bec0b1b67a2f968c4b71fad5eb380178ebe8aff8c129ff735",
+        "archive_bytes": 132583887
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39885224758,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120192041513,
+    "name": "Dependency seed",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:40:26Z",
+    "completed_at": "2026-10-23T01:44:32Z",
+    "seconds": 246.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39885224758/job/120192041513",
+    "log_file": "bitcoin-grpc-server/runs/39885224758/job-120192041513.log.gz",
+    "compiling_message_count": 504,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:43:09.6069412Z mbx[cache]: object cache: 0 hits, 0 misses, 356 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 764.6 MiB stored locally",
+      "2026-10-23T01:44:01.1806704Z mbx[cache]: object cache: 128 hits, 7 misses, 231 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 150.4 MiB stored locally",
+      "2026-10-23T01:44:21.0938472Z mbx[cache]: object cache: 310 hits, 52 misses, 6 bypassed; 0 B downloaded, 0 B uploaded, 31.3 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:41:17.4262318Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:41:17.4263318Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [
+      "2026-10-23T01:44:22.4975703Z exported 644 actions and 3979 objects (953.8 MiB) for export group \"velnor\"",
+      "2026-10-23T01:44:23.1173649Z velnor: mbx bundle not exported (over_ceiling)"
+    ],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-a802af81fe6e1461c418101c69691b63c4cd38c43fdc0aeb79a625874f18cceb",
+        "archive_bytes": 347959895
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e593bc9dc312591bec0b1b67a2f968c4b71fad5eb380178ebe8aff8c129ff735",
+        "archive_bytes": 132583887
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39885224758,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120192041522,
+    "name": "Rust / bitcoin-grpc-server",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:40:26Z",
+    "completed_at": "2026-10-23T01:44:39Z",
+    "seconds": 253.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39885224758/job/120192041522",
+    "log_file": "bitcoin-grpc-server/runs/39885224758/job-120192041522.log.gz",
+    "compiling_message_count": 503,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:43:12.5875558Z mbx[cache]: object cache: 0 hits, 0 misses, 354 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 757.7 MiB stored locally",
+      "2026-10-23T01:43:15.7095251Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:44:28.1474914Z mbx[cache]: object cache: 234 hits, 21 misses, 106 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 75.3 MiB stored locally",
+      "2026-10-23T01:44:29.4749291Z mbx[cache]: object cache: 204 hits, 37 misses, 123 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 106.4 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:41:16.7755951Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:41:16.7756787Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359018236
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e593bc9dc312591bec0b1b67a2f968c4b71fad5eb380178ebe8aff8c129ff735",
+        "archive_bytes": 132583887
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39885224758,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120192041564,
+    "name": "Rust / bitcoin-grpc-proto",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:40:26Z",
+    "completed_at": "2026-10-23T01:41:30Z",
+    "seconds": 64.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39885224758/job/120192041564",
+    "log_file": "bitcoin-grpc-server/runs/39885224758/job-120192041564.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:41:19.8929753Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 6.9 MiB stored locally",
+      "2026-10-23T01:41:21.1302236Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 9.7 KiB stored locally",
+      "2026-10-23T01:41:21.1904887Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:41:21.1940308Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 29.6 KiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:41:18.6091497Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:41:18.6092408Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359018236
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e593bc9dc312591bec0b1b67a2f968c4b71fad5eb380178ebe8aff8c129ff735",
+        "archive_bytes": 132583887
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39885224758,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120193299143,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:44:41Z",
+    "completed_at": "2026-10-23T01:44:56Z",
+    "seconds": 15.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39885224758/job/120193299143",
+    "log_file": null
+  },
+  {
+    "repo": "bitcoin-grpc-server",
+    "run_id": 39885224758,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120193378143,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:44:57Z",
+    "completed_at": "2026-10-23T01:45:00Z",
+    "seconds": 3.0,
+    "url": "https://github.com/ChainArgos/bitcoin-grpc-server/actions/runs/39885224758/job/120193378143",
+    "log_file": null
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39883761013,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187015385,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:23:57Z",
+    "completed_at": "2026-10-23T01:25:15Z",
+    "seconds": 78.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39883761013/job/120187015385",
+    "log_file": "bitcoin-processor-rust/runs/39883761013/job-120187015385.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T01:25:01.4625355Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:25:01.4625823Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352048193
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e29b86a8db82b2c260d08ea25fef57b5c21ffd7029e44847b8871e591c5607c6",
+        "archive_bytes": 112810554
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39883761013,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187015676,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:23:58Z",
+    "completed_at": "2026-10-23T01:24:12Z",
+    "seconds": 14.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39883761013/job/120187015676",
+    "log_file": "bitcoin-processor-rust/runs/39883761013/job-120187015676.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64915124
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39883761013,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187429144,
+    "name": "Rust / bitcoin-migration",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:25:18Z",
+    "completed_at": "2026-10-23T01:31:53Z",
+    "seconds": 395.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39883761013/job/120187429144",
+    "log_file": "bitcoin-processor-rust/runs/39883761013/job-120187429144.log.gz",
+    "compiling_message_count": 474,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:28:37.5584753Z mbx[cache]: object cache: 0 hits, 0 misses, 335 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 941.5 MiB stored locally",
+      "2026-10-23T01:28:41.4496253Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:31:15.6430868Z mbx[cache]: object cache: 42 hits, 1 misses, 169 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 399.5 MiB stored locally",
+      "2026-10-23T01:31:33.8677370Z mbx[cache]: object cache: 112 hits, 0 misses, 238 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 577.6 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:26:27.6852959Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:26:27.6856199Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359027436
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e29b86a8db82b2c260d08ea25fef57b5c21ffd7029e44847b8871e591c5607c6",
+        "archive_bytes": 112810554
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39883761013,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187429182,
+    "name": "Rust / bitcoin-model-proto",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:25:17Z",
+    "completed_at": "2026-10-23T01:26:30Z",
+    "seconds": 73.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39883761013/job/120187429182",
+    "log_file": "bitcoin-processor-rust/runs/39883761013/job-120187429182.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:26:18.6401442Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:26:20.0744828Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:26:20.0747740Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 10.0 KiB stored locally",
+      "2026-10-23T01:26:20.0855103Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 58.5 KiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:26:17.4048277Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:26:17.4049216Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359027436
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e29b86a8db82b2c260d08ea25fef57b5c21ffd7029e44847b8871e591c5607c6",
+        "archive_bytes": 112810554
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39883761013,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187429226,
+    "name": "Rust / bitcoin-processor-fixtures",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:25:18Z",
+    "completed_at": "2026-10-23T01:26:41Z",
+    "seconds": 83.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39883761013/job/120187429226",
+    "log_file": "bitcoin-processor-rust/runs/39883761013/job-120187429226.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:26:26.5678257Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:26:27.6667777Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:26:27.8936835Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 11.7 KiB stored locally",
+      "2026-10-23T01:26:28.0319906Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 73.7 KiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:26:24.9987894Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:26:24.9990184Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359027436
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e29b86a8db82b2c260d08ea25fef57b5c21ffd7029e44847b8871e591c5607c6",
+        "archive_bytes": 112810554
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39883761013,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187429272,
+    "name": "Rust / bitcoin-processor-app",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:25:18Z",
+    "completed_at": "2026-10-23T01:36:30Z",
+    "seconds": 672.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39883761013/job/120187429272",
+    "log_file": "bitcoin-processor-rust/runs/39883761013/job-120187429272.log.gz",
+    "compiling_message_count": 709,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:30:23.8320926Z mbx[cache]: object cache: 0 hits, 0 misses, 540 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 1.6 GiB stored locally",
+      "2026-10-23T01:30:28.3203000Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:35:24.0924515Z mbx[cache]: object cache: 66 hits, 7 misses, 321 not looked up, 5 bypassed; 0 B downloaded, 0 B uploaded, 514.1 MiB stored locally",
+      "2026-10-23T01:36:17.6442996Z mbx[cache]: object cache: 194 hits, 14 misses, 348 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 718.0 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:26:16.8096114Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:26:16.8096878Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359027436
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e29b86a8db82b2c260d08ea25fef57b5c21ffd7029e44847b8871e591c5607c6",
+        "archive_bytes": 112810554
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39883761013,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187430393,
+    "name": "Dependency seed",
+    "conclusion": "skipped",
+    "started_at": "2026-10-23T01:25:16Z",
+    "completed_at": "2026-10-23T01:25:16Z",
+    "seconds": 0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39883761013/job/120187430393",
+    "log_file": null
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39883761013,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120190854284,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:36:32Z",
+    "completed_at": "2026-10-23T01:36:45Z",
+    "seconds": 13.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39883761013/job/120190854284",
+    "log_file": null
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39883761013,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120190930559,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:36:47Z",
+    "completed_at": "2026-10-23T01:36:49Z",
+    "seconds": 2.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39883761013/job/120190930559",
+    "log_file": null
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39885044479,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191142306,
+    "name": "Prune superseded cache entries",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:37:27Z",
+    "completed_at": "2026-10-23T01:37:32Z",
+    "seconds": 5.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39885044479/job/120191142306",
+    "log_file": "bitcoin-processor-rust/runs/39885044479/job-120191142306.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": []
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39885044506,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191142824,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:37:28Z",
+    "completed_at": "2026-10-23T01:38:40Z",
+    "seconds": 72.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39885044506/job/120191142824",
+    "log_file": "bitcoin-processor-rust/runs/39885044506/job-120191142824.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T01:38:26.6483046Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:38:26.6483780Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352048193
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e29b86a8db82b2c260d08ea25fef57b5c21ffd7029e44847b8871e591c5607c6",
+        "archive_bytes": 112810554
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39885044506,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191143172,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:37:28Z",
+    "completed_at": "2026-10-23T01:37:48Z",
+    "seconds": 20.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39885044506/job/120191143172",
+    "log_file": "bitcoin-processor-rust/runs/39885044506/job-120191143172.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64915124
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39885044506,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191516212,
+    "name": "Rust / bitcoin-processor-fixtures",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:42Z",
+    "completed_at": "2026-10-23T01:40:09Z",
+    "seconds": 87.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39885044506/job/120191516212",
+    "log_file": "bitcoin-processor-rust/runs/39885044506/job-120191516212.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:39:54.5396511Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:39:55.6116715Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:39:55.6969705Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 11.7 KiB stored locally",
+      "2026-10-23T01:39:55.6976494Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 73.7 KiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:39:53.6016544Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:39:53.6017254Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359027436
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e29b86a8db82b2c260d08ea25fef57b5c21ffd7029e44847b8871e591c5607c6",
+        "archive_bytes": 112810554
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39885044506,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191516236,
+    "name": "Rust / bitcoin-model-proto",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:42Z",
+    "completed_at": "2026-10-23T01:39:51Z",
+    "seconds": 69.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39885044506/job/120191516236",
+    "log_file": "bitcoin-processor-rust/runs/39885044506/job-120191516236.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:39:41.2321172Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:39:42.4665739Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:39:42.6325868Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 10.0 KiB stored locally",
+      "2026-10-23T01:39:42.7008661Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 58.5 KiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:39:40.2381654Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:39:40.2382713Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359027436
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e29b86a8db82b2c260d08ea25fef57b5c21ffd7029e44847b8871e591c5607c6",
+        "archive_bytes": 112810554
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39885044506,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191516239,
+    "name": "Dependency seed",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:42Z",
+    "completed_at": "2026-10-23T01:50:31Z",
+    "seconds": 709.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39885044506/job/120191516239",
+    "log_file": "bitcoin-processor-rust/runs/39885044506/job-120191516239.log.gz",
+    "compiling_message_count": 750,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:43:53.8349708Z mbx[cache]: object cache: 0 hits, 0 misses, 546 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 1.7 GiB stored locally",
+      "2026-10-23T01:46:49.9890064Z mbx[cache]: object cache: 0 hits, 0 misses, 563 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 986.2 MiB stored locally",
+      "2026-10-23T01:48:26.2144079Z mbx[cache]: object cache: 341 hits, 34 misses, 110 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 298.9 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:39:53.5080053Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:39:53.5082373Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [
+      "2026-10-23T01:50:11.4906112Z exported 1249 actions and 7937 objects (3.0 GiB) for export group \"velnor\"",
+      "2026-10-23T01:50:12.5042928Z velnor: mbx bundle not exported (over_ceiling)"
+    ],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-a802af81fe6e1461c418101c69691b63c4cd38c43fdc0aeb79a625874f18cceb",
+        "archive_bytes": 348101404
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e29b86a8db82b2c260d08ea25fef57b5c21ffd7029e44847b8871e591c5607c6",
+        "archive_bytes": 112810554
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39885044506,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191516242,
+    "name": "Rust / bitcoin-migration",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:42Z",
+    "completed_at": "2026-10-23T01:45:05Z",
+    "seconds": 383.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39885044506/job/120191516242",
+    "log_file": "bitcoin-processor-rust/runs/39885044506/job-120191516242.log.gz",
+    "compiling_message_count": 475,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:42:02.7080930Z mbx[cache]: object cache: 0 hits, 0 misses, 335 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 941.5 MiB stored locally",
+      "2026-10-23T01:42:04.2730912Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:44:32.7354029Z mbx[cache]: object cache: 37 hits, 1 misses, 174 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 414.3 MiB stored locally",
+      "2026-10-23T01:44:47.0989729Z mbx[cache]: object cache: 117 hits, 0 misses, 233 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 562.8 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:39:54.8942345Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:39:54.8946034Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359027436
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e29b86a8db82b2c260d08ea25fef57b5c21ffd7029e44847b8871e591c5607c6",
+        "archive_bytes": 112810554
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39885044506,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191516337,
+    "name": "Rust / bitcoin-processor-app",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:42Z",
+    "completed_at": "2026-10-23T01:49:43Z",
+    "seconds": 661.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39885044506/job/120191516337",
+    "log_file": "bitcoin-processor-rust/runs/39885044506/job-120191516337.log.gz",
+    "compiling_message_count": 709,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:43:38.5045313Z mbx[cache]: object cache: 0 hits, 0 misses, 540 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 1.6 GiB stored locally",
+      "2026-10-23T01:43:42.8396617Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:48:36.7646309Z mbx[cache]: object cache: 69 hits, 7 misses, 318 not looked up, 5 bypassed; 0 B downloaded, 0 B uploaded, 505.7 MiB stored locally",
+      "2026-10-23T01:49:31.6624909Z mbx[cache]: object cache: 191 hits, 14 misses, 351 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 726.4 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:39:36.6721872Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:39:36.6722784Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359027436
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-e29b86a8db82b2c260d08ea25fef57b5c21ffd7029e44847b8871e591c5607c6",
+        "archive_bytes": 112810554
+      }
+    ]
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39885044506,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120194795179,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:49:46Z",
+    "completed_at": "2026-10-23T01:50:02Z",
+    "seconds": 16.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39885044506/job/120194795179",
+    "log_file": null
+  },
+  {
+    "repo": "bitcoin-processor-rust",
+    "run_id": 39885044506,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120194884335,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:50:05Z",
+    "completed_at": "2026-10-23T01:50:07Z",
+    "seconds": 2.0,
+    "url": "https://github.com/ChainArgos/bitcoin-processor-rust/actions/runs/39885044506/job/120194884335",
+    "log_file": null
+  },
+  {
+    "repo": "blockchain-explorer",
+    "run_id": 39886098283,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120194514552,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:48:48Z",
+    "completed_at": "2026-10-23T01:49:01Z",
+    "seconds": 13.0,
+    "url": "https://github.com/ChainArgos/blockchain-explorer/actions/runs/39886098283/job/120194514552",
+    "log_file": "blockchain-explorer/runs/39886098283/job-120194514552.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64915123
+      }
+    ]
+  },
+  {
+    "repo": "blockchain-explorer",
+    "run_id": 39886098283,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120194514722,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:48:48Z",
+    "completed_at": "2026-10-23T01:50:07Z",
+    "seconds": 79.0,
+    "url": "https://github.com/ChainArgos/blockchain-explorer/actions/runs/39886098283/job/120194514722",
+    "log_file": "blockchain-explorer/runs/39886098283/job-120194514722.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T01:49:53.2076525Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:49:53.2077515Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352043996
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-039a2580146acf7ab49e7006831b6411e52a1c2d0984459e2cedd2f0656a875c",
+        "archive_bytes": 115877889
+      }
+    ]
+  },
+  {
+    "repo": "blockchain-explorer",
+    "run_id": 39886098283,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120194909035,
+    "name": "Rust / blockchain-explorer",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:50:10Z",
+    "completed_at": "2026-10-23T02:02:50Z",
+    "seconds": 760.0,
+    "url": "https://github.com/ChainArgos/blockchain-explorer/actions/runs/39886098283/job/120194909035",
+    "log_file": "blockchain-explorer/runs/39886098283/job-120194909035.log.gz",
+    "compiling_message_count": 806,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:56:28.0806510Z mbx[cache]: object cache: 0 hits, 0 misses, 567 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 1.7 GiB stored locally",
+      "2026-10-23T01:56:58.5780592Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T02:01:03.6739902Z mbx[cache]: object cache: 78 hits, 5 misses, 328 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 683.2 MiB stored locally",
+      "2026-10-23T02:02:34.5178102Z mbx[cache]: object cache: 214 hits, 23 misses, 373 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 945.2 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:51:11.4881721Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:51:11.4882845Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359102263
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-039a2580146acf7ab49e7006831b6411e52a1c2d0984459e2cedd2f0656a875c",
+        "archive_bytes": 115877889
+      }
+    ]
+  },
+  {
+    "repo": "blockchain-explorer",
+    "run_id": 39886098283,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120194910471,
+    "name": "Dependency seed",
+    "conclusion": "skipped",
+    "started_at": "2026-10-23T01:50:08Z",
+    "completed_at": "2026-10-23T01:50:08Z",
+    "seconds": 0,
+    "url": "https://github.com/ChainArgos/blockchain-explorer/actions/runs/39886098283/job/120194910471",
+    "log_file": null
+  },
+  {
+    "repo": "blockchain-explorer",
+    "run_id": 39886098283,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120198689534,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T02:02:52Z",
+    "completed_at": "2026-10-23T02:03:07Z",
+    "seconds": 15.0,
+    "url": "https://github.com/ChainArgos/blockchain-explorer/actions/runs/39886098283/job/120198689534",
+    "log_file": null
+  },
+  {
+    "repo": "blockchain-explorer",
+    "run_id": 39886098283,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120198778677,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T02:03:09Z",
+    "completed_at": "2026-10-23T02:03:12Z",
+    "seconds": 3.0,
+    "url": "https://github.com/ChainArgos/blockchain-explorer/actions/runs/39886098283/job/120198778677",
+    "log_file": null
+  },
+  {
+    "repo": "blockchain-explorer",
+    "run_id": 39887554049,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120199168672,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T02:04:25Z",
+    "completed_at": "2026-10-23T02:04:38Z",
+    "seconds": 13.0,
+    "url": "https://github.com/ChainArgos/blockchain-explorer/actions/runs/39887554049/job/120199168672",
+    "log_file": "blockchain-explorer/runs/39887554049/job-120199168672.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64915123
+      }
+    ]
+  },
+  {
+    "repo": "blockchain-explorer",
+    "run_id": 39887554049,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120199168855,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T02:04:24Z",
+    "completed_at": "2026-10-23T02:05:32Z",
+    "seconds": 68.0,
+    "url": "https://github.com/ChainArgos/blockchain-explorer/actions/runs/39887554049/job/120199168855",
+    "log_file": "blockchain-explorer/runs/39887554049/job-120199168855.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T02:05:18.8563106Z velnor: sources hit, skipping fetch",
+      "2026-10-23T02:05:18.8564253Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352043996
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-039a2580146acf7ab49e7006831b6411e52a1c2d0984459e2cedd2f0656a875c",
+        "archive_bytes": 115877889
+      }
+    ]
+  },
+  {
+    "repo": "blockchain-explorer",
+    "run_id": 39887554049,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120199531751,
+    "name": "Dependency seed",
+    "conclusion": "success",
+    "started_at": "2026-10-23T02:05:34Z",
+    "completed_at": "2026-10-23T02:18:38Z",
+    "seconds": 784.0,
+    "url": "https://github.com/ChainArgos/blockchain-explorer/actions/runs/39887554049/job/120199531751",
+    "log_file": "blockchain-explorer/runs/39887554049/job-120199531751.log.gz",
+    "compiling_message_count": 805,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T02:12:01.4397855Z mbx[cache]: object cache: 0 hits, 0 misses, 567 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 1.7 GiB stored locally",
+      "2026-10-23T02:16:33.9821186Z mbx[cache]: object cache: 0 hits, 0 misses, 610 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 1.3 GiB stored locally",
+      "2026-10-23T02:17:40.7285045Z mbx[cache]: object cache: 292 hits, 28 misses, 91 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 259.8 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T02:06:34.7407439Z velnor: sources hit, skipping fetch",
+      "2026-10-23T02:06:34.7408585Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [
+      "2026-10-23T02:18:23.1906423Z exported 1295 actions and 8329 objects (3.3 GiB) for export group \"velnor\"",
+      "2026-10-23T02:18:23.9125743Z velnor: mbx bundle not exported (over_ceiling)"
+    ],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-a802af81fe6e1461c418101c69691b63c4cd38c43fdc0aeb79a625874f18cceb",
+        "archive_bytes": 348115655
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-039a2580146acf7ab49e7006831b6411e52a1c2d0984459e2cedd2f0656a875c",
+        "archive_bytes": 115877889
+      }
+    ]
+  },
+  {
+    "repo": "blockchain-explorer",
+    "run_id": 39887554049,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120199531840,
+    "name": "Rust / blockchain-explorer",
+    "conclusion": "success",
+    "started_at": "2026-10-23T02:05:34Z",
+    "completed_at": "2026-10-23T02:15:20Z",
+    "seconds": 586.0,
+    "url": "https://github.com/ChainArgos/blockchain-explorer/actions/runs/39887554049/job/120199531840",
+    "log_file": "blockchain-explorer/runs/39887554049/job-120199531840.log.gz",
+    "compiling_message_count": 806,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T02:10:37.1046125Z mbx[cache]: object cache: 0 hits, 0 misses, 567 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 1.7 GiB stored locally",
+      "2026-10-23T02:10:54.1549108Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T02:13:56.4918771Z mbx[cache]: object cache: 80 hits, 4 misses, 327 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 678.0 MiB stored locally",
+      "2026-10-23T02:15:02.0011576Z mbx[cache]: object cache: 212 hits, 24 misses, 374 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 950.4 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T02:06:40.8422709Z velnor: sources hit, skipping fetch",
+      "2026-10-23T02:06:40.8423722Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359102263
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-039a2580146acf7ab49e7006831b6411e52a1c2d0984459e2cedd2f0656a875c",
+        "archive_bytes": 115877889
+      }
+    ]
+  },
+  {
+    "repo": "blockchain-explorer",
+    "run_id": 39887554049,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120202498313,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T02:15:22Z",
+    "completed_at": "2026-10-23T02:15:31Z",
+    "seconds": 9.0,
+    "url": "https://github.com/ChainArgos/blockchain-explorer/actions/runs/39887554049/job/120202498313",
+    "log_file": null
+  },
+  {
+    "repo": "blockchain-explorer",
+    "run_id": 39887554049,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120202553670,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T02:15:33Z",
+    "completed_at": "2026-10-23T02:15:35Z",
+    "seconds": 2.0,
+    "url": "https://github.com/ChainArgos/blockchain-explorer/actions/runs/39887554049/job/120202553670",
+    "log_file": null
+  },
+  {
+    "repo": "blockchain-explorer",
+    "run_id": 39887554085,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120199168895,
+    "name": "Prune superseded cache entries",
+    "conclusion": "success",
+    "started_at": "2026-10-23T02:04:24Z",
+    "completed_at": "2026-10-23T02:04:29Z",
+    "seconds": 5.0,
+    "url": "https://github.com/ChainArgos/blockchain-explorer/actions/runs/39887554085/job/120199168895",
+    "log_file": "blockchain-explorer/runs/39887554085/job-120199168895.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": []
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39884643630,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120189842810,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:33:14Z",
+    "completed_at": "2026-10-23T01:34:20Z",
+    "seconds": 66.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39884643630/job/120189842810",
+    "log_file": "eth-grpc-server/runs/39884643630/job-120189842810.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T01:34:07.1499071Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:34:07.1501076Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352173924
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-7710898cd3c01a281099f3e2a36c228c67d09816d647e9dd9dafca6d2bb168d6",
+        "archive_bytes": 110667874
+      }
+    ]
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39884643630,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120189843081,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:33:14Z",
+    "completed_at": "2026-10-23T01:33:29Z",
+    "seconds": 15.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39884643630/job/120189843081",
+    "log_file": "eth-grpc-server/runs/39884643630/job-120189843081.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64915275
+      }
+    ]
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39884643630,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120190195425,
+    "name": "Rust / eth-grpc-proto",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:34:22Z",
+    "completed_at": "2026-10-23T01:35:38Z",
+    "seconds": 76.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39884643630/job/120190195425",
+    "log_file": "eth-grpc-server/runs/39884643630/job-120190195425.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:35:24.0838140Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:35:25.0323279Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 9.8 KiB stored locally",
+      "2026-10-23T01:35:25.0434863Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:35:25.1517792Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 51.0 KiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:35:23.1558164Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:35:23.1558885Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358899548
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-7710898cd3c01a281099f3e2a36c228c67d09816d647e9dd9dafca6d2bb168d6",
+        "archive_bytes": 110667874
+      }
+    ]
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39884643630,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120190195427,
+    "name": "Rust / eth-grpc-server",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:34:22Z",
+    "completed_at": "2026-10-23T01:45:36Z",
+    "seconds": 674.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39884643630/job/120190195427",
+    "log_file": "eth-grpc-server/runs/39884643630/job-120190195427.log.gz",
+    "compiling_message_count": 705,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:39:44.7215792Z mbx[cache]: object cache: 0 hits, 0 misses, 510 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 1.7 GiB stored locally",
+      "2026-10-23T01:39:49.5078090Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:44:40.9488865Z mbx[cache]: object cache: 85 hits, 4 misses, 304 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 618.0 MiB stored locally",
+      "2026-10-23T01:45:22.8130720Z mbx[cache]: object cache: 187 hits, 18 misses, 328 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 753.5 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:35:25.0679614Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:35:25.0680915Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358899548
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-7710898cd3c01a281099f3e2a36c228c67d09816d647e9dd9dafca6d2bb168d6",
+        "archive_bytes": 110667874
+      }
+    ]
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39884643630,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120190197701,
+    "name": "Dependency seed",
+    "conclusion": "skipped",
+    "started_at": "2026-10-23T01:34:21Z",
+    "completed_at": "2026-10-23T01:34:20Z",
+    "seconds": 0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39884643630/job/120190197701",
+    "log_file": null
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39884643630,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120193579045,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:45:38Z",
+    "completed_at": "2026-10-23T01:45:52Z",
+    "seconds": 14.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39884643630/job/120193579045",
+    "log_file": null
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39884643630,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120193658796,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:45:54Z",
+    "completed_at": "2026-10-23T01:45:57Z",
+    "seconds": 3.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39884643630/job/120193658796",
+    "log_file": null
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39885911545,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120193910779,
+    "name": "Prune superseded cache entries",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:46:45Z",
+    "completed_at": "2026-10-23T01:46:52Z",
+    "seconds": 7.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39885911545/job/120193910779",
+    "log_file": "eth-grpc-server/runs/39885911545/job-120193910779.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": []
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39885911570,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120193911386,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:46:45Z",
+    "completed_at": "2026-10-23T01:46:57Z",
+    "seconds": 12.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39885911570/job/120193911386",
+    "log_file": "eth-grpc-server/runs/39885911570/job-120193911386.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64915275
+      }
+    ]
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39885911570,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120193911561,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:46:45Z",
+    "completed_at": "2026-10-23T01:47:54Z",
+    "seconds": 69.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39885911570/job/120193911561",
+    "log_file": "eth-grpc-server/runs/39885911570/job-120193911561.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T01:47:39.6148077Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:47:39.6149222Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352173924
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-7710898cd3c01a281099f3e2a36c228c67d09816d647e9dd9dafca6d2bb168d6",
+        "archive_bytes": 110667874
+      }
+    ]
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39885911570,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120194263371,
+    "name": "Dependency seed",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:47:56Z",
+    "completed_at": "2026-10-23T01:57:20Z",
+    "seconds": 564.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39885911570/job/120194263371",
+    "log_file": "eth-grpc-server/runs/39885911570/job-120194263371.log.gz",
+    "compiling_message_count": 706,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:52:30.6572289Z mbx[cache]: object cache: 0 hits, 0 misses, 512 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 1.7 GiB stored locally",
+      "2026-10-23T01:55:03.5694228Z mbx[cache]: object cache: 0 hits, 0 misses, 535 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 1.0 GiB stored locally",
+      "2026-10-23T01:55:49.1896456Z mbx[cache]: object cache: 272 hits, 23 misses, 99 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 298.5 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:49:00.8700149Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:49:00.8701049Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [
+      "2026-10-23T01:57:02.4400201Z exported 1167 actions and 7467 objects (3.1 GiB) for export group \"velnor\"",
+      "2026-10-23T01:57:03.3694002Z velnor: mbx bundle not exported (over_ceiling)"
+    ],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-a802af81fe6e1461c418101c69691b63c4cd38c43fdc0aeb79a625874f18cceb",
+        "archive_bytes": 348054653
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-7710898cd3c01a281099f3e2a36c228c67d09816d647e9dd9dafca6d2bb168d6",
+        "archive_bytes": 110667874
+      }
+    ]
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39885911570,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120194263483,
+    "name": "Rust / eth-grpc-proto",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:47:56Z",
+    "completed_at": "2026-10-23T01:49:13Z",
+    "seconds": 77.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39885911570/job/120194263483",
+    "log_file": "eth-grpc-server/runs/39885911570/job-120194263483.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:48:59.1583006Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:49:00.1850310Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:49:00.6554657Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 9.8 KiB stored locally",
+      "2026-10-23T01:49:00.6569260Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 51.0 KiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:48:57.3125404Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:48:57.3127572Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358899548
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-7710898cd3c01a281099f3e2a36c228c67d09816d647e9dd9dafca6d2bb168d6",
+        "archive_bytes": 110667874
+      }
+    ]
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39885911570,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120194263518,
+    "name": "Rust / eth-grpc-server",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:47:56Z",
+    "completed_at": "2026-10-23T01:59:32Z",
+    "seconds": 696.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39885911570/job/120194263518",
+    "log_file": "eth-grpc-server/runs/39885911570/job-120194263518.log.gz",
+    "compiling_message_count": 705,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:53:24.5359084Z mbx[cache]: object cache: 0 hits, 0 misses, 510 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 1.7 GiB stored locally",
+      "2026-10-23T01:53:29.5678966Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:58:34.6249323Z mbx[cache]: object cache: 76 hits, 2 misses, 315 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 614.6 MiB stored locally",
+      "2026-10-23T01:59:20.0720227Z mbx[cache]: object cache: 196 hits, 20 misses, 317 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 756.9 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:48:50.9462958Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:48:50.9463785Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358899548
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-7710898cd3c01a281099f3e2a36c228c67d09816d647e9dd9dafca6d2bb168d6",
+        "archive_bytes": 110667874
+      }
+    ]
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39885911570,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120197669528,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:59:34Z",
+    "completed_at": "2026-10-23T01:59:48Z",
+    "seconds": 14.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39885911570/job/120197669528",
+    "log_file": null
+  },
+  {
+    "repo": "eth-grpc-server",
+    "run_id": 39885911570,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120197750702,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:59:51Z",
+    "completed_at": "2026-10-23T01:59:54Z",
+    "seconds": 3.0,
+    "url": "https://github.com/ChainArgos/eth-grpc-server/actions/runs/39885911570/job/120197750702",
+    "log_file": null
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39883770173,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187044393,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:24:03Z",
+    "completed_at": "2026-10-23T01:24:20Z",
+    "seconds": 17.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39883770173/job/120187044393",
+    "log_file": "eth-processor-rust/runs/39883770173/job-120187044393.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64915217
+      }
+    ]
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39883770173,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187044681,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:24:03Z",
+    "completed_at": "2026-10-23T01:25:20Z",
+    "seconds": 77.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39883770173/job/120187044681",
+    "log_file": "eth-processor-rust/runs/39883770173/job-120187044681.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T01:25:05.0537235Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:25:05.0538169Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352155627
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-2f7156d4d246fb00ee018bdbc7be76f7c20b95fd8af71c2177bc1511c83e466c",
+        "archive_bytes": 113543918
+      }
+    ]
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39883770173,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187454043,
+    "name": "Rust / eth-processor-fixtures",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:25:22Z",
+    "completed_at": "2026-10-23T01:26:45Z",
+    "seconds": 83.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39883770173/job/120187454043",
+    "log_file": "eth-processor-rust/runs/39883770173/job-120187454043.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:26:32.4523060Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:26:33.3972942Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:26:33.6513262Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 11.6 KiB stored locally",
+      "2026-10-23T01:26:34.0463733Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 1.4 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:26:31.3362227Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:26:31.3363024Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358933729
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-2f7156d4d246fb00ee018bdbc7be76f7c20b95fd8af71c2177bc1511c83e466c",
+        "archive_bytes": 113543918
+      }
+    ]
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39883770173,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187454076,
+    "name": "Rust / eth-migration",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:25:23Z",
+    "completed_at": "2026-10-23T01:31:58Z",
+    "seconds": 395.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39883770173/job/120187454076",
+    "log_file": "eth-processor-rust/runs/39883770173/job-120187454076.log.gz",
+    "compiling_message_count": 474,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:28:48.7132130Z mbx[cache]: object cache: 0 hits, 0 misses, 335 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 941.6 MiB stored locally",
+      "2026-10-23T01:28:50.4469389Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:31:20.4405929Z mbx[cache]: object cache: 39 hits, 1 misses, 172 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 409.8 MiB stored locally",
+      "2026-10-23T01:31:39.1677082Z mbx[cache]: object cache: 115 hits, 0 misses, 235 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 568.7 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:26:34.5763412Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:26:34.5767213Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358933729
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-2f7156d4d246fb00ee018bdbc7be76f7c20b95fd8af71c2177bc1511c83e466c",
+        "archive_bytes": 113543918
+      }
+    ]
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39883770173,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187454107,
+    "name": "Rust / eth-model-proto",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:25:22Z",
+    "completed_at": "2026-10-23T01:26:36Z",
+    "seconds": 74.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39883770173/job/120187454107",
+    "log_file": "eth-processor-rust/runs/39883770173/job-120187454107.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:26:24.3369487Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:26:25.2828391Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:26:25.4826378Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 9.8 KiB stored locally",
+      "2026-10-23T01:26:26.0801901Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 1.4 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:26:23.3205622Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:26:23.3206672Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358933729
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-2f7156d4d246fb00ee018bdbc7be76f7c20b95fd8af71c2177bc1511c83e466c",
+        "archive_bytes": 113543918
+      }
+    ]
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39883770173,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187454143,
+    "name": "Rust / eth-processor-app",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:25:22Z",
+    "completed_at": "2026-10-23T01:37:41Z",
+    "seconds": 739.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39883770173/job/120187454143",
+    "log_file": "eth-processor-rust/runs/39883770173/job-120187454143.log.gz",
+    "compiling_message_count": 749,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:30:21.0732351Z mbx[cache]: object cache: 0 hits, 0 misses, 547 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 1.9 GiB stored locally",
+      "2026-10-23T01:30:25.1981817Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:36:58.5611210Z mbx[cache]: object cache: 112 hits, 12 misses, 349 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 664.9 MiB stored locally",
+      "2026-10-23T01:37:23.0845313Z mbx[cache]: object cache: 229 hits, 20 misses, 314 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 647.5 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:26:37.2734654Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:26:37.2735343Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358933729
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-2f7156d4d246fb00ee018bdbc7be76f7c20b95fd8af71c2177bc1511c83e466c",
+        "archive_bytes": 113543918
+      }
+    ]
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39883770173,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187455168,
+    "name": "Dependency seed",
+    "conclusion": "skipped",
+    "started_at": "2026-10-23T01:25:21Z",
+    "completed_at": "2026-10-23T01:25:20Z",
+    "seconds": 0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39883770173/job/120187455168",
+    "log_file": null
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39883770173,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120191219185,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:37:43Z",
+    "completed_at": "2026-10-23T01:38:00Z",
+    "seconds": 17.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39883770173/job/120191219185",
+    "log_file": null
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39883770173,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120191311773,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:02Z",
+    "completed_at": "2026-10-23T01:38:05Z",
+    "seconds": 3.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39883770173/job/120191311773",
+    "log_file": null
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39885149301,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191485085,
+    "name": "Prune superseded cache entries",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:36Z",
+    "completed_at": "2026-10-23T01:38:40Z",
+    "seconds": 4.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39885149301/job/120191485085",
+    "log_file": "eth-processor-rust/runs/39885149301/job-120191485085.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": []
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39885149307,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191485858,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:36Z",
+    "completed_at": "2026-10-23T01:38:47Z",
+    "seconds": 11.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39885149307/job/120191485858",
+    "log_file": "eth-processor-rust/runs/39885149307/job-120191485858.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64915217
+      }
+    ]
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39885149307,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191486210,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:36Z",
+    "completed_at": "2026-10-23T01:39:55Z",
+    "seconds": 79.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39885149307/job/120191486210",
+    "log_file": "eth-processor-rust/runs/39885149307/job-120191486210.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T01:39:37.7112455Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:39:37.7119835Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352155627
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-2f7156d4d246fb00ee018bdbc7be76f7c20b95fd8af71c2177bc1511c83e466c",
+        "archive_bytes": 113543918
+      }
+    ]
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39885149307,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191891359,
+    "name": "Dependency seed",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:39:57Z",
+    "completed_at": "2026-10-23T01:49:39Z",
+    "seconds": 582.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39885149307/job/120191891359",
+    "log_file": "eth-processor-rust/runs/39885149307/job-120191891359.log.gz",
+    "compiling_message_count": 749,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:44:40.8059658Z mbx[cache]: object cache: 0 hits, 0 misses, 553 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 1.9 GiB stored locally",
+      "2026-10-23T01:47:18.2275591Z mbx[cache]: object cache: 0 hits, 0 misses, 570 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 1011.6 MiB stored locally",
+      "2026-10-23T01:48:23.7126673Z mbx[cache]: object cache: 341 hits, 35 misses, 100 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 306.0 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:41:02.8020352Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:41:02.8021066Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [
+      "2026-10-23T01:49:23.0960433Z exported 1254 actions and 7954 objects (3.3 GiB) for export group \"velnor\"",
+      "2026-10-23T01:49:24.0930444Z velnor: mbx bundle not exported (over_ceiling)"
+    ],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-a802af81fe6e1461c418101c69691b63c4cd38c43fdc0aeb79a625874f18cceb",
+        "archive_bytes": 347864219
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-2f7156d4d246fb00ee018bdbc7be76f7c20b95fd8af71c2177bc1511c83e466c",
+        "archive_bytes": 113543918
+      }
+    ]
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39885149307,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191891397,
+    "name": "Rust / eth-model-proto",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:39:57Z",
+    "completed_at": "2026-10-23T01:41:08Z",
+    "seconds": 71.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39885149307/job/120191891397",
+    "log_file": "eth-processor-rust/runs/39885149307/job-120191891397.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:40:56.8539229Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:40:58.3008551Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 9.8 KiB stored locally",
+      "2026-10-23T01:40:58.3564315Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:40:58.6322160Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 1.4 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:40:55.3783549Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:40:55.3784652Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358933729
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-2f7156d4d246fb00ee018bdbc7be76f7c20b95fd8af71c2177bc1511c83e466c",
+        "archive_bytes": 113543918
+      }
+    ]
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39885149307,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191891425,
+    "name": "Rust / eth-processor-app",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:39:57Z",
+    "completed_at": "2026-10-23T01:56:29Z",
+    "seconds": 992.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39885149307/job/120191891425",
+    "log_file": "eth-processor-rust/runs/39885149307/job-120191891425.log.gz",
+    "compiling_message_count": 749,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:46:17.3096626Z mbx[cache]: object cache: 0 hits, 0 misses, 547 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 1.9 GiB stored locally",
+      "2026-10-23T01:46:23.6148582Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:55:36.1389427Z mbx[cache]: object cache: 112 hits, 13 misses, 348 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 674.0 MiB stored locally",
+      "2026-10-23T01:56:15.1481229Z mbx[cache]: object cache: 229 hits, 19 misses, 315 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 638.4 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:40:56.8138400Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:40:56.8139169Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358933729
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-2f7156d4d246fb00ee018bdbc7be76f7c20b95fd8af71c2177bc1511c83e466c",
+        "archive_bytes": 113543918
+      }
+    ]
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39885149307,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191891435,
+    "name": "Rust / eth-migration",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:39:58Z",
+    "completed_at": "2026-10-23T01:47:52Z",
+    "seconds": 474.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39885149307/job/120191891435",
+    "log_file": "eth-processor-rust/runs/39885149307/job-120191891435.log.gz",
+    "compiling_message_count": 474,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:44:05.7182278Z mbx[cache]: object cache: 0 hits, 0 misses, 335 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 941.6 MiB stored locally",
+      "2026-10-23T01:44:07.3361890Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:47:09.1751706Z mbx[cache]: object cache: 37 hits, 1 misses, 174 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 418.0 MiB stored locally",
+      "2026-10-23T01:47:29.1205850Z mbx[cache]: object cache: 117 hits, 0 misses, 233 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 560.5 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:41:27.0477001Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:41:27.0477816Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358933729
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-2f7156d4d246fb00ee018bdbc7be76f7c20b95fd8af71c2177bc1511c83e466c",
+        "archive_bytes": 113543918
+      }
+    ]
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39885149307,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191891473,
+    "name": "Rust / eth-processor-fixtures",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:39:57Z",
+    "completed_at": "2026-10-23T01:41:14Z",
+    "seconds": 77.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39885149307/job/120191891473",
+    "log_file": "eth-processor-rust/runs/39885149307/job-120191891473.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:41:01.4467993Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:41:03.2287737Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:41:03.2318815Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 11.6 KiB stored locally",
+      "2026-10-23T01:41:03.2471200Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 1.4 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:40:59.9057862Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:40:59.9059100Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358933729
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-2f7156d4d246fb00ee018bdbc7be76f7c20b95fd8af71c2177bc1511c83e466c",
+        "archive_bytes": 113543918
+      }
+    ]
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39885149307,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120196784803,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:56:31Z",
+    "completed_at": "2026-10-23T01:56:43Z",
+    "seconds": 12.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39885149307/job/120196784803",
+    "log_file": null
+  },
+  {
+    "repo": "eth-processor-rust",
+    "run_id": 39885149307,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120196855223,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:56:45Z",
+    "completed_at": "2026-10-23T01:56:48Z",
+    "seconds": 3.0,
+    "url": "https://github.com/ChainArgos/eth-processor-rust/actions/runs/39885149307/job/120196855223",
+    "log_file": null
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39884653246,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120189874055,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:33:20Z",
+    "completed_at": "2026-10-23T01:33:34Z",
+    "seconds": 14.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39884653246/job/120189874055",
+    "log_file": "tron-grpc-server/runs/39884653246/job-120189874055.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64915163
+      }
+    ]
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39884653246,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120189874359,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:33:21Z",
+    "completed_at": "2026-10-23T01:34:52Z",
+    "seconds": 91.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39884653246/job/120189874359",
+    "log_file": "tron-grpc-server/runs/39884653246/job-120189874359.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T01:34:36.1576806Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:34:36.1581556Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352160404
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-0c4409e536777330a2f2d5886e327ec1fa87ce53bd65732cccd44f57f8d4a327",
+        "archive_bytes": 110307111
+      }
+    ]
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39884653246,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120190358333,
+    "name": "Rust / tron-grpc-proto",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:34:55Z",
+    "completed_at": "2026-10-23T01:36:13Z",
+    "seconds": 78.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39884653246/job/120190358333",
+    "log_file": "tron-grpc-server/runs/39884653246/job-120190358333.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:35:59.0380236Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:36:00.3979191Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 9.9 KiB stored locally",
+      "2026-10-23T01:36:00.4328887Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:36:00.4357014Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 49.5 KiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:35:56.9881707Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:35:56.9882818Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358983215
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-0c4409e536777330a2f2d5886e327ec1fa87ce53bd65732cccd44f57f8d4a327",
+        "archive_bytes": 110307111
+      }
+    ]
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39884653246,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120190358346,
+    "name": "Rust / tron-grpc-server",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:34:55Z",
+    "completed_at": "2026-10-23T01:45:38Z",
+    "seconds": 643.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39884653246/job/120190358346",
+    "log_file": "tron-grpc-server/runs/39884653246/job-120190358346.log.gz",
+    "compiling_message_count": 705,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:40:04.2236504Z mbx[cache]: object cache: 0 hits, 0 misses, 509 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 1.7 GiB stored locally",
+      "2026-10-23T01:40:08.8415152Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:44:40.9521381Z mbx[cache]: object cache: 81 hits, 2 misses, 310 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 620.7 MiB stored locally",
+      "2026-10-23T01:45:23.6885728Z mbx[cache]: object cache: 191 hits, 20 misses, 321 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 749.3 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:35:54.6593920Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:35:54.6598615Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358983215
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-0c4409e536777330a2f2d5886e327ec1fa87ce53bd65732cccd44f57f8d4a327",
+        "archive_bytes": 110307111
+      }
+    ]
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39884653246,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120190359732,
+    "name": "Dependency seed",
+    "conclusion": "skipped",
+    "started_at": "2026-10-23T01:34:53Z",
+    "completed_at": "2026-10-23T01:34:53Z",
+    "seconds": 0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39884653246/job/120190359732",
+    "log_file": null
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39884653246,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120193589084,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:45:40Z",
+    "completed_at": "2026-10-23T01:45:56Z",
+    "seconds": 16.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39884653246/job/120193589084",
+    "log_file": null
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39884653246,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120193678694,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:45:58Z",
+    "completed_at": "2026-10-23T01:46:01Z",
+    "seconds": 3.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39884653246/job/120193678694",
+    "log_file": null
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39885921905,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120193942183,
+    "name": "Prune superseded cache entries",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:46:51Z",
+    "completed_at": "2026-10-23T01:46:56Z",
+    "seconds": 5.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39885921905/job/120193942183",
+    "log_file": "tron-grpc-server/runs/39885921905/job-120193942183.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": []
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39885921996,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120193943449,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:46:52Z",
+    "completed_at": "2026-10-23T01:47:03Z",
+    "seconds": 11.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39885921996/job/120193943449",
+    "log_file": "tron-grpc-server/runs/39885921996/job-120193943449.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64915163
+      }
+    ]
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39885921996,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120193943623,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:46:52Z",
+    "completed_at": "2026-10-23T01:48:10Z",
+    "seconds": 78.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39885921996/job/120193943623",
+    "log_file": "tron-grpc-server/runs/39885921996/job-120193943623.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T01:47:52.3566707Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:47:52.3567594Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352160404
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-0c4409e536777330a2f2d5886e327ec1fa87ce53bd65732cccd44f57f8d4a327",
+        "archive_bytes": 110307111
+      }
+    ]
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39885921996,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120194343268,
+    "name": "Rust / tron-grpc-proto",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:48:12Z",
+    "completed_at": "2026-10-23T01:49:25Z",
+    "seconds": 73.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39885921996/job/120194343268",
+    "log_file": "tron-grpc-server/runs/39885921996/job-120194343268.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:49:11.5686235Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:49:12.6772164Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:49:12.6789511Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 9.9 KiB stored locally",
+      "2026-10-23T01:49:12.6795828Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 49.5 KiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:49:10.2450811Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:49:10.2455938Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358983215
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-0c4409e536777330a2f2d5886e327ec1fa87ce53bd65732cccd44f57f8d4a327",
+        "archive_bytes": 110307111
+      }
+    ]
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39885921996,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120194343363,
+    "name": "Dependency seed",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:48:12Z",
+    "completed_at": "2026-10-23T01:56:38Z",
+    "seconds": 506.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39885921996/job/120194343363",
+    "log_file": "tron-grpc-server/runs/39885921996/job-120194343363.log.gz",
+    "compiling_message_count": 706,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:52:26.0648598Z mbx[cache]: object cache: 0 hits, 0 misses, 511 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 1.7 GiB stored locally",
+      "2026-10-23T01:54:46.5080066Z mbx[cache]: object cache: 0 hits, 0 misses, 534 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 1.0 GiB stored locally",
+      "2026-10-23T01:55:28.6960638Z mbx[cache]: object cache: 272 hits, 23 misses, 99 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 297.5 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:49:15.1643143Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:49:15.1643631Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [
+      "2026-10-23T01:56:19.9849317Z exported 1165 actions and 7456 objects (3.0 GiB) for export group \"velnor\"",
+      "2026-10-23T01:56:21.1080323Z velnor: mbx bundle not exported (over_ceiling)"
+    ],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-a802af81fe6e1461c418101c69691b63c4cd38c43fdc0aeb79a625874f18cceb",
+        "archive_bytes": 348040260
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-0c4409e536777330a2f2d5886e327ec1fa87ce53bd65732cccd44f57f8d4a327",
+        "archive_bytes": 110307111
+      }
+    ]
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39885921996,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120194343372,
+    "name": "Rust / tron-grpc-server",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:48:13Z",
+    "completed_at": "2026-10-23T01:57:17Z",
+    "seconds": 544.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39885921996/job/120194343372",
+    "log_file": "tron-grpc-server/runs/39885921996/job-120194343372.log.gz",
+    "compiling_message_count": 705,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:52:36.3867368Z mbx[cache]: object cache: 0 hits, 0 misses, 509 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 1.7 GiB stored locally",
+      "2026-10-23T01:52:42.4366786Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:56:23.2765602Z mbx[cache]: object cache: 70 hits, 3 misses, 320 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 637.3 MiB stored locally",
+      "2026-10-23T01:56:58.4001475Z mbx[cache]: object cache: 202 hits, 19 misses, 311 not looked up, 7 bypassed; 0 B downloaded, 0 B uploaded, 732.7 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:49:20.6830459Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:49:20.6831060Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 358983215
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-0c4409e536777330a2f2d5886e327ec1fa87ce53bd65732cccd44f57f8d4a327",
+        "archive_bytes": 110307111
+      }
+    ]
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39885921996,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120197016961,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:57:20Z",
+    "completed_at": "2026-10-23T01:57:32Z",
+    "seconds": 12.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39885921996/job/120197016961",
+    "log_file": null
+  },
+  {
+    "repo": "tron-grpc-server",
+    "run_id": 39885921996,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120197088017,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:57:34Z",
+    "completed_at": "2026-10-23T01:57:37Z",
+    "seconds": 3.0,
+    "url": "https://github.com/ChainArgos/tron-grpc-server/actions/runs/39885921996/job/120197088017",
+    "log_file": null
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39883783663,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187086621,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:24:11Z",
+    "completed_at": "2026-10-23T01:24:24Z",
+    "seconds": 13.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39883783663/job/120187086621",
+    "log_file": "tron-processor-rust/runs/39883783663/job-120187086621.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64915132
+      }
+    ]
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39883783663,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187086848,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:24:11Z",
+    "completed_at": "2026-10-23T01:25:20Z",
+    "seconds": 69.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39883783663/job/120187086848",
+    "log_file": "tron-processor-rust/runs/39883783663/job-120187086848.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T01:25:06.2529756Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:25:06.2530484Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352030617
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-f6f9d75a056825bc8c70a435396e9f9b2512d1ae8a4014e4a8fb26cbfecb58be",
+        "archive_bytes": 113522727
+      }
+    ]
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39883783663,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187451147,
+    "name": "Rust / tron-processor-app",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:25:22Z",
+    "completed_at": "2026-10-23T01:37:07Z",
+    "seconds": 705.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39883783663/job/120187451147",
+    "log_file": "tron-processor-rust/runs/39883783663/job-120187451147.log.gz",
+    "compiling_message_count": 756,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:30:47.9044456Z mbx[cache]: object cache: 0 hits, 0 misses, 542 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 1.7 GiB stored locally",
+      "2026-10-23T01:30:52.9890448Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:36:33.4155369Z mbx[cache]: object cache: 120 hits, 12 misses, 354 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 670.2 MiB stored locally",
+      "2026-10-23T01:36:55.6136477Z mbx[cache]: object cache: 229 hits, 20 misses, 309 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 644.1 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:26:21.5418828Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:26:21.5433062Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359089777
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-f6f9d75a056825bc8c70a435396e9f9b2512d1ae8a4014e4a8fb26cbfecb58be",
+        "archive_bytes": 113522727
+      }
+    ]
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39883783663,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187451186,
+    "name": "Rust / tron-model-proto",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:25:22Z",
+    "completed_at": "2026-10-23T01:26:45Z",
+    "seconds": 83.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39883783663/job/120187451186",
+    "log_file": "tron-processor-rust/runs/39883783663/job-120187451186.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:26:30.3842266Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:26:31.1530373Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 9.9 KiB stored locally",
+      "2026-10-23T01:26:31.7520983Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:26:31.7935632Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 145.1 KiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:26:29.5173406Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:26:29.5174418Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359089777
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-f6f9d75a056825bc8c70a435396e9f9b2512d1ae8a4014e4a8fb26cbfecb58be",
+        "archive_bytes": 113522727
+      }
+    ]
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39883783663,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187451231,
+    "name": "Rust / tron-migration",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:25:22Z",
+    "completed_at": "2026-10-23T01:31:44Z",
+    "seconds": 382.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39883783663/job/120187451231",
+    "log_file": "tron-processor-rust/runs/39883783663/job-120187451231.log.gz",
+    "compiling_message_count": 475,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:28:39.1719859Z mbx[cache]: object cache: 0 hits, 0 misses, 335 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 941.5 MiB stored locally",
+      "2026-10-23T01:28:41.5003019Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:31:09.0212449Z mbx[cache]: object cache: 39 hits, 1 misses, 172 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 410.8 MiB stored locally",
+      "2026-10-23T01:31:27.5325880Z mbx[cache]: object cache: 115 hits, 0 misses, 235 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 566.4 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:26:26.7048897Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:26:26.7052719Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359089777
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-f6f9d75a056825bc8c70a435396e9f9b2512d1ae8a4014e4a8fb26cbfecb58be",
+        "archive_bytes": 113522727
+      }
+    ]
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39883783663,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187451277,
+    "name": "Rust / tron-processor-fixtures",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:25:22Z",
+    "completed_at": "2026-10-23T01:26:33Z",
+    "seconds": 71.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39883783663/job/120187451277",
+    "log_file": "tron-processor-rust/runs/39883783663/job-120187451277.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:26:21.1417703Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:26:22.6212529Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 11.6 KiB stored locally",
+      "2026-10-23T01:26:22.6602301Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 160.4 KiB stored locally",
+      "2026-10-23T01:26:22.6608441Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:26:19.1457838Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:26:19.1462027Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359089777
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-f6f9d75a056825bc8c70a435396e9f9b2512d1ae8a4014e4a8fb26cbfecb58be",
+        "archive_bytes": 113522727
+      }
+    ]
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39883783663,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120187453102,
+    "name": "Dependency seed",
+    "conclusion": "skipped",
+    "started_at": "2026-10-23T01:25:20Z",
+    "completed_at": "2026-10-23T01:25:20Z",
+    "seconds": 0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39883783663/job/120187453102",
+    "log_file": null
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39883783663,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120191046412,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:37:09Z",
+    "completed_at": "2026-10-23T01:37:26Z",
+    "seconds": 17.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39883783663/job/120191046412",
+    "log_file": null
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39883783663,
+    "event": "pull_request",
+    "attempt": 1,
+    "job_id": 120191143087,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:37:27Z",
+    "completed_at": "2026-10-23T01:37:30Z",
+    "seconds": 3.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39883783663/job/120191143087",
+    "log_file": null
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39885158639,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191516944,
+    "name": "Plan",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:42Z",
+    "completed_at": "2026-10-23T01:40:00Z",
+    "seconds": 78.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39885158639/job/120191516944",
+    "log_file": "tron-processor-rust/runs/39885158639/job-120191516944.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [
+      "2026-10-23T01:39:43.9227502Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:39:43.9228384Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-01fe00daf763bc32194fba0a67a3d18dbea33609858eff5ef4085ed2320dbfff",
+        "archive_bytes": 352030617
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-f6f9d75a056825bc8c70a435396e9f9b2512d1ae8a4014e4a8fb26cbfecb58be",
+        "archive_bytes": 113522727
+      }
+    ]
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39885158639,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191517177,
+    "name": "Jactionlint",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:42Z",
+    "completed_at": "2026-10-23T01:38:55Z",
+    "seconds": 13.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39885158639/job/120191517177",
+    "log_file": "tron-processor-rust/runs/39885158639/job-120191517177.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-47b780117aa4ede3408349bc01d970a91c1cb3e2ee66718361244f288361d78f",
+        "archive_bytes": 64915132
+      }
+    ]
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39885158639,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191915872,
+    "name": "Rust / tron-processor-fixtures",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:40:02Z",
+    "completed_at": "2026-10-23T01:41:11Z",
+    "seconds": 69.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39885158639/job/120191915872",
+    "log_file": "tron-processor-rust/runs/39885158639/job-120191915872.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:41:00.7518818Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:41:01.8194908Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:41:01.9798648Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 11.6 KiB stored locally",
+      "2026-10-23T01:41:02.2165244Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 160.4 KiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:40:58.7056670Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:40:58.7068813Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359089777
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-f6f9d75a056825bc8c70a435396e9f9b2512d1ae8a4014e4a8fb26cbfecb58be",
+        "archive_bytes": 113522727
+      }
+    ]
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39885158639,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191915925,
+    "name": "Rust / tron-processor-app",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:40:02Z",
+    "completed_at": "2026-10-23T01:52:12Z",
+    "seconds": 730.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39885158639/job/120191915925",
+    "log_file": "tron-processor-rust/runs/39885158639/job-120191915925.log.gz",
+    "compiling_message_count": 756,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:45:45.2584202Z mbx[cache]: object cache: 0 hits, 0 misses, 542 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 1.7 GiB stored locally",
+      "2026-10-23T01:45:52.0486538Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:51:29.6354893Z mbx[cache]: object cache: 117 hits, 13 misses, 356 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 697.4 MiB stored locally",
+      "2026-10-23T01:51:50.5855607Z mbx[cache]: object cache: 232 hits, 19 misses, 307 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 617.0 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:41:25.5785679Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:41:25.5786532Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359089777
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-f6f9d75a056825bc8c70a435396e9f9b2512d1ae8a4014e4a8fb26cbfecb58be",
+        "archive_bytes": 113522727
+      }
+    ]
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39885158639,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191915927,
+    "name": "Dependency seed",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:40:02Z",
+    "completed_at": "2026-10-23T01:52:14Z",
+    "seconds": 732.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39885158639/job/120191915927",
+    "log_file": "tron-processor-rust/runs/39885158639/job-120191915927.log.gz",
+    "compiling_message_count": 755,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:46:02.7675746Z mbx[cache]: object cache: 0 hits, 0 misses, 548 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 1.8 GiB stored locally",
+      "2026-10-23T01:49:37.3047345Z mbx[cache]: object cache: 0 hits, 0 misses, 565 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 1011.2 MiB stored locally",
+      "2026-10-23T01:51:19.0792842Z mbx[cache]: object cache: 349 hits, 35 misses, 105 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 304.5 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:41:05.0089133Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:41:05.0092015Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [
+      "2026-10-23T01:52:00.0086345Z exported 1249 actions and 7937 objects (3.1 GiB) for export group \"velnor\"",
+      "2026-10-23T01:52:00.6722476Z velnor: mbx bundle not exported (over_ceiling)"
+    ],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-a802af81fe6e1461c418101c69691b63c4cd38c43fdc0aeb79a625874f18cceb",
+        "archive_bytes": 348017851
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-f6f9d75a056825bc8c70a435396e9f9b2512d1ae8a4014e4a8fb26cbfecb58be",
+        "archive_bytes": 113522727
+      }
+    ]
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39885158639,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191915982,
+    "name": "Rust / tron-model-proto",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:40:02Z",
+    "completed_at": "2026-10-23T01:41:11Z",
+    "seconds": 69.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39885158639/job/120191915982",
+    "log_file": "tron-processor-rust/runs/39885158639/job-120191915982.log.gz",
+    "compiling_message_count": 1,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:41:00.7410361Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 1.1 MiB stored locally",
+      "2026-10-23T01:41:02.2028243Z mbx[cache]: object cache: 0 hits, 0 misses, 2 not looked up; 0 B downloaded, 0 B uploaded, 9.9 KiB stored locally",
+      "2026-10-23T01:41:02.2217931Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:41:02.2219139Z mbx[cache]: object cache: 0 hits, 1 misses; 0 B downloaded, 0 B uploaded, 145.1 KiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:40:59.7582206Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:40:59.7583413Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359089777
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-f6f9d75a056825bc8c70a435396e9f9b2512d1ae8a4014e4a8fb26cbfecb58be",
+        "archive_bytes": 113522727
+      }
+    ]
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39885158639,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191916028,
+    "name": "Rust / tron-migration",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:40:02Z",
+    "completed_at": "2026-10-23T01:47:38Z",
+    "seconds": 456.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39885158639/job/120191916028",
+    "log_file": "tron-processor-rust/runs/39885158639/job-120191916028.log.gz",
+    "compiling_message_count": 474,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [
+      "2026-10-23T01:43:45.6324815Z mbx[cache]: object cache: 0 hits, 0 misses, 335 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 941.5 MiB stored locally",
+      "2026-10-23T01:43:47.5722531Z mbx[cache]: object cache: 0 hits, 0 misses, 1 bypassed; 0 B downloaded, 0 B uploaded, 0 B stored locally",
+      "2026-10-23T01:47:06.3082699Z mbx[cache]: object cache: 38 hits, 1 misses, 173 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 410.7 MiB stored locally",
+      "2026-10-23T01:47:26.4698660Z mbx[cache]: object cache: 116 hits, 0 misses, 234 not looked up, 6 bypassed; 0 B downloaded, 0 B uploaded, 566.6 MiB stored locally"
+    ],
+    "sources_status": [
+      "2026-10-23T01:41:00.6362026Z velnor: sources hit, skipping fetch",
+      "2026-10-23T01:41:00.6362773Z velnor: sources downloaded=0"
+    ],
+    "mbx_bundle_restore_miss": true,
+    "mbx_exports": [],
+    "observed_cache_archives": [
+      {
+        "key": "mise-tools-v2-60ffe74b07a2abccea04f9edd1cb5182b87eb83cb5252b861149f4f486085667",
+        "archive_bytes": 359089777
+      },
+      {
+        "key": "velnor-v2-sources-trusted-s256-e32b46924cd679f385a2d1a7e3c22253aa3c0be67fb101bb0e636963ba16b528-s256-f6f9d75a056825bc8c70a435396e9f9b2512d1ae8a4014e4a8fb26cbfecb58be",
+        "archive_bytes": 113522727
+      }
+    ]
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39885158639,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120195519392,
+    "name": "Required verdict",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:52:14Z",
+    "completed_at": "2026-10-23T01:52:29Z",
+    "seconds": 15.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39885158639/job/120195519392",
+    "log_file": null
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39885158639,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120195603716,
+    "name": "Required",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:52:31Z",
+    "completed_at": "2026-10-23T01:52:35Z",
+    "seconds": 4.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39885158639/job/120195603716",
+    "log_file": null
+  },
+  {
+    "repo": "tron-processor-rust",
+    "run_id": 39885158713,
+    "event": "push",
+    "attempt": 1,
+    "job_id": 120191516716,
+    "name": "Prune superseded cache entries",
+    "conclusion": "success",
+    "started_at": "2026-10-23T01:38:42Z",
+    "completed_at": "2026-10-23T01:38:47Z",
+    "seconds": 5.0,
+    "url": "https://github.com/ChainArgos/tron-processor-rust/actions/runs/39885158713/job/120191516716",
+    "log_file": "tron-processor-rust/runs/39885158713/job-120191516716.log.gz",
+    "compiling_message_count": 0,
+    "actual_compiler_invocations": null,
+    "native_mbx_stats": [],
+    "sources_status": [],
+    "mbx_bundle_restore_miss": false,
+    "mbx_exports": [],
+    "observed_cache_archives": []
+  }
+]

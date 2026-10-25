@@ -1,0 +1,56 @@
+[
+  {
+    "repository": "jackin-project/jackin",
+    "head": "faa2ab6c12e3de45a76ab6b98df0c64dac7aac6e",
+    "generator": "0.1.52",
+    "access": "source and selected jobs readable; public"
+  },
+  {
+    "repository": "tailrocks/velnor-new",
+    "head": "e851b39e3bedc664f8bd6470c629e7bac36c561c",
+    "generator": "0.1.53",
+    "access": "source and selected jobs readable; public"
+  },
+  {
+    "repository": "ChainArgos/bitcoin-grpc-server",
+    "head": "cd0a5bfb92538c230d1762b0ab7fafb52282fc33",
+    "generator": "0.1.41",
+    "access": "source and selected jobs readable; private"
+  },
+  {
+    "repository": "ChainArgos/bitcoin-processor-rust",
+    "head": "d9115d1d42c881b23e6a5dd2f0dcd2dab5f3babd",
+    "generator": "0.1.41",
+    "access": "source and selected jobs readable; private"
+  },
+  {
+    "repository": "ChainArgos/blockchain-explorer",
+    "head": "4b9fc98f29705541d74e181dcc52c717c21e6075",
+    "generator": "0.1.41",
+    "access": "source and selected jobs readable; private"
+  },
+  {
+    "repository": "ChainArgos/eth-grpc-server",
+    "head": "4b97aa1a0cf8c15f7a2ab75435c7c6da270b2ea6",
+    "generator": "0.1.41",
+    "access": "source and selected jobs readable; private"
+  },
+  {
+    "repository": "ChainArgos/eth-processor-rust",
+    "head": "c08aa7d5232e43466fcfd4fa6929ef7dec7bb76c",
+    "generator": "0.1.41",
+    "access": "source and selected jobs readable; private"
+  },
+  {
+    "repository": "ChainArgos/tron-grpc-server",
+    "head": "9143caa0321469ca6627a9feb638e20da714dcb5",
+    "generator": "0.1.41",
+    "access": "source and selected jobs readable; private"
+  },
+  {
+    "repository": "ChainArgos/tron-processor-rust",
+    "head": "0e2a1050b34284530047a49d9a65fff333cecaed",
+    "generator": "0.1.41",
+    "access": "source and selected jobs readable; private"
+  }
+]

@@ -1,0 +1,196 @@
+{
+  "plan": "Velnor GitHub-only cache replacement",
+  "date": "2026-10-25",
+  "files": [
+    {
+      "path": "ACCEPTANCE.md",
+      "bytes": 59311,
+      "sha256": "e4898079990041c3df327bc1cfa067b3a60f6c2221c4e6d37b9a32fb10ea0e46"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "bytes": 46963,
+      "sha256": "c3fac5e1bd3d2a703ed7db42e0b666e0e7ae1ad1f1dba9a72db5181124b71eec"
+    },
+    {
+      "path": "CACHE_BUDGET.json",
+      "bytes": 10813,
+      "sha256": "e098cca4d65950ee6ba1cad8fae8038a761acf31e1f9c8a630b0df19b32fa8d6"
+    },
+    {
+      "path": "CACHE_BUDGET.md",
+      "bytes": 15599,
+      "sha256": "eec63fc255276b06a4d45bbef06cac2cb0e3e18fc652928e4ffc95874c7368c5"
+    },
+    {
+      "path": "CAPABILITIES.md",
+      "bytes": 26349,
+      "sha256": "1a87c6d1c492e1e57461181173cf9a7a877ba199edf3a816bcf5c06d78adf970"
+    },
+    {
+      "path": "CAPACITY_REVIEW.md",
+      "bytes": 26972,
+      "sha256": "582f2a119973ca5fa0e195a5b812b16fc202f78ac5dc7f18140c2c2d654bc465"
+    },
+    {
+      "path": "CONSTRAINT_REVIEW.md",
+      "bytes": 7097,
+      "sha256": "ee7bb1e0a47b8df7b9e96a95a3842029ad7963a888a6afec335d6f5c003b4a1a"
+    },
+    {
+      "path": "CONTRACTS.md",
+      "bytes": 39021,
+      "sha256": "ec84393d0d8d84f138d2879b5ffeefa83deba300751a4d5ed671780819082735"
+    },
+    {
+      "path": "EVIDENCE.md",
+      "bytes": 18136,
+      "sha256": "4cbe8342a6a8ac9f144a8c6e6eab9999554bbfeab15897abd85f0c26a8511046"
+    },
+    {
+      "path": "GOAL.txt",
+      "bytes": 9028,
+      "sha256": "9bbbe688767b38da6a6cbb9ed156d8ec2b7bb7bf1e2fcdad1dc2d5337355c0fc"
+    },
+    {
+      "path": "MIGRATION.md",
+      "bytes": 7015,
+      "sha256": "602b4dd6ea7b17ea1784cd50f1fd8be849c3d5c0e8363c64b4617a367376d7d1"
+    },
+    {
+      "path": "PLAN_VALIDATION.json",
+      "bytes": 2361,
+      "sha256": "0944abb3ff7d33c03b6796522f57687bfe176ad47b36f3b7e0449761f88164eb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5557,
+      "sha256": "79169a5f513b094729468a0ce5ef6234fb8766e7e83654e96667a004279dfd66"
+    },
+    {
+      "path": "REPOSITORY_FINDINGS.md",
+      "bytes": 25112,
+      "sha256": "b82ec43520f4d305d02baf0ad3f79f2aa93b51b602bc964563349e66cbf5a404"
+    },
+    {
+      "path": "RUST_RESEARCH.md",
+      "bytes": 19461,
+      "sha256": "756b9796128839e467a5a1659b7cb6a81930951852a4e933d65d981ede982945"
+    },
+    {
+      "path": "RUST_SECURITY_REVIEW.md",
+      "bytes": 31472,
+      "sha256": "d0b9e9ac7395457932ddfa1b02c0798fa81c81b095e76044c54abf2f4d934fbd"
+    },
+    {
+      "path": "TASKS.json",
+      "bytes": 301615,
+      "sha256": "1f521b23ea4c5bc4054dc3f52dd03b8c3e4bb02334f14e05f4f3d12631328683"
+    },
+    {
+      "path": "TASKS.md",
+      "bytes": 185225,
+      "sha256": "025cc9e81b9abeae0e140a73e1e89f3546fcd57f7b5099d1a693998c594822fa"
+    },
+    {
+      "path": "TASKS_BRIEF.md",
+      "bytes": 66825,
+      "sha256": "7a1bf1d15bb65e739c9e3e66b881cf39ffa2077bb35ad1dd7e986c311f9828f0"
+    },
+    {
+      "path": "WORKFLOWS.md",
+      "bytes": 10306,
+      "sha256": "4f36c47dc3d280700f5570c41f431b1a25850248882fa0857f2723e2db86ffe6"
+    },
+    {
+      "path": "evidence/cache-access-errors.json",
+      "bytes": 2361,
+      "sha256": "32023bf42fae1bc34bb111c6536a5a72332d734e82ff82bac18bd698359c4895"
+    },
+    {
+      "path": "evidence/chainargos-job-observations.json",
+      "bytes": 136460,
+      "sha256": "fd0af4fc73e621c77d18a87931e5f5db317ec2f8c5f111365218676bb40f8c80"
+    },
+    {
+      "path": "evidence/chainargos-recipe-facts.json",
+      "bytes": 122178,
+      "sha256": "bce33bf3b7a91def2117ed4856af9fdf4d5b288267d22e62807962257a0a86f7"
+    },
+    {
+      "path": "evidence/chainargos-source-manifest.json",
+      "bytes": 115805,
+      "sha256": "7ef832daafab3f3a85c394af102bed7041882cc8eb2f2f99b4069cd2be1faa52"
+    },
+    {
+      "path": "evidence/jackin-current-observations.json",
+      "bytes": 202177,
+      "sha256": "745489fda6fce09cfbbbcbbb869499627c9bf92f360b28662bc97e46f1272970"
+    },
+    {
+      "path": "evidence/jobs.json",
+      "bytes": 3366257,
+      "sha256": "d952ac51250372a8c33282f6a5678f0cdab905353a80d9a3b25c66241b6d2740"
+    },
+    {
+      "path": "evidence/pipelines.json",
+      "bytes": 22120,
+      "sha256": "08d0d257f349ff1e310f07c918535219d40104864d9a22b4b66073acb1d699ba"
+    },
+    {
+      "path": "evidence/repositories.json",
+      "bytes": 1804,
+      "sha256": "47deb6fd0193d05de0616cff21bca21612cd7e71fa4929a9e25bbb8cea2d340e"
+    },
+    {
+      "path": "evidence/velnor-observed-cache-sizes.json",
+      "bytes": 3150,
+      "sha256": "fe8cc85997a40adca68fb15252038ada10f7ad8cb675386672ef1280519861b5"
+    },
+    {
+      "path": "evidence/workflow-generators.json",
+      "bytes": 29048,
+      "sha256": "b360d08fb292b9ac110a390daa785501a8fa3b69b2b787492bae7817313cfbb1"
+    },
+    {
+      "path": "reviews/capacity.md",
+      "bytes": 26972,
+      "sha256": "582f2a119973ca5fa0e195a5b812b16fc202f78ac5dc7f18140c2c2d654bc465"
+    },
+    {
+      "path": "reviews/platform-final.md",
+      "bytes": 8653,
+      "sha256": "bd7dea6240e7c9a4c19638673e2faf29f271a64307d5773d26ac949bc170de49"
+    },
+    {
+      "path": "reviews/repository-evidence-completeness.md",
+      "bytes": 4689,
+      "sha256": "50bdcbed08fe89ae68be69b8c2a82d9c8c99505686b860e792abb417e07d22c6"
+    },
+    {
+      "path": "reviews/repository-task-quality-checks.json",
+      "bytes": 2142,
+      "sha256": "b422fe014ff4fa65139465116afc4f773349709130dd699830f92213d7f7f15b"
+    },
+    {
+      "path": "reviews/repository-task-quality-final.md",
+      "bytes": 14700,
+      "sha256": "2fa4e0cfd50fed318332b7e8a8ffe0cfddd2a050be63e09b7e256bd64afba3c8"
+    },
+    {
+      "path": "reviews/rust-security.md",
+      "bytes": 31475,
+      "sha256": "bb8c278238a9982bd7c1b09ee3dfda7fc3c61c954375a9674ab0d5a0b3ff3e91"
+    },
+    {
+      "path": "reviews/rust-source-final.md",
+      "bytes": 15210,
+      "sha256": "05f1703c21d5c795e2d2105c789e97d14cb7f9c1bcf2fa0b77d6918d3158c237"
+    },
+    {
+      "path": "reviews/rust-source-initial.md",
+      "bytes": 10961,
+      "sha256": "ffe0f7059a961daa33e3f16ac256ceca90186bdb1ace70dccc6027abcf355b2b"
+    }
+  ]
+}
