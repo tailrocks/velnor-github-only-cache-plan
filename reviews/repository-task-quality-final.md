@@ -39,25 +39,15 @@ T01's future regression, removal, and generated-output maps must be expanded bef
 The plan requires forward writer edges and another cycle/conflict check at that boundary.
 It does not assume that unknown paths cannot conflict.
 
-## 2. Models and task size
+## 2. Subagents and task size
 
-| Implementer | Cards |
-|---|---:|
-| GPT-6-Luna low | 7 |
-| GPT-6-Luna medium | 61 |
-| GPT-6-Luna high | 11 |
-| GPT-6.1-Sol high, named reviews | 2 |
-
-Luna low or medium owns 68 of 81 cards.
-It owns 63 of 74 ordinary implementation, contract, verification, and migration cards.
-Both are strict majorities.
-No routine task is assigned to Astra.
-The recorded Astra planning role does not change implementation assignments.
+Implementation, verification, and review run in subagents.
+No model is prescribed.
 
 T56 owns the named security review.
 T57 owns the named architecture review.
-Their higher reasoning assignment is explicit.
-The Luna high work remains bounded by source owners and behavioral cases.
+Both run in subagents.
+That work remains bounded by source owners and behavioral cases.
 
 The 81-card count is not a defect by itself.
 The added cards separate bootstrap, production recipes, fixed authority fragments, and bounded qualification subsets.

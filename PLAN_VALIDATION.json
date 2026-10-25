@@ -1,7 +1,7 @@
 {
   "status": "planning_structure_checked_runtime_pending",
   "date": "2026-10-25",
-  "task_json_sha256": "1f521b23ea4c5bc4054dc3f52dd03b8c3e4bb02334f14e05f4f3d12631328683",
+  "task_json_sha256": "375a36aaa5819547c7365fca73a979ead202132b44a25cb7107f4fd2fdb4e835",
   "task_count": 81,
   "edge_count": 207,
   "topological_order": [
@@ -118,28 +118,7 @@
     "C21",
     "C22"
   ],
-  "implementer_assignments": [
-    {
-      "model": "GPT-6-Luna",
-      "reasoning": "low",
-      "count": 7
-    },
-    {
-      "model": "GPT-6-Luna",
-      "reasoning": "medium",
-      "count": 61
-    },
-    {
-      "model": "GPT-6-Luna",
-      "reasoning": "high",
-      "count": 11
-    },
-    {
-      "model": "GPT-6.1-Sol",
-      "reasoning": "high",
-      "count": 2
-    }
-  ],
+  "subagent_assignments": "Implementation, verification, and review run in subagents. No model is prescribed. T56 owns the named security review. T57 owns the named architecture review.", 
   "no_runtime_claim": "This check executes no implementation tests, compiler experiment, or hosted workflow.",
   "ste_note": "Sentence-length and style checks do not constitute independent ASD-STE100 certification."
 }

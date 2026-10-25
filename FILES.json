@@ -34,8 +34,8 @@
     },
     {
       "path": "CONSTRAINT_REVIEW.md",
-      "bytes": 7097,
-      "sha256": "ee7bb1e0a47b8df7b9e96a95a3842029ad7963a888a6afec335d6f5c003b4a1a"
+      "bytes": 7081,
+      "sha256": "f1f85f29af9f210e95c1e36077f20e3c89ecf284077d47f7b6bbce8ea83b9adb"
     },
     {
       "path": "CONTRACTS.md",
@@ -48,9 +48,9 @@
       "sha256": "4cbe8342a6a8ac9f144a8c6e6eab9999554bbfeab15897abd85f0c26a8511046"
     },
     {
-      "path": "GOAL.txt",
-      "bytes": 9028,
-      "sha256": "9bbbe688767b38da6a6cbb9ed156d8ec2b7bb7bf1e2fcdad1dc2d5337355c0fc"
+      "path": "GOAL.md",
+      "bytes": 9309,
+      "sha256": "b0cda56cb857598f8aa140f12a8a789af7488f8640112055a943ebcecfa2d213"
     },
     {
       "path": "MIGRATION.md",
@@ -59,13 +59,13 @@
     },
     {
       "path": "PLAN_VALIDATION.json",
-      "bytes": 2361,
-      "sha256": "0944abb3ff7d33c03b6796522f57687bfe176ad47b36f3b7e0449761f88164eb"
+      "bytes": 2167,
+      "sha256": "5fc497e2d48e52080320bc1fc1ee8fde513bd641d51d7d3e78f983e873050276"
     },
     {
       "path": "README.md",
-      "bytes": 5557,
-      "sha256": "79169a5f513b094729468a0ce5ef6234fb8766e7e83654e96667a004279dfd66"
+      "bytes": 5352,
+      "sha256": "25ced4eedbe056b22efdb419cc6248dd2d561ced87582c1c752b15da3d907ee5"
     },
     {
       "path": "REPOSITORY_FINDINGS.md",
@@ -84,18 +84,18 @@
     },
     {
       "path": "TASKS.json",
-      "bytes": 301615,
-      "sha256": "1f521b23ea4c5bc4054dc3f52dd03b8c3e4bb02334f14e05f4f3d12631328683"
+      "bytes": 304538,
+      "sha256": "fb7eb1ec4a89cdffcfff71b6997e1a72c8f8cc7e1548a4738f6508b192e46a67"
     },
     {
       "path": "TASKS.md",
-      "bytes": 185225,
-      "sha256": "025cc9e81b9abeae0e140a73e1e89f3546fcd57f7b5099d1a693998c594822fa"
+      "bytes": 180336,
+      "sha256": "509d3fde8cf13cec72e6132ee70cbf63a81ce7d8d060e4acd48499af583c2641"
     },
     {
       "path": "TASKS_BRIEF.md",
-      "bytes": 66825,
-      "sha256": "7a1bf1d15bb65e739c9e3e66b881cf39ffa2077bb35ad1dd7e986c311f9828f0"
+      "bytes": 66512,
+      "sha256": "0be1c55d570dba3b502f7041aaa2e613b14e7ea7f578bbc2540f114e743dd6a5"
     },
     {
       "path": "WORKFLOWS.md",
@@ -169,13 +169,13 @@
     },
     {
       "path": "reviews/repository-task-quality-checks.json",
-      "bytes": 2142,
-      "sha256": "b422fe014ff4fa65139465116afc4f773349709130dd699830f92213d7f7f15b"
+      "bytes": 1741,
+      "sha256": "fdf2fd8d30c4ab995a2798af17a607c22e2dcb0781a6732788085206c561142f"
     },
     {
       "path": "reviews/repository-task-quality-final.md",
-      "bytes": 14700,
-      "sha256": "2fa4e0cfd50fed318332b7e8a8ffe0cfddd2a050be63e09b7e256bd64afba3c8"
+      "bytes": 14332,
+      "sha256": "a25a645953709ed6f008eb2ba0f50e74038f4b960d6d93439596a094dcd2ad0a"
     },
     {
       "path": "reviews/rust-security.md",

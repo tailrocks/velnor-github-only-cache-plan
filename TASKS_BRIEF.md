@@ -8,7 +8,7 @@ This is a compact index of full executable cards in TASKS.md. TASKS.json supplie
 
 ## T01 — Freeze source and caller ownership
 
-Requires: none. Worker: GPT-6-Luna low. Reviewer: medium.
+Requires: none. Use implementation and review subagents.
 
 Files: D/source-map.json; D/caller-map.md; D/output-map.json; D/regression-map.json; D/removal-map.json.
 
@@ -36,7 +36,7 @@ Block: Record access-dependent paths as unknown. Do not invent their contents.
 
 ## T02 — Record inventories and baseline gaps
 
-Requires: T01. Worker: GPT-6-Luna low. Reviewer: medium.
+Requires: T01. Use implementation and review subagents.
 
 Files: D/baseline.json; D/cache-inventory.json; D/run-budget.json.
 
@@ -58,7 +58,7 @@ Block: Block only live measurement gates when access fails. Core implementation 
 
 ## T03 — Replace obsolete cache and grouping policies
 
-Requires: T01. Worker: GPT-6-Luna low. Reviewer: medium.
+Requires: T01. Use implementation and review subagents.
 
 Files: docs/hard-decisions.md; docs/proposed/cache-decisions.md; docs/proposed/cache-contract.md; docs/proposed/cache-families.md; docs/proposed/parallelism-and-selection-contract.md; docs/proposed/rust-quality-contract.md.
 
@@ -80,7 +80,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T04 — Define cache identity and coverage types
 
-Requires: T03. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T03. Use implementation and review subagents.
 
 Files: C/workflow/cache_policy.rs; C/workflow/cache_identity.rs; C/workflow/mod.rs.
 
@@ -102,7 +102,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T05 — Define execution context and outcome types
 
-Requires: T04. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T04. Use implementation and review subagents.
 
 Files: C/workflow/cache_context.rs; C/workflow/report.rs; C/workflow/report_validate.rs; C/workflow/mod.rs.
 
@@ -126,7 +126,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T06 — Derive dependency coverage without application churn
 
-Requires: T04. Worker: GPT-6-Luna high. Reviewer: medium.
+Requires: T04. Use implementation and review subagents.
 
 Files: R/closure.rs; R/identity.rs; R/identity_closure.rs.
 
@@ -148,7 +148,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T07 — Enumerate actual production and helper recipes
 
-Requires: T05, T06. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T05, T06. Use implementation and review subagents.
 
 Files: O/cache_recipes.rs; O/product_release_pins.rs; O/preview_producer.rs.
 
@@ -172,7 +172,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T08 — Plan compatible groups and exact unit sets
 
-Requires: T05, T06, T07. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T05, T06, T07. Use implementation and review subagents.
 
 Files: O/crate_jobs.rs; O/crate_jobs_build_jobs.rs; C/workflow/crate_job.rs.
 
@@ -194,7 +194,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T09 — Bind deterministic owned execution homes
 
-Requires: T05, T08. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T05, T08. Use implementation and review subagents.
 
 Files: O/cache_execution_context.rs; O/check_prepare.rs; M/check_execution.rs.
 
@@ -218,7 +218,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T10 — Restore authenticated source objects and original metadata
 
-Requires: T06, T09. Worker: GPT-6-Luna high. Reviewer: medium.
+Requires: T06, T09. Use implementation and review subagents.
 
 Files: O/cache_source_projection.rs; O/source_prep.rs; O/source_cache.rs.
 
@@ -246,7 +246,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T11 — Hydrate one verified source family
 
-Requires: T10. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T10. Use implementation and review subagents.
 
 Files: M/cache_sources.rs; M/cache_transport.rs; O/source_cache.rs.
 
@@ -268,7 +268,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T12 — Preserve private source authorization boundaries
 
-Requires: T09, T10, T11. Worker: GPT-6-Luna high. Reviewer: medium.
+Requires: T09, T10, T11. Use implementation and review subagents.
 
 Files: O/private_wiring.rs; O/private_fetch_session.rs; W/private_source_steps.rs.
 
@@ -290,7 +290,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T13 — Create one tool set for each host
 
-Requires: T04, T09. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T04, T09. Use implementation and review subagents.
 
 Files: O/tool_cache_pins.rs; W/cache_steps_tools_restore.rs; W/cache_p08_tool_payload.rs.
 
@@ -312,7 +312,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T14 — Reuse verified immutable tool acquisition
 
-Requires: T13. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T13. Use implementation and review subagents.
 
 Files: W/cache_steps_tools_installs_verify.sh; O/rust_toolchain_script.rs; W/cache_steps_tools_restore.rs.
 
@@ -334,7 +334,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T15 — Hydrate qualified tools inside private checks
 
-Requires: T09, T12, T14. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T09, T12, T14. Use implementation and review subagents.
 
 Files: O/check_tool_acquire.rs; O/check_tool_layout.rs; M/qualified_acquisition.rs.
 
@@ -356,7 +356,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T16 — Render the shared tool and cache homes
 
-Requires: T14, T15. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T14, T15. Use implementation and review subagents.
 
 Files: W/toolchain_env_homes.rs; W/toolchain_env.rs; W/cache_p08_runtime_prelude.rs.
 
@@ -378,7 +378,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T17 — Implement transparent Rust compiler observation
 
-Requires: T05, T09, T11. Worker: GPT-6-Luna high. Reviewer: medium.
+Requires: T05, T09, T11. Use implementation and review subagents.
 
 Files: M/compiler_observer.rs; M/command.rs; M/lib.rs.
 
@@ -402,7 +402,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T18 — Observe supported native compiler boundaries
 
-Requires: T17. Worker: GPT-6-Luna high. Reviewer: medium.
+Requires: T17. Use implementation and review subagents.
 
 Files: M/native_compiler_observer.rs; M/compiler_observer.rs; M/lib.rs.
 
@@ -424,7 +424,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T19 — Expose child compiler and acquisition evidence
 
-Requires: T09, T11, T15, T17, T18. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T09, T11, T15, T17, T18. Use implementation and review subagents.
 
 Files: O/compiler_observation.rs; O/check_runtime.rs; O/check_prepare.rs.
 
@@ -448,7 +448,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T20 — Pack complete state and safe manifests
 
-Requires: T05, T10, T19. Worker: GPT-6-Luna high. Reviewer: medium.
+Requires: T05, T10, T19. Use implementation and review subagents.
 
 Files: O/cache_snapshot.rs; O/cache_archive.rs; O/lib.rs.
 
@@ -476,7 +476,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T21 — Measure and qualify the outer archive envelope
 
-Requires: T20. Worker: GPT-6-Luna high. Reviewer: medium.
+Requires: T20. Use implementation and review subagents.
 
 Files: O/cache_archive_envelope.rs; O/cache_archive.rs; O/cache_snapshot.rs.
 
@@ -502,7 +502,7 @@ Block: An unknown hosted envelope blocks publication qualification. It does not 
 
 ## T22 — Implement repository-wide byte admission
 
-Requires: T04, T20, T21. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T04, T20, T21. Use implementation and review subagents.
 
 Files: O/cache_inventory.rs; O/cache_admission.rs; O/lib.rs.
 
@@ -528,7 +528,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T23 — Bind all cache families to the common contract
 
-Requires: T04, T05, T22. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T04, T05, T22. Use implementation and review subagents.
 
 Files: C/workflow/cache_family.rs; C/workflow/cache_family_steps.rs; O/stack_family_cache.rs.
 
@@ -552,7 +552,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T24 — Select exact generations and validate active intent
 
-Requires: T06, T22. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T06, T22. Use implementation and review subagents.
 
 Files: O/cache_discovery.rs; O/cache_keys.rs; O/cache_intent.rs.
 
@@ -582,7 +582,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T25 — Validate final coverage before publication
 
-Requires: T08, T19, T20, T24. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T08, T19, T20, T24. Use implementation and review subagents.
 
 Files: O/cache_coverage_replay.rs; O/crate_jobs_obligations.rs; O/compiler_observation.rs.
 
@@ -612,7 +612,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T26 — Publish immutable generations and verify remote bytes
 
-Requires: T21, T22, T24, T25. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T21, T22, T24, T25. Use implementation and review subagents.
 
 Files: O/cache_publication.rs; O/cache_recovery.rs; O/lib.rs.
 
@@ -638,7 +638,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T27 — Delete only verified superseded owned entries
 
-Requires: T26. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T26. Use implementation and review subagents.
 
 Files: O/cache_cleanup_policy.rs; O/cache_cleanup_emit.rs; O/cache_prune_emit.rs.
 
@@ -668,7 +668,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T28 — Expose existing-binary cache and observer operations
 
-Requires: T17, T26, T27. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T17, T26, T27. Use implementation and review subagents.
 
 Files: L/dispatch/cache.rs; L/dispatch/operation.rs; L/dispatch.rs.
 
@@ -692,7 +692,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T29 — Bind compiler adapter entry and environment
 
-Requires: T17, T18, T28. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T17, T18, T28. Use implementation and review subagents.
 
 Files: L/main.rs; L/dispatch/compiler.rs; W/task_wrapper_declared.rs.
 
@@ -716,7 +716,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T30 — Render thin source tool and state transport
 
-Requires: T16, T20, T23, T28. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T16, T20, T23, T28. Use implementation and review subagents.
 
 Files: W/cache_steps.rs; W/cache_steps_mbx_bundle.rs; W/cache_steps_mbx_gate.rs.
 
@@ -740,7 +740,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T31 — Render event permissions and writer queues
 
-Requires: T08, T27, T30. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T08, T27, T30. Use implementation and review subagents.
 
 Files: C/workflow/ir.rs; O/workflow_policy.rs; W/dispatch_cache_boundary.rs.
 
@@ -762,7 +762,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T32 — Integrate static reader writer and cleanup jobs
 
-Requires: T08, T24, T27, T31. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T08, T24, T27, T31. Use implementation and review subagents.
 
 Files: O/crate_jobs.rs; O/crate_jobs_build_jobs.rs; O/crate_jobs_stage.rs.
 
@@ -788,7 +788,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T33 — Integrate exact commands into isolated group lanes
 
-Requires: T09, T25, T29, T32. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T09, T25, T29, T32. Use implementation and review subagents.
 
 Files: O/crate_jobs_steps.rs; O/crate_jobs_obligations.rs; R/tasks.rs.
 
@@ -810,7 +810,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T34 — Integrate unit-level Required validation
 
-Requires: T05, T33. Worker: GPT-6-Luna high. Reviewer: medium.
+Requires: T05, T33. Use implementation and review subagents.
 
 Files: O/required_dispositions.rs; O/required_evidence.rs; W/required_gate.rs.
 
@@ -838,7 +838,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T35 — Bind grouped ledgers through the actual final merge
 
-Requires: T19, T34. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T19, T34. Use implementation and review subagents.
 
 Files: O/merge.rs; O/merge_checks.rs; O/merge_request.rs.
 
@@ -862,7 +862,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T36 — Carry observation evidence through existing report artifacts
 
-Requires: T34, T35. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T34, T35. Use implementation and review subagents.
 
 Files: O/retrieve_reports.rs; O/task_report.rs; W/required_gate.rs.
 
@@ -886,7 +886,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T37 — Validate owned measurement evidence and effective attempts
 
-Requires: T05, T36. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T05, T36. Use implementation and review subagents.
 
 Files: scripts/hosted_phase_measurement/measure_support.py; scripts/hosted_phase_measurement/report_events.py; scripts/hosted_phase_measurement/tests/test_gc1_observation.py.
 
@@ -910,7 +910,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T38 — Integrate complete lifecycle counters into the existing collector
 
-Requires: T37. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T37. Use implementation and review subagents.
 
 Files: scripts/hosted_phase_measurement/report_counters.py; scripts/hosted_phase_measurement/report_builder.py; scripts/hosted_phase_measurement/tests/test_gc1_observation.py.
 
@@ -934,7 +934,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T39 — Integrate named checks with restored context
 
-Requires: T09, T15, T19, T34, T36. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T09, T15, T19, T34, T36. Use implementation and review subagents.
 
 Files: O/check_prepare.rs; M/check_execution.rs; O/check_runtime.rs.
 
@@ -956,7 +956,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T40 — Integrate preview native producers
 
-Requires: T07, T30, T39. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T07, T30, T39. Use implementation and review subagents.
 
 Files: O/preview_producer.rs; O/preview_production_execution.rs; O/native_mise_tasks.rs.
 
@@ -978,7 +978,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T41 — Integrate stable and native build callers
 
-Requires: T40. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T40. Use implementation and review subagents.
 
 Files: O/native_check_runtime/execute.rs; O/native_check_runtime/install.rs; W/native_check_execution.rs.
 
@@ -1000,7 +1000,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T42 — Bind product release build groups
 
-Requires: T31, T41. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T31, T41. Use implementation and review subagents.
 
 Files: W/schema2_generator_release_jobs.rs; W/schema2_generator_release_workflow_steps.rs; W/schema2_generator_release_assets.rs.
 
@@ -1026,7 +1026,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T43 — Restore the pinned controller before cache operations
 
-Requires: T14, T30, T42. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T14, T30, T42. Use implementation and review subagents.
 
 Files: W/closure.rs; W/steps.rs; W/cache_bootstrap.py.
 
@@ -1058,7 +1058,7 @@ Block: Block warm activation until a real approved controller release supports t
 
 ## T44 — Integrate Plan and source-bound helper reuse
 
-Requires: T14, T29, T30, T43. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T14, T29, T30, T43. Use implementation and review subagents.
 
 Files: O/workflow_jobs_cache.rs; W/preseed.rs; W/preseed_closure.rs.
 
@@ -1084,7 +1084,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T45 — Factor fixed image record and archive validation
 
-Requires: T05, T44. Worker: GPT-6-Luna high. Reviewer: medium.
+Requires: T05, T44. Use implementation and review subagents.
 
 Files: W/job_image_authority_record.py; W/job_image_authority_oci.py; W/job_image_authority_tar.py.
 
@@ -1106,7 +1106,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T46 — Factor fixed image identity and publication logic
 
-Requires: T45. Worker: GPT-6-Luna high. Reviewer: medium.
+Requires: T45. Use implementation and review subagents.
 
 Files: W/job_image_authority_identity.py; W/job_image_authority_registry.py; W/job_image_authority_publish.py.
 
@@ -1130,7 +1130,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T47 — Compose one source-free image authority body
 
-Requires: T46. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T46. Use implementation and review subagents.
 
 Files: W/job_image_authority.rs; W/schema2_job_image_candidate.rs; O/image_maintenance/source.rs.
 
@@ -1156,7 +1156,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T48 — Remove source execution from image authority jobs
 
-Requires: T14, T44, T47. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T14, T44, T47. Use implementation and review subagents.
 
 Files: W/schema2_job_image_candidate.rs; W/schema2_job_image_native.rs; W/job_image_authority.rs.
 
@@ -1180,7 +1180,7 @@ Block: Block this path if existing capabilities cannot preserve every product tr
 
 ## T49 — Apply common admission to existing cache families
 
-Requires: T22, T23, T30, T41. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T22, T23, T30, T41. Use implementation and review subagents.
 
 Files: O/stack_family_cache.rs; O/tofu_cache.rs; W/cache_steps_family.rs.
 
@@ -1206,7 +1206,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T50 — Replace unbounded qualification cache writers
 
-Requires: T31, T48, T49. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T31, T48, T49. Use implementation and review subagents.
 
 Files: W/matrix_qualification.rs; W/schema2_mbx_qualification.rs; C/workflow/qualification_cache_lineage.rs.
 
@@ -1228,7 +1228,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T51 — Replace obsolete consumer cache settings
 
-Requires: T03, T31, T49. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T03, T31, T49. Use implementation and review subagents.
 
 Files: O/config.rs; O/config_workflow.rs; C/config/workflow.rs.
 
@@ -1250,7 +1250,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T52 — Complete cross-crate caller bindings
 
-Requires: T26, T34, T38, T42, T44, T48, T50, T51. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T26, T34, T38, T42, T44, T48, T50, T51. Use implementation and review subagents.
 
 Files: O/lib.rs; C/workflow_reexports.rs; W/lib.rs.
 
@@ -1272,7 +1272,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T53 — Complete pure cache contract regression fixtures
 
-Requires: T22, T23, T24, T52. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T22, T23, T24, T52. Use implementation and review subagents.
 
 Files: crates/velnor-actions-contract/tests/gc1_contract_cases.rs; crates/velnor-actions-contract/tests/velnor_contract.rs.
 
@@ -1294,7 +1294,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T54 — Complete snapshot and observer regression fixtures
 
-Requires: T10, T19, T52. Worker: GPT-6-Luna high. Reviewer: medium.
+Requires: T10, T19, T52. Use implementation and review subagents.
 
 Files: crates/velnor-actions-orchestrator/tests/gc1_runtime_cases.rs; crates/velnor-actions-orchestrator/tests/velnor_orchestrator.rs.
 
@@ -1320,7 +1320,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T55 — Complete event and failure workflow fixtures
 
-Requires: T31, T34, T50, T52. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T31, T34, T50, T52. Use implementation and review subagents.
 
 Files: crates/velnor-actions-workflow-renderer/tests/gc1_workflow_cases.rs; crates/velnor-actions-workflow-renderer/tests/velnor_workflow_renderer.rs.
 
@@ -1346,7 +1346,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T56 — Review cache and authority boundaries
 
-Requires: T12, T48, T54, T55. Worker: GPT-6.1-Sol high. Reviewer: high.
+Requires: T12, T48, T54, T55. Use review subagents.
 
 Files: docs/reviews/cache-github-only-security.md.
 
@@ -1368,7 +1368,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T57 — Review integrated architecture and task coverage
 
-Requires: T01, T53, T54, T55, T56. Worker: GPT-6.1-Sol high. Reviewer: high.
+Requires: T01, T53, T54, T55, T56. Use review subagents.
 
 Files: docs/reviews/cache-github-only-architecture.md; D/caller-map.md.
 
@@ -1390,7 +1390,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T58 — Define the bounded qualification harness and run commands
 
-Requires: T54, T57. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T54, T57. Use implementation and review subagents.
 
 Files: crates/velnor-actions-orchestrator/tests/gc1_qualification_cases.rs; crates/velnor-actions-orchestrator/tests/gc1_qualification_support.rs; crates/velnor-actions-orchestrator/tests/velnor_orchestrator.rs; docs/implemented/cache-github-only-qualification.md; D/run-commands.json.
 
@@ -1418,7 +1418,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T59 — Implement input and cold-to-warm qualification cases
 
-Requires: T58. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T58. Use implementation and review subagents.
 
 Files: crates/velnor-actions-orchestrator/tests/gc1_qualification_inputs.rs; crates/velnor-actions-orchestrator/tests/gc1_qualification_cases.rs.
 
@@ -1444,7 +1444,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T60 — Implement event and cancellation qualification cases
 
-Requires: T59. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T59. Use implementation and review subagents.
 
 Files: crates/velnor-actions-orchestrator/tests/gc1_qualification_lifecycle.rs; crates/velnor-actions-orchestrator/tests/gc1_qualification_cases.rs.
 
@@ -1470,7 +1470,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T61 — Implement publication and recovery qualification cases
 
-Requires: T60. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T60. Use implementation and review subagents.
 
 Files: crates/velnor-actions-orchestrator/tests/gc1_qualification_failure.rs; crates/velnor-actions-orchestrator/tests/gc1_qualification_cases.rs.
 
@@ -1496,7 +1496,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T62 — Implement private-home release and pressure qualification cases
 
-Requires: T61. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T61. Use implementation and review subagents.
 
 Files: crates/velnor-actions-orchestrator/tests/gc1_qualification_paths.rs; crates/velnor-actions-orchestrator/tests/gc1_qualification_cases.rs.
 
@@ -1522,7 +1522,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T63 — Run full verification before candidate integration
 
-Requires: T62. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T62. Use implementation and review subagents.
 
 Files: docs/reviews/cache-github-only-local-verification.json.
 
@@ -1546,7 +1546,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T64 — Prepare the reviewed generator candidate and activation handoff
 
-Requires: T63. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T63. Use implementation and review subagents.
 
 Files: docs/reviews/cache-github-only-candidate.json; .velnor/config.toml.
 
@@ -1572,7 +1572,7 @@ Block: Wait for explicit owner activation of the reviewed candidate. Do not merg
 
 ## T65 — Qualify cold warm and dependency-change behavior
 
-Requires: T02, T64. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T02, T64. Use implementation and review subagents.
 
 Files: docs/reviews/cache-github-only-hosted-warm.json.
 
@@ -1594,7 +1594,7 @@ Block: Remain blocked until hosted execution and its run budget are authorized. 
 
 ## T66 — Qualify event authority and recovery behavior
 
-Requires: T65. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T65. Use implementation and review subagents.
 
 Files: docs/reviews/cache-github-only-hosted-lifecycle.json.
 
@@ -1616,7 +1616,7 @@ Block: Use dedicated owned test entries. Actual default-branch and release-path 
 
 ## T67 — Qualify capacity migration and competing families
 
-Requires: T02, T27, T65. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T02, T27, T65. Use implementation and review subagents.
 
 Files: docs/reviews/cache-github-only-hosted-capacity.json; D/cache-budget.json.
 
@@ -1638,7 +1638,7 @@ Block: Report the exact capacity conflict when a fit fails. Do not substitute ex
 
 ## T68 — Remove obsolete dependency seed implementation
 
-Requires: T58, T66, T67. Worker: GPT-6-Luna low. Reviewer: medium.
+Requires: T58, T66, T67. Use implementation and review subagents.
 
 Files: O/dependency_seed.rs; C/workflow/dependency_seed.rs; O/workflow_jobs.rs.
 
@@ -1660,7 +1660,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T69 — Remove persisted MBX cache policies and rendering
 
-Requires: T55, T68. Worker: GPT-6-Luna low. Reviewer: medium.
+Requires: T55, T68. Use implementation and review subagents.
 
 Files: C/workflow/cache_family_mbx.rs; W/cache_steps_mbx_scripts.rs; W/cache_steps_mbx_command.rs.
 
@@ -1682,7 +1682,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T70 — Remove old family elections and pruning policies
 
-Requires: T69. Worker: GPT-6-Luna low. Reviewer: medium.
+Requires: T69. Use implementation and review subagents.
 
 Files: W/cache_elect.rs; W/cache_save_budget.rs; W/cache_prune.rs; M/cache_trust.rs.
 
@@ -1704,7 +1704,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T71 — Publish the qualified cache contract and operations guide
 
-Requires: T03, T70. Worker: GPT-6-Luna low. Reviewer: medium.
+Requires: T03, T70. Use implementation and review subagents.
 
 Files: docs/proposed/cache-contract.md; docs/proposed/cache-families.md; docs/implemented/cache-github-only-operations.md.
 
@@ -1726,7 +1726,7 @@ Block: Stop this task when a required interface or capability is missing. Contin
 
 ## T72 — Finalize the qualified generator and immutable consumer pin
 
-Requires: T64, T71. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T64, T71. Use implementation and review subagents.
 
 Files: docs/reviews/cache-github-only-final-candidate.json; .velnor/config.toml.
 
@@ -1754,7 +1754,7 @@ Block: Stage the complete change for approval. Do not invent a release, merge, o
 
 ## T73 — Migrate jackin-project/jackin
 
-Requires: T66, T67, T72. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T66, T67, T72. Use implementation and review subagents.
 
 Files: .velnor/config.toml.
 
@@ -1778,7 +1778,7 @@ Block: Block activation when the approved pin, run authorization, native observa
 
 ## T74 — Migrate ChainArgos/blockchain-explorer
 
-Requires: T66, T67, T72. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T66, T67, T72. Use implementation and review subagents.
 
 Files: .velnor/config.toml.
 
@@ -1802,7 +1802,7 @@ Block: Block activation when the approved pin, run authorization, native observa
 
 ## T75 — Migrate ChainArgos/bitcoin-grpc-server
 
-Requires: T66, T67, T72. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T66, T67, T72. Use implementation and review subagents.
 
 Files: .velnor/config.toml.
 
@@ -1826,7 +1826,7 @@ Block: Block activation when the approved pin, run authorization, native observa
 
 ## T76 — Migrate ChainArgos/eth-grpc-server
 
-Requires: T66, T67, T72. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T66, T67, T72. Use implementation and review subagents.
 
 Files: .velnor/config.toml.
 
@@ -1850,7 +1850,7 @@ Block: Block activation when the approved pin, run authorization, native observa
 
 ## T77 — Migrate ChainArgos/tron-grpc-server
 
-Requires: T66, T67, T72. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T66, T67, T72. Use implementation and review subagents.
 
 Files: .velnor/config.toml.
 
@@ -1874,7 +1874,7 @@ Block: Block activation when the approved pin, run authorization, native observa
 
 ## T78 — Migrate ChainArgos/bitcoin-processor-rust
 
-Requires: T66, T67, T72. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T66, T67, T72. Use implementation and review subagents.
 
 Files: .velnor/config.toml.
 
@@ -1898,7 +1898,7 @@ Block: Block activation when the approved pin, run authorization, native observa
 
 ## T79 — Migrate ChainArgos/eth-processor-rust
 
-Requires: T66, T67, T72. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T66, T67, T72. Use implementation and review subagents.
 
 Files: .velnor/config.toml.
 
@@ -1922,7 +1922,7 @@ Block: Block activation when the approved pin, run authorization, native observa
 
 ## T80 — Migrate ChainArgos/tron-processor-rust
 
-Requires: T66, T67, T72. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T66, T67, T72. Use implementation and review subagents.
 
 Files: .velnor/config.toml.
 
@@ -1946,7 +1946,7 @@ Block: Block activation when the approved pin, run authorization, native observa
 
 ## T81 — Close fleet qualification and obsolete namespace retirement
 
-Requires: T71, T72, T73, T74, T75, T76, T77, T78, T79, T80. Worker: GPT-6-Luna medium. Reviewer: medium.
+Requires: T71, T72, T73, T74, T75, T76, T77, T78, T79, T80. Use implementation and review subagents.
 
 Files: docs/reviews/cache-github-only-fleet.json; docs/implemented/cache-github-only-operations.md.
 

@@ -3,15 +3,9 @@
   "plan": "velnor-github-only-cache",
   "planning_date": "2026-10-25",
   "status": "planning_complete_runtime_pending",
-  "planning_models": {
-    "root": "GPT-6 Astra Pro",
-    "subagents": "gpt-6-astra",
-    "exposed_reasoning": "ultra",
-    "limitation": "The tool exposes no separate Pro reasoning label."
-  },
   "orchestrator": {
-    "model": "GPT-6.1-Sol",
-    "reasoning": "low"
+    "role": "orchestrator",
+    "execution": "main agent"
   },
   "fixed_architecture": "ARCHITECTURE.md",
   "interfaces_contract": "CONTRACTS.md",
@@ -140,13 +134,13 @@
         "Do not edit implementation or generated outputs.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "low"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "git rev-parse HEAD",
@@ -209,13 +203,13 @@
         "Do not dispatch runs, delete caches, or infer stored bytes from raw exports.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "low"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "gh api --paginate \"repos/$VELNOR_REPOSITORY/actions/caches?per_page=100\"",
@@ -280,13 +274,13 @@
         "Do not weaken tests, release authority, or input completeness.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "low"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "alint validate-config",
@@ -357,13 +351,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-contract -E 'test(gc1_t04_)' --message-format json",
@@ -442,13 +436,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-contract -E 'test(gc1_t05_)' --message-format json",
@@ -523,13 +517,13 @@
         "Do not build a new Cargo resolver or exempt workspace dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "high"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-rust -E 'test(gc1_t06_)' --message-format json",
@@ -608,13 +602,13 @@
         "Do not derive release coverage solely from crate CI tasks or invent dependency-only commands.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t07_)' --message-format json",
@@ -691,13 +685,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t08_)' --message-format json",
@@ -776,13 +770,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t09_)' --message-format json",
@@ -865,13 +859,13 @@
         "Do not normalize timestamps or restore checkout Git metadata. Do not follow links during metadata restoration.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "high"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t10_)' --message-format json",
@@ -946,13 +940,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-mise -E 'test(gc1_t11_)' --message-format json",
@@ -1029,13 +1023,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "high"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t12_)' --message-format json",
@@ -1113,13 +1107,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t13_)' --message-format json",
@@ -1194,13 +1188,13 @@
         "Do not trust candidate-supplied checksums or add a new installer.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t14_)' --message-format json",
@@ -1277,13 +1271,13 @@
         "Do not change consumer Mise files or trust an unverified installed prefix.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t15_)' --message-format json",
@@ -1361,13 +1355,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t16_)' --message-format json",
@@ -1449,13 +1443,13 @@
         "Do not implement a compiler cache or modify MBX.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "high"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-mise -E 'test(gc1_t17_)' --message-format json",
@@ -1534,13 +1528,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "high"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-mise -E 'test(gc1_t18_)' --message-format json",
@@ -1624,13 +1618,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t19_)' --message-format json",
@@ -1716,13 +1710,13 @@
         "Do not filter opaque Cargo state or required rustdoc parts. Do not persist the separate MBX object store.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "high"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t20_)' --message-format json",
@@ -1803,13 +1797,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "high"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t21_)' --message-format json",
@@ -1894,13 +1888,13 @@
         "Do not raise settings, buy capacity, or delete unrelated entries.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t22_)' --message-format json",
@@ -1980,13 +1974,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-contract -E 'test(gc1_t23_)' --message-format json",
@@ -2071,13 +2065,13 @@
         "Do not infer current intent from creation time alone.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t24_)' --message-format json",
@@ -2161,13 +2155,13 @@
         "Do not publish replay-mutated state, invent dependency-only commands, or hide repeated tests.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t25_)' --message-format json",
@@ -2254,13 +2248,13 @@
         "Do not overwrite immutable keys or delete predecessors in compiler jobs.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t26_)' --message-format json",
@@ -2343,13 +2337,13 @@
         "Do not delete by an unbounded prefix or treat cleanup as an atomic transaction.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t27_)' --message-format json",
@@ -2429,13 +2423,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-cli -E 'test(gc1_t28_)' --message-format json",
@@ -2515,13 +2509,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-cli -E 'test(gc1_t29_)' --message-format json",
@@ -2600,13 +2594,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t30_)' --message-format json",
@@ -2683,13 +2677,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t31_)' --message-format json",
@@ -2769,13 +2763,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t32_)' --message-format json",
@@ -2855,13 +2849,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t33_)' --message-format json",
@@ -2942,13 +2936,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "high"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t34_)' --message-format json",
@@ -3025,13 +3019,13 @@
         "Do not weaken exact-set Required checks or accept an older result without retained-job proof.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t35_)' --message-format json",
@@ -3108,13 +3102,13 @@
         "Do not treat loose extracted files or producer claims as authenticated artifact evidence.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t36_)' --message-format json",
@@ -3193,13 +3187,13 @@
         "Do not change the collector CLI or infer CPU time from compiler wall time.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "python3 - <<'PY'\nimport unittest\n\nsuite = unittest.TestLoader().discover('scripts/hosted_phase_measurement/tests', pattern='test_*.py')\ndef names(node):\n    for item in node:\n        if isinstance(item, unittest.TestSuite):\n            yield from names(item)\n        else:\n            yield item.id()\nfound = set(names(suite))\nprint('\\n'.join(sorted(found)))\nrequired = set(['test_gc1_observation.Gc1ObservationTests.test_rejects_unbound_zero', 'test_gc1_observation.Gc1ObservationTests.test_accepts_bound_observation'])\nif not found or not required <= found:\n    raise SystemExit('Missing required measurement tests')\nresult = unittest.TextTestRunner(verbosity=2).run(suite)\nif not result.wasSuccessful():\n    raise SystemExit(1)\nPY"
@@ -3264,13 +3258,13 @@
         "Do not double-count retained jobs or promote legacy Cargo progress lines into compiler counts.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "python3 - <<'PY'\nimport unittest\n\nsuite = unittest.TestLoader().discover('scripts/hosted_phase_measurement/tests', pattern='test_*.py')\ndef names(node):\n    for item in node:\n        if isinstance(item, unittest.TestSuite):\n            yield from names(item)\n        else:\n            yield item.id()\nfound = set(names(suite))\nprint('\\n'.join(sorted(found)))\nrequired = set(['test_gc1_observation.Gc1ObservationTests.test_join_uses_effective_attempt', 'test_gc1_observation.Gc1ObservationTests.test_pipeline_includes_helpers_and_replay'])\nif not found or not required <= found:\n    raise SystemExit('Missing required measurement tests')\nresult = unittest.TextTestRunner(verbosity=2).run(suite)\nif not result.wasSuccessful():\n    raise SystemExit(1)\nPY"
@@ -3342,13 +3336,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t39_)' --message-format json",
@@ -3425,13 +3419,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t40_)' --message-format json",
@@ -3508,13 +3502,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t41_)' --message-format json",
@@ -3592,13 +3586,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t42_)' --message-format json",
@@ -3682,13 +3676,13 @@
         "Do not execute cached unverified code or compile archive guard to unlock restoration.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t43_)' --message-format json",
@@ -3770,13 +3764,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t44_)' --message-format json",
@@ -3856,13 +3850,13 @@
         "Do not change image products or add a new validator release dependency.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "high"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t45_)' --message-format json",
@@ -3944,13 +3938,13 @@
         "Do not upload products, add a registry cache, or introduce a new OCI client.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "high"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t46_)' --message-format json",
@@ -4029,13 +4023,13 @@
         "Do not change credential-free image build semantics or introduce new authority claims.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t47_)' --message-format json",
@@ -4113,13 +4107,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t48_)' --message-format json",
@@ -4201,13 +4195,13 @@
         "Do not add a new backend or cache absent consumer products.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t49_)' --message-format json",
@@ -4287,13 +4281,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t50_)' --message-format json",
@@ -4372,13 +4366,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t51_)' --message-format json",
@@ -4462,13 +4456,13 @@
         "Do not hide behavior changes inside mechanical binding edits.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t52_)' --message-format json",
@@ -4549,13 +4543,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-contract -E 'test(gc1_contract_)' --message-format json",
@@ -4631,13 +4625,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "high"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_runtime_)' --message-format json",
@@ -4712,13 +4706,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_workflow_)' --message-format json",
@@ -4786,13 +4780,13 @@
         "Do not implement fixes inside the review task.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "high"
+      "implementation_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "high"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest run --locked -p velnor-actions-orchestrator -E 'test(gc1_runtime_)' --no-tests fail",
@@ -4856,13 +4850,13 @@
         "Do not declare a measured fit or speedup before live evidence.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "high"
+      "implementation_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "high"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo fmt --all -- --check",
@@ -4939,13 +4933,13 @@
         "Do not start hosted fault runs through a unit test by default.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_aux)' --message-format json",
@@ -5017,13 +5011,13 @@
         "Do not run hosted faults by default or replace real compiler evidence with Cargo progress messages.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_qualification::)' --message-format json",
@@ -5108,13 +5102,13 @@
         "Do not run hosted faults by default or replace real compiler evidence with Cargo progress messages.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_qualification::)' --message-format json",
@@ -5205,13 +5199,13 @@
         "Do not run hosted faults by default or replace real compiler evidence with Cargo progress messages.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_qualification::)' --message-format json",
@@ -5306,13 +5300,13 @@
         "Do not run hosted faults by default or replace real compiler evidence with Cargo progress messages.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_qualification::)' --message-format json",
@@ -5405,13 +5399,13 @@
         "Do not replace full verification with focused tests.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "VERIFY_ROOT_AND_RUNNER"
@@ -5474,13 +5468,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "GENERATE_CANDIDATE",
@@ -5541,13 +5535,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "QUALIFY_CASES_01_06_17_18_19"
@@ -5608,13 +5602,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "QUALIFY_CASES_07_15_20"
@@ -5678,13 +5672,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "QUALIFY_CASES_16_21_22"
@@ -5753,13 +5747,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "low"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-orchestrator -E 'test(gc1_t68_)' --message-format json",
@@ -5840,13 +5834,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "low"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t69_)' --message-format json",
@@ -5924,13 +5918,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "low"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "cargo nextest list --locked -p velnor-actions-workflow-renderer -E 'test(gc1_t70_)' --message-format json",
@@ -6002,13 +5996,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "low"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "alint validate-config",
@@ -6077,13 +6071,13 @@
         "Do not change unrelated behavior or dependencies.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "GENERATE_CANDIDATE",
@@ -6157,13 +6151,13 @@
         "Do not edit Cargo or Mise semantics, add products, or delete unrelated caches.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "GENERATE_VERIFIED_CONSUMER",
@@ -6233,13 +6227,13 @@
         "Do not edit Cargo or Mise semantics, add products, or delete unrelated caches.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "GENERATE_VERIFIED_CONSUMER",
@@ -6310,13 +6304,13 @@
         "Do not edit Cargo or Mise semantics, add products, or delete unrelated caches.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "GENERATE_VERIFIED_CONSUMER",
@@ -6387,13 +6381,13 @@
         "Do not edit Cargo or Mise semantics, add products, or delete unrelated caches.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "GENERATE_VERIFIED_CONSUMER",
@@ -6464,13 +6458,13 @@
         "Do not edit Cargo or Mise semantics, add products, or delete unrelated caches.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "GENERATE_VERIFIED_CONSUMER",
@@ -6541,13 +6535,13 @@
         "Do not edit Cargo or Mise semantics, add products, or delete unrelated caches.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "GENERATE_VERIFIED_CONSUMER",
@@ -6618,13 +6612,13 @@
         "Do not edit Cargo or Mise semantics, add products, or delete unrelated caches.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "GENERATE_VERIFIED_CONSUMER",
@@ -6695,13 +6689,13 @@
         "Do not edit Cargo or Mise semantics, add products, or delete unrelated caches.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "GENERATE_VERIFIED_CONSUMER",
@@ -6776,13 +6770,13 @@
         "Do not change repository settings or claim completion while a required capacity or observation gate remains blocked.",
         "Do not deploy, merge, change settings, or publish products."
       ],
-      "implementer": {
-        "model": "GPT-6-Luna",
-        "reasoning": "medium"
+      "implementation_subagent": {
+        "role": "implementation subagent",
+        "execution": "subagent"
       },
-      "reviewer": {
-        "model": "GPT-6.1-Sol",
-        "reasoning": "medium"
+      "review_subagent": {
+        "role": "review subagent",
+        "execution": "subagent"
       },
       "verification_commands": [
         "VERIFY_ROOT_AND_RUNNER",

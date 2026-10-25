@@ -15,10 +15,9 @@ Each card inherits the following rules. They are part of every task.
 * Run the full existing root and nested-workspace gates before an integration commit.
 * Continue independent ready tasks when another task is blocked.
 
-The orchestrator is GPT-6.1-Sol with low reasoning.
-The default reviewer is GPT-6.1-Sol with medium reasoning.
-Named security and architecture reviews use Sol high reasoning.
-All implementation and verification workers use GPT-6-Luna.
+Implementation, verification, and review run in subagents.
+Use a separate subagent for review.
+Run the named architecture and security reviews in subagents.
 
 ## Exact command sets
 
@@ -116,7 +115,6 @@ Only reviewed strict-removal equivalence can preserve earlier evidence without r
 
 **Exclude:** Do not edit implementation or generated outputs. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna low; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -158,7 +156,6 @@ alint check --fail-on-warning
 
 **Exclude:** Do not dispatch runs, delete caches, or infer stored bytes from raw exports. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna low; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -201,7 +198,6 @@ gh api "repos/$VELNOR_REPOSITORY/actions/cache/retention-limit"
 
 **Exclude:** Do not weaken tests, release authority, or input completeness. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna low; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -247,7 +243,6 @@ git diff --check
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -298,7 +293,6 @@ cargo clippy --locked -p velnor-actions-contract --all-targets -- -D warnings
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -345,7 +339,6 @@ cargo clippy --locked -p velnor-actions-contract --all-targets -- -D warnings
 
 **Exclude:** Do not build a new Cargo resolver or exempt workspace dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna high; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -394,7 +387,6 @@ cargo clippy --locked -p velnor-actions-rust --all-targets -- -D warnings
 
 **Exclude:** Do not derive release coverage solely from crate CI tasks or invent dependency-only commands. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -441,7 +433,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -490,7 +481,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -543,7 +533,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not normalize timestamps or restore checkout Git metadata. Do not follow links during metadata restoration. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna high; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -590,7 +579,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -637,7 +625,6 @@ cargo clippy --locked -p velnor-actions-mise --all-targets -- -D warnings
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna high; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -684,7 +671,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -731,7 +717,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not trust candidate-supplied checksums or add a new installer. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -778,7 +763,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not change consumer Mise files or trust an unverified installed prefix. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -825,7 +809,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -874,7 +857,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not implement a compiler cache or modify MBX. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna high; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -921,7 +903,6 @@ cargo clippy --locked -p velnor-actions-mise --all-targets -- -D warnings
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna high; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -970,7 +951,6 @@ cargo clippy --locked -p velnor-actions-mise --all-targets -- -D warnings
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1023,7 +1003,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not filter opaque Cargo state or required rustdoc parts. Do not persist the separate MBX object store. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna high; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1074,7 +1053,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna high; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1125,7 +1103,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not raise settings, buy capacity, or delete unrelated entries. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1174,7 +1151,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1229,7 +1205,6 @@ cargo clippy --locked -p velnor-actions-contract --all-targets -- -D warnings
 
 **Exclude:** Do not infer current intent from creation time alone. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1284,7 +1259,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not publish replay-mutated state, invent dependency-only commands, or hide repeated tests. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1335,7 +1309,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not overwrite immutable keys or delete predecessors in compiler jobs. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1390,7 +1363,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not delete by an unbounded prefix or treat cleanup as an atomic transaction. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1441,7 +1413,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1490,7 +1461,6 @@ cargo clippy --locked -p velnor-actions-cli --all-targets -- -D warnings
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1539,7 +1509,6 @@ cargo clippy --locked -p velnor-actions-cli --all-targets -- -D warnings
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1586,7 +1555,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1637,7 +1605,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1684,7 +1651,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1737,7 +1703,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna high; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1786,7 +1751,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not weaken exact-set Required checks or accept an older result without retained-job proof. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1835,7 +1799,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not treat loose extracted files or producer claims as authenticated artifact evidence. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1882,7 +1845,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change the collector CLI or infer CPU time from compiler wall time. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -1944,7 +1906,6 @@ PY
 
 **Exclude:** Do not double-count retained jobs or promote legacy Cargo progress lines into compiler counts. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2006,7 +1967,6 @@ PY
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2053,7 +2013,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2100,7 +2059,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2151,7 +2109,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2208,7 +2165,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not execute cached unverified code or compile archive guard to unlock restoration. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2259,7 +2215,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2306,7 +2261,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not change image products or add a new validator release dependency. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna high; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2355,7 +2309,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not upload products, add a registry cache, or introduce a new OCI client. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna high; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2406,7 +2359,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not change credential-free image build semantics or introduce new authority claims. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2455,7 +2407,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2506,7 +2457,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not add a new backend or cache absent consumer products. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2553,7 +2503,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2600,7 +2549,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2647,7 +2595,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not hide behavior changes inside mechanical binding edits. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2692,7 +2639,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2740,7 +2686,6 @@ cargo nextest run --locked -p velnor-actions-contract --no-tests fail
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna high; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2788,7 +2733,6 @@ cargo nextest run --locked -p velnor-actions-orchestrator --no-tests fail
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2828,7 +2772,6 @@ cargo nextest run --locked -p velnor-actions-workflow-renderer --no-tests fail
 
 **Exclude:** Do not implement fixes inside the review task. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6.1-Sol high; reviewer GPT-6.1-Sol high.
 
 **Verification:**
 
@@ -2868,7 +2811,6 @@ git diff --check
 
 **Exclude:** Do not declare a measured fit or speedup before live evidence. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6.1-Sol high; reviewer GPT-6.1-Sol high.
 
 **Verification:**
 
@@ -2918,7 +2860,6 @@ cargo nextest run --locked --workspace --no-tests fail
 
 **Exclude:** Do not start hosted fault runs through a unit test by default. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -2965,7 +2906,6 @@ cargo nextest run --locked -p velnor-actions-orchestrator -E 'test(gc1_aux)' --n
 
 **Exclude:** Do not run hosted faults by default or replace real compiler evidence with Cargo progress messages. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3012,7 +2952,6 @@ cargo nextest run --locked -p velnor-actions-orchestrator -E 'test(gc1_qualifica
 
 **Exclude:** Do not run hosted faults by default or replace real compiler evidence with Cargo progress messages. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3059,7 +2998,6 @@ cargo nextest run --locked -p velnor-actions-orchestrator -E 'test(gc1_qualifica
 
 **Exclude:** Do not run hosted faults by default or replace real compiler evidence with Cargo progress messages. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3106,7 +3044,6 @@ cargo nextest run --locked -p velnor-actions-orchestrator -E 'test(gc1_qualifica
 
 **Exclude:** Do not run hosted faults by default or replace real compiler evidence with Cargo progress messages. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3147,7 +3084,6 @@ cargo nextest run --locked -p velnor-actions-orchestrator -E 'test(gc1_qualifica
 
 **Exclude:** Do not replace full verification with focused tests. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3193,7 +3129,6 @@ VERIFY_ROOT_AND_RUNNER
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3235,7 +3170,6 @@ git diff --check
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3275,7 +3209,6 @@ QUALIFY_CASES_01_06_17_18_19
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3315,7 +3248,6 @@ QUALIFY_CASES_07_15_20
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3359,7 +3291,6 @@ QUALIFY_CASES_16_21_22
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna low; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3410,7 +3341,6 @@ cargo clippy --locked -p velnor-actions-orchestrator --all-targets -- -D warning
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna low; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3459,7 +3389,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna low; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3500,7 +3429,6 @@ cargo clippy --locked -p velnor-actions-workflow-renderer --all-targets -- -D wa
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna low; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3552,7 +3480,6 @@ git diff --check
 
 **Exclude:** Do not change unrelated behavior or dependencies. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3601,7 +3528,6 @@ git diff --check
 
 **Exclude:** Do not edit Cargo or Mise semantics, add products, or delete unrelated caches. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3650,7 +3576,6 @@ QUALIFY_REPOSITORY_MATRIX
 
 **Exclude:** Do not edit Cargo or Mise semantics, add products, or delete unrelated caches. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3700,7 +3625,6 @@ QUALIFY_REPOSITORY_MATRIX
 
 **Exclude:** Do not edit Cargo or Mise semantics, add products, or delete unrelated caches. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3750,7 +3674,6 @@ QUALIFY_REPOSITORY_MATRIX
 
 **Exclude:** Do not edit Cargo or Mise semantics, add products, or delete unrelated caches. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3800,7 +3723,6 @@ QUALIFY_REPOSITORY_MATRIX
 
 **Exclude:** Do not edit Cargo or Mise semantics, add products, or delete unrelated caches. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3850,7 +3772,6 @@ QUALIFY_REPOSITORY_MATRIX
 
 **Exclude:** Do not edit Cargo or Mise semantics, add products, or delete unrelated caches. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3900,7 +3821,6 @@ QUALIFY_REPOSITORY_MATRIX
 
 **Exclude:** Do not edit Cargo or Mise semantics, add products, or delete unrelated caches. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3950,7 +3870,6 @@ QUALIFY_REPOSITORY_MATRIX
 
 **Exclude:** Do not edit Cargo or Mise semantics, add products, or delete unrelated caches. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 
@@ -3992,7 +3911,6 @@ QUALIFY_REPOSITORY_MATRIX
 
 **Exclude:** Do not change repository settings or claim completion while a required capacity or observation gate remains blocked. Do not deploy, merge, change settings, or publish products.
 
-**Models:** GPT-6-Luna medium; reviewer GPT-6.1-Sol medium.
 
 **Verification:**
 

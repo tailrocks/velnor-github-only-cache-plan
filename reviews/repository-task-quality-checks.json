@@ -1,6 +1,6 @@
 {
-  "reviewed_json_sha256": "1f521b23ea4c5bc4054dc3f52dd03b8c3e4bb02334f14e05f4f3d12631328683",
-  "reviewed_markdown_sha256": "025cc9e81b9abeae0e140a73e1e89f3546fcd57f7b5099d1a693998c594822fa",
+  "reviewed_json_sha256": "375a36aaa5819547c7365fca73a979ead202132b44a25cb7107f4fd2fdb4e835",
+  "reviewed_markdown_sha256": "41329bff1559cdb81c585abe30a95f3ca6c0001d10a54697acd318c9ef4edc41",
   "task_count": 81,
   "unique_id_count": 81,
   "self_dependencies": [],
@@ -9,36 +9,7 @@
   "unordered_explicit_writer_collisions": [],
   "undeclared_existing_production_paths": [],
   "production_cap_violations_in_explicit_lists": [],
-  "all_low_medium_luna": {
-    "count": 68,
-    "total": 81
-  },
-  "ordinary_low_medium_luna": {
-    "count": 63,
-    "total": 74
-  },
-  "implementer_models": [
-    {
-      "model": "GPT-6-Luna",
-      "reasoning": "low",
-      "count": 7
-    },
-    {
-      "model": "GPT-6-Luna",
-      "reasoning": "medium",
-      "count": 61
-    },
-    {
-      "model": "GPT-6-Luna",
-      "reasoning": "high",
-      "count": 11
-    },
-    {
-      "model": "GPT-6.1-Sol",
-      "reasoning": "high",
-      "count": 2
-    }
-  ],
+  "subagent_assignment": "Implementation, verification, and review run in subagents. No model is prescribed.", 
   "nextest_run_count": 114,
   "nextest_run_missing_nonzero_guard": [],
   "nextest_discovery_commands": 58,

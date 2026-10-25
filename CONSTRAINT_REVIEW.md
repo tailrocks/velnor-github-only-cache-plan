@@ -36,7 +36,7 @@ Use `pass`, `fail`, or `unknown`. Do not convert unknown into pass.
 | Source restoration | Preserve matching source bytes and original metadata. Keep current checkout Git state. | Nanosecond/directory/changed/deleted/link/build-script/Git fixtures. |
 | Compiler observation | Count real rustc, rustdoc, and supported native work. Unknown escapes stay unknown. | Observer closure, process/wrapper evidence, nonempty expected workload. |
 | Capacity conflict | Do not delete required coverage, mislabel raw bytes, or claim an unmeasured fit. | Complete per-repository model and explicit deficient-byte report if rejected. |
-| Implementation models | Luna performs ordinary implementation and verification. Sol manages and reviews. | Task-state history and per-card model assignment. |
+| Implementation subagents | Implementation, verification, and review run in subagents. | Task-state history and per-card subagent assignment. |
 | Planning restraint | No live workflow dispatch, cache mutation, settings change, merge, release, or deployment. | This planning activity contains read-only repository research and local report creation only. |
 
 ## Planning disposition

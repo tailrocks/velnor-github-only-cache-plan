@@ -38,7 +38,7 @@ The plan uses a conservative decimal ten-billion-byte ceiling and a provisional 
 4. Read CACHE_BUDGET.md for complete repository accounting.
 5. Read WORKFLOWS.md for event paths and publication states.
 6. Read ACCEPTANCE.md for all 22 qualification cases and performance gates.
-7. Use GOAL.txt as the copyable implementation prompt.
+7. Use GOAL.md as the copyable implementation prompt.
 8. Use TASKS.json for scheduling and TASKS.md for complete task cards.
 9. Use MIGRATION.md for generator and consumer activation order.
 10. Apply CONSTRAINT_REVIEW.md before qualification closure.
@@ -47,7 +47,7 @@ The plan uses a conservative decimal ten-billion-byte ceiling and a provisional 
 
 | File | Purpose |
 |---|---|
-| GOAL.txt | Complete copyable `/goal` prompt in simplified technical English. |
+| GOAL.md | Complete copyable `/goal` prompt in simplified technical English. |
 | ARCHITECTURE.md | Selected small architecture, identities, storage, lifecycle, security, and caller decisions. |
 | CONTRACTS.md | Exact proposed shared records and one owner per interface. |
 | TASKS.md | Every bounded task, source scope, steps, models, tests, evidence, and blocking conditions. |
@@ -68,17 +68,14 @@ The plan uses a conservative decimal ten-billion-byte ceiling and a provisional 
 | evidence/ | Machine-readable source revisions, generator headers, pipelines, all jobs, and observed counters. |
 | reviews/ | Independent review findings and final planning dispositions. |
 
-## Models
+## Execution subagents
 
-Three Astra planning subagents performed separate repository, Rust, platform, capacity, security, and task-quality reviews.
-The available reasoning setting was `ultra`; the tool exposed no separate `Pro` setting.
-No unavailable model or reasoning label is claimed.
+Planning used separate repository, Rust, platform, capacity, security, and task-quality reviews.
+No model is prescribed.
 
-The implementation plan assigns orchestration to GPT-6.1-Sol low.
-It assigns implementation and verification to GPT-6-Luna.
-Normal reviews use GPT-6.1-Sol medium.
-Two named architecture/security gates use Sol high.
-The final task JSON is authoritative for exact counts and assignments.
+Run implementation, verification, and review in subagents.
+Run review and the two named architecture and security gates in subagents.
+The final task JSON is authoritative for exact counts and subagent assignments.
 
 ## Evidence status
 
