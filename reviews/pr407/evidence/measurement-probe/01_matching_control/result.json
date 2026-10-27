@@ -1,0 +1,148 @@
+{
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "scripts.hosted_phase_measurement.measure_hosted_run",
+    "--repository",
+    "fixture-owner/fixture-repo",
+    "--run-json",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/run.json",
+    "--jobs-json",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/jobs.json",
+    "--logs-zip",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/logs.zip",
+    "--artifact-json",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/artifact.json",
+    "--artifact-id",
+    "777",
+    "--final-artifact",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/final.zip",
+    "--out",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/report.json"
+  ],
+  "case": "01_matching_control",
+  "cwd": "/workspace/scratch/226f2776372f/pr407-review",
+  "environment_override": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 0,
+  "expected_error_substring": "",
+  "expected_exit": 0,
+  "fixtures": [
+    {
+      "bytes": 95,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/run.json",
+      "sha256": "63990691c6aef676d835cd6f273d14141e2b4bf7493996c6bdd296b19add0544"
+    },
+    {
+      "bytes": 477,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/jobs.json",
+      "sha256": "5f5db4797d2b1d50df6a471cd795243f5cb1dd6c60813a4f7a5ef93dffc2d290"
+    },
+    {
+      "bytes": 22,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/logs.zip",
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    {
+      "bytes": 442,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/artifact.json",
+      "sha256": "518f7380715003e10ac78db777ede25a090c88d31a2b0c57627a6fec1981f6de"
+    },
+    {
+      "bytes": 1145,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/final.zip",
+      "sha256": "77e026a7ec3c29fffc45707fdfa75bfa90644721434aa1cd2fc2c12f83cb4568"
+    }
+  ],
+  "observed_lifecycle": {
+    "byte_channels": {
+      "cache_transfer_bytes": null,
+      "cache_transfer_bytes_unknown_reason": "Authoritative only in actual_counters.cache_transfer_totals_by_phase; the lifecycle view never re-sums them.",
+      "mbx_object_cache_summaries": null,
+      "mbx_object_cache_summaries_unknown_reason": "Corroborating observations only in actual_counters.mbx_object_cache_summary_totals; never promoted into compiler or cache-transfer counts.",
+      "origin_acquisition_bytes": null,
+      "origin_acquisition_bytes_unknown_reason": "Owned observation bindings do not join to origin receipts in this collector; origin bytes stay unknown here.",
+      "separation_rule": "Origin bytes, cache bytes, and historical MBX summaries are kept separate and never summed together."
+    },
+    "dedup_key": [
+      "repository",
+      "run_id",
+      "actual job id",
+      "actual attempt",
+      "observation session",
+      "task report id"
+    ],
+    "dedup_scope": "each real job, attempt, and bound task report is counted exactly once; a retained job contributes its original work once and a rerun contributes its new work in addition to earlier work",
+    "effective_required": {
+      "bound_task_report_count": 1,
+      "covered_job_attempt_count": 1,
+      "covered_job_attempts": [
+        {
+          "actual_attempt": 1,
+          "bound_task_reports": [
+            "task-r4242-a1-m-aaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb"
+          ],
+          "job_id": 101,
+          "job_name": "rust-velnor-actions-actionlint-write"
+        }
+      ],
+      "scope": "exactly the retained-or-rerun jobs accepted for the current verdict"
+    },
+    "executed_lifecycle": {
+      "by_conclusion": {
+        "success": 1
+      },
+      "job_count": 1,
+      "jobs": [
+        {
+          "conclusion": "success",
+          "job_id": 101,
+          "job_name": "rust-velnor-actions-actionlint-write",
+          "run_attempt": 1,
+          "status": "completed"
+        }
+      ],
+      "scope": "every supplied authenticated job record counted once; includes bootstrap, helpers, preparation, replay, and failed or cancelled attempts with no role or conclusion filter"
+    },
+    "head_sha": "0123456789abcdef0123456789abcdef01234567",
+    "join": {
+      "joined": [
+        {
+          "effective_job_conclusion": "success",
+          "effective_job_id": 101,
+          "observation_session_id": "review-fixture-session",
+          "producer_attempt": 1,
+          "producer_job": "rust-velnor-actions-actionlint-write",
+          "task_report_id": "task-r4242-a1-m-aaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb"
+        }
+      ],
+      "method": "each owned observation resolved through the authenticated effective-job map by actual producer job/attempt; forged or stale attempts fail instead of joining",
+      "observation_count": 1,
+      "status": "verified"
+    },
+    "missing_coverage": {
+      "disposition": "unknown",
+      "jobs_without_bound_observation": [],
+      "task_reports_without_observation": [],
+      "unknown_reason": "Jobs and task reports without a bound observation stay unknown; they are never counted as zero work."
+    },
+    "process_counts": {
+      "compiler_executions": null,
+      "compiler_executions_unknown_reason": "Owned bindings carry identity, not per-process compiler events; unobserved process work stays unknown, never zero.",
+      "native_process_executions": null,
+      "native_process_executions_unknown_reason": "Absolute native calls and unobserved build-script network access are not covered by owned bindings; they stay unknown, never zero."
+    },
+    "repository": "fixture-owner/fixture-repo",
+    "run_id": 4242,
+    "status": "verified"
+  },
+  "report": {
+    "bytes": 12486,
+    "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/report.json",
+    "sha256": "f027acb4514e4e06f5a87f61349e56b3474887da37eb29d74c1583a7b4548ba0"
+  },
+  "stderr": "",
+  "stdout": ""
+}

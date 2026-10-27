@@ -1,0 +1,369 @@
+{
+  "probe": {
+    "bytes": 6969,
+    "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/probe.py",
+    "sha256": "24b6de0cb37c07421f8bbf44036753e5817dece12e838440985533f96d3a799a"
+  },
+  "results": [
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "scripts.hosted_phase_measurement.measure_hosted_run",
+        "--repository",
+        "fixture-owner/fixture-repo",
+        "--run-json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/run.json",
+        "--jobs-json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/jobs.json",
+        "--logs-zip",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/logs.zip",
+        "--artifact-json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/artifact.json",
+        "--artifact-id",
+        "777",
+        "--final-artifact",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/final.zip",
+        "--out",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/report.json"
+      ],
+      "case": "01_matching_control",
+      "cwd": "/workspace/scratch/226f2776372f/pr407-review",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 0,
+      "expected_error_substring": "",
+      "expected_exit": 0,
+      "fixtures": [
+        {
+          "bytes": 95,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/run.json",
+          "sha256": "63990691c6aef676d835cd6f273d14141e2b4bf7493996c6bdd296b19add0544"
+        },
+        {
+          "bytes": 477,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/jobs.json",
+          "sha256": "5f5db4797d2b1d50df6a471cd795243f5cb1dd6c60813a4f7a5ef93dffc2d290"
+        },
+        {
+          "bytes": 22,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/logs.zip",
+          "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+        },
+        {
+          "bytes": 442,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/artifact.json",
+          "sha256": "518f7380715003e10ac78db777ede25a090c88d31a2b0c57627a6fec1981f6de"
+        },
+        {
+          "bytes": 1145,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/final.zip",
+          "sha256": "77e026a7ec3c29fffc45707fdfa75bfa90644721434aa1cd2fc2c12f83cb4568"
+        }
+      ],
+      "observed_lifecycle": {
+        "byte_channels": {
+          "cache_transfer_bytes": null,
+          "cache_transfer_bytes_unknown_reason": "Authoritative only in actual_counters.cache_transfer_totals_by_phase; the lifecycle view never re-sums them.",
+          "mbx_object_cache_summaries": null,
+          "mbx_object_cache_summaries_unknown_reason": "Corroborating observations only in actual_counters.mbx_object_cache_summary_totals; never promoted into compiler or cache-transfer counts.",
+          "origin_acquisition_bytes": null,
+          "origin_acquisition_bytes_unknown_reason": "Owned observation bindings do not join to origin receipts in this collector; origin bytes stay unknown here.",
+          "separation_rule": "Origin bytes, cache bytes, and historical MBX summaries are kept separate and never summed together."
+        },
+        "dedup_key": [
+          "repository",
+          "run_id",
+          "actual job id",
+          "actual attempt",
+          "observation session",
+          "task report id"
+        ],
+        "dedup_scope": "each real job, attempt, and bound task report is counted exactly once; a retained job contributes its original work once and a rerun contributes its new work in addition to earlier work",
+        "effective_required": {
+          "bound_task_report_count": 1,
+          "covered_job_attempt_count": 1,
+          "covered_job_attempts": [
+            {
+              "actual_attempt": 1,
+              "bound_task_reports": [
+                "task-r4242-a1-m-aaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb"
+              ],
+              "job_id": 101,
+              "job_name": "rust-velnor-actions-actionlint-write"
+            }
+          ],
+          "scope": "exactly the retained-or-rerun jobs accepted for the current verdict"
+        },
+        "executed_lifecycle": {
+          "by_conclusion": {
+            "success": 1
+          },
+          "job_count": 1,
+          "jobs": [
+            {
+              "conclusion": "success",
+              "job_id": 101,
+              "job_name": "rust-velnor-actions-actionlint-write",
+              "run_attempt": 1,
+              "status": "completed"
+            }
+          ],
+          "scope": "every supplied authenticated job record counted once; includes bootstrap, helpers, preparation, replay, and failed or cancelled attempts with no role or conclusion filter"
+        },
+        "head_sha": "0123456789abcdef0123456789abcdef01234567",
+        "join": {
+          "joined": [
+            {
+              "effective_job_conclusion": "success",
+              "effective_job_id": 101,
+              "observation_session_id": "review-fixture-session",
+              "producer_attempt": 1,
+              "producer_job": "rust-velnor-actions-actionlint-write",
+              "task_report_id": "task-r4242-a1-m-aaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb"
+            }
+          ],
+          "method": "each owned observation resolved through the authenticated effective-job map by actual producer job/attempt; forged or stale attempts fail instead of joining",
+          "observation_count": 1,
+          "status": "verified"
+        },
+        "missing_coverage": {
+          "disposition": "unknown",
+          "jobs_without_bound_observation": [],
+          "task_reports_without_observation": [],
+          "unknown_reason": "Jobs and task reports without a bound observation stay unknown; they are never counted as zero work."
+        },
+        "process_counts": {
+          "compiler_executions": null,
+          "compiler_executions_unknown_reason": "Owned bindings carry identity, not per-process compiler events; unobserved process work stays unknown, never zero.",
+          "native_process_executions": null,
+          "native_process_executions_unknown_reason": "Absolute native calls and unobserved build-script network access are not covered by owned bindings; they stay unknown, never zero."
+        },
+        "repository": "fixture-owner/fixture-repo",
+        "run_id": 4242,
+        "status": "verified"
+      },
+      "report": {
+        "bytes": 12486,
+        "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/01_matching_control/report.json",
+        "sha256": "f027acb4514e4e06f5a87f61349e56b3474887da37eb29d74c1583a7b4548ba0"
+      },
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "scripts.hosted_phase_measurement.measure_hosted_run",
+        "--repository",
+        "fixture-owner/fixture-repo",
+        "--run-json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/run.json",
+        "--jobs-json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/jobs.json",
+        "--logs-zip",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/logs.zip",
+        "--artifact-json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/artifact.json",
+        "--artifact-id",
+        "777",
+        "--final-artifact",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/final.zip",
+        "--out",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/report.json"
+      ],
+      "case": "02_display_name",
+      "cwd": "/workspace/scratch/226f2776372f/pr407-review",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 2,
+      "expected_error_substring": "has no authenticated job record",
+      "expected_exit": 2,
+      "fixtures": [
+        {
+          "bytes": 95,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/run.json",
+          "sha256": "63990691c6aef676d835cd6f273d14141e2b4bf7493996c6bdd296b19add0544"
+        },
+        {
+          "bytes": 481,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/jobs.json",
+          "sha256": "57bcaf45ba787a0e1c19c25944847e15685a115b0d8f7da82a0f47d49713384e"
+        },
+        {
+          "bytes": 22,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/logs.zip",
+          "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+        },
+        {
+          "bytes": 442,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/artifact.json",
+          "sha256": "518f7380715003e10ac78db777ede25a090c88d31a2b0c57627a6fec1981f6de"
+        },
+        {
+          "bytes": 1145,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/final.zip",
+          "sha256": "77e026a7ec3c29fffc45707fdfa75bfa90644721434aa1cd2fc2c12f83cb4568"
+        }
+      ],
+      "stderr": "measurement collection failed: observation m-aaaaaaaaaaaaaaaa/tasks/task-r4242-a1-m-aaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb.observation.json: producer job/attempt ('rust-velnor-actions-actionlint-write', 1) has no authenticated job record\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "scripts.hosted_phase_measurement.measure_hosted_run",
+        "--repository",
+        "fixture-owner/fixture-repo",
+        "--run-json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/run.json",
+        "--jobs-json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/jobs.json",
+        "--logs-zip",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/logs.zip",
+        "--artifact-json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/artifact.json",
+        "--artifact-id",
+        "777",
+        "--final-artifact",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/final.zip",
+        "--out",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/report.json"
+      ],
+      "case": "03_retained_attempt",
+      "cwd": "/workspace/scratch/226f2776372f/pr407-review",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 2,
+      "expected_error_substring": "belongs to a different run/attempt/source",
+      "expected_exit": 2,
+      "fixtures": [
+        {
+          "bytes": 95,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/run.json",
+          "sha256": "6e6665bedc0a2606545829ffd844eb72880f442fa81e0cc0fd190a43549175e4"
+        },
+        {
+          "bytes": 477,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/jobs.json",
+          "sha256": "5f5db4797d2b1d50df6a471cd795243f5cb1dd6c60813a4f7a5ef93dffc2d290"
+        },
+        {
+          "bytes": 22,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/logs.zip",
+          "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+        },
+        {
+          "bytes": 442,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/artifact.json",
+          "sha256": "7847a7d7d442d33aa287508889b8ab2034afb2bb2613c25ac1f49ca482d38ca8"
+        },
+        {
+          "bytes": 1145,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/final.zip",
+          "sha256": "637345623713028bfff5f7778a1a31c4e7eeedba55606af36035ebd15270afa6"
+        }
+      ],
+      "stderr": "measurement collection failed: job 101 belongs to a different run/attempt/source\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "scripts.hosted_phase_measurement.measure_hosted_run",
+        "--repository",
+        "fixture-owner/fixture-repo",
+        "--run-json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/run.json",
+        "--jobs-json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/jobs.json",
+        "--logs-zip",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/logs.zip",
+        "--artifact-json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/artifact.json",
+        "--artifact-id",
+        "777",
+        "--final-artifact",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/final.zip",
+        "--out",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/report.json"
+      ],
+      "case": "04_display_name_in_binding",
+      "cwd": "/workspace/scratch/226f2776372f/pr407-review",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "exit_code": 2,
+      "expected_error_substring": "bad producer_job",
+      "expected_exit": 2,
+      "fixtures": [
+        {
+          "bytes": 95,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/run.json",
+          "sha256": "63990691c6aef676d835cd6f273d14141e2b4bf7493996c6bdd296b19add0544"
+        },
+        {
+          "bytes": 481,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/jobs.json",
+          "sha256": "57bcaf45ba787a0e1c19c25944847e15685a115b0d8f7da82a0f47d49713384e"
+        },
+        {
+          "bytes": 22,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/logs.zip",
+          "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+        },
+        {
+          "bytes": 442,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/artifact.json",
+          "sha256": "efb1ebae2ecf5fe91d40e42f31cc29927c0d52553c5e911a41784f8dea4fcad6"
+        },
+        {
+          "bytes": 1149,
+          "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/final.zip",
+          "sha256": "0b57181cfcd1627b7a7cbca5fa1d464f29e1945e1fba6ecc45817762c23d0f84"
+        }
+      ],
+      "stderr": "measurement collection failed: observation m-aaaaaaaaaaaaaaaa/tasks/task-r4242-a1-m-aaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb.observation.json: bad producer_job\n",
+      "stdout": ""
+    }
+  ],
+  "scope": "Synthetic external fixtures; public CLI execution; no real API authentication or GitHub retention evidence.",
+  "source_head": "586bdb2be3b1d203abbdd19a09bff8b188c20cc3",
+  "sources": [
+    {
+      "bytes": 2026,
+      "path": "/workspace/scratch/226f2776372f/pr407-review/scripts/hosted_phase_measurement/measure_hosted_run.py",
+      "sha256": "e7e473b67f8a6eda340f9d0be003ea46812d73f18ca43ff393cc786ed01fa345"
+    },
+    {
+      "bytes": 7104,
+      "path": "/workspace/scratch/226f2776372f/pr407-review/scripts/hosted_phase_measurement/report_builder.py",
+      "sha256": "e25398accacc0d546b48ae309023f8db91e273345cd8fe776f39b8727c0c55bf"
+    },
+    {
+      "bytes": 28640,
+      "path": "/workspace/scratch/226f2776372f/pr407-review/scripts/hosted_phase_measurement/measure_support.py",
+      "sha256": "df4fcf7c42086d3c599e450d09ef8b8c1e0d6d49173d87fa87639cd7ba2fa4a7"
+    },
+    {
+      "bytes": 9078,
+      "path": "/workspace/scratch/226f2776372f/pr407-review/scripts/hosted_phase_measurement/report_events.py",
+      "sha256": "da098070743debc0234728dcb039a4d42f75a78da4d883b80b4b5a6b2e43a09d"
+    },
+    {
+      "bytes": 15558,
+      "path": "/workspace/scratch/226f2776372f/pr407-review/scripts/hosted_phase_measurement/report_counters.py",
+      "sha256": "3fbefebfa18fd548d6568e0b42258d461ecf20c256f960a268d1278eef63fef6"
+    }
+  ]
+}

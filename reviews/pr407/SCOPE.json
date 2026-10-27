@@ -1,0 +1,78 @@
+{
+  "repository": "tailrocks/velnor-new",
+  "branch": "chore/apache-2-license",
+  "pull_request": 407,
+  "head": "586bdb2be3b1d203abbdd19a09bff8b188c20cc3",
+  "main": "7d8d076872ff256c194e375c62f1c44cbf134d81",
+  "controller_tag": "v0.1.55",
+  "controller_commit": "693f3aae14406fb7851ac70f0aee647a869b5063",
+  "reconstructed_merge_tree": "d8f108613addaac46883e80c6a8a3fc43882091e",
+  "original_open_merge_available": false,
+  "exact_GOAL_md_available": false,
+  "authority_recovery_is_current_authority_verification": false,
+  "planning_reviewers": [
+    {
+      "task": "pr407_private_review",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "ultra"
+    },
+    {
+      "task": "pr407_cache_review",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "ultra"
+    },
+    {
+      "task": "pr407_controller_review",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "ultra"
+    }
+  ],
+  "rust_tests_executed": false,
+  "hosted_runs_started": false,
+  "product_files_modified": false,
+  "live_cache_mutations": false,
+  "patch_applicability": [
+    {
+      "checkout": "pr407-review",
+      "patch": "private-expression-fix.patch",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "checkout": "pr407-review",
+      "patch": "cache-placement-proposed.patch",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "checkout": "pr407-merged",
+      "patch": "private-expression-fix.patch",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "checkout": "pr407-merged",
+      "patch": "cache-placement-proposed.patch",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "runtime_probes": [
+    "exact emitted state restore shell",
+    "exact EVIDENCE_PROGRAM with actual authority modules",
+    "actual measurement collector CLI"
+  ],
+  "scope_limit": "Only F1 and F2 have proposed patches. F3 through F7 need integration repairs. F8 is assessment only.",
+  "review_checkout_status": "clean",
+  "official_scheduler_source": {
+    "repository": "actions/runner",
+    "commit": "80ca6ea6c936dc9532d0d86625f862585e800f75",
+    "blob": "0381463f3d57f6e027dbe634cc44eb9135d7280c",
+    "hosted_scheduler_executed": false,
+    "graph_structure_check": "18 writers depend on push-skipped readers"
+  }
+}

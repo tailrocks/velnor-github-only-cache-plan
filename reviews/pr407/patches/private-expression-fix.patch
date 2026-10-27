@@ -1,0 +1,127 @@
+--- a/crates/velnor-actions-workflow-renderer/src/private_source_steps.rs
++++ b/crates/velnor-actions-workflow-renderer/src/private_source_steps.rs
+@@ -87,12 +87,24 @@
+                 || key.starts_with("VELNOR_")
+         }) || self
+             .toolchain_env
+-            .values()
+-            .any(|value| value.contains("${{"))
++            .iter()
++            .any(|(key, value)| value.contains("${{") && !is_toolchain_expression(key, value))
+         {
+             return Err(bad("toolchain_env"));
+         }
+         Ok(())
++    }
++}
++
++fn is_toolchain_expression(key: &str, value: &str) -> bool {
++    use velnor_actions_mise::runtime_paths::{CARGO_HOME_EXPR, RUSTUP_HOME_EXPR};
++    use velnor_actions_mise::{PinnedTool, project_tool_expression};
++
++    match key {
++        "MISE_RUSTUP_HOME" => value == RUSTUP_HOME_EXPR,
++        "MISE_CARGO_HOME" => value == CARGO_HOME_EXPR,
++        "RUSTUP_TOOLCHAIN" => value == project_tool_expression(PinnedTool::Rust),
++        _ => false,
+     }
+ }
+ 
+--- a/crates/velnor-actions-orchestrator/tests/gc1_t12.rs
++++ b/crates/velnor-actions-orchestrator/tests/gc1_t12.rs
+@@ -26,6 +26,8 @@
+     PrivateSourcesSpec, private_source_steps,
+ };
+ 
++mod toolchain_expressions;
++
+ fn fail(message: &str) -> Box<dyn Error> {
+     io::Error::other(message).into()
+ }
+@@ -279,6 +281,7 @@
+     check_triple_ordering()?;
+     check_mint_carries_no_credential()?;
+     check_fetch_and_revoke_token_binding()?;
++    toolchain_expressions::check_generated_toolchain_expressions()?;
+     check_allowlist_gates_payload()?;
+     check_approved_assets_restore_at_stable_paths()?;
+     Ok(())
+@@ -378,6 +381,7 @@
+ #[test]
+ fn gc1_t12_rejects_invalid_state() -> Result<(), Box<dyn Error>> {
+     check_rejects_unauthorized_payloads()?;
++    toolchain_expressions::check_rejects_unowned_toolchain_expressions()?;
+     check_rejects_unapproved_or_tampered_assets()?;
+     Ok(())
+ }
+--- /dev/null
++++ b/crates/velnor-actions-orchestrator/tests/gc1_t12/toolchain_expressions.rs
+@@ -0,0 +1,68 @@
++// SPDX-FileCopyrightText: 2026 Alexey Zhokhov
++// SPDX-License-Identifier: Apache-2.0
++
++use std::error::Error;
++
++use velnor_actions_contract::{PRIVATE_FETCH_TOKEN_ENV, PRIVATE_TOKEN_OUTPUT_EXPR, StepKind};
++use velnor_actions_mise::{PinnedTool, ToolHomes, project_tool_expression, project_tool_shell_ref};
++
++use super::{fail, reject_parts, render, valid_parts};
++
++pub(super) fn check_generated_toolchain_expressions() -> Result<(), Box<dyn Error>> {
++    let homes = ToolHomes::runner_temp();
++    for toolchain in [
++        project_tool_shell_ref(PinnedTool::Rust),
++        project_tool_expression(PinnedTool::Rust),
++    ] {
++        let mut parts = valid_parts();
++        parts.toolchain.extend([
++            ("MISE_RUSTUP_HOME".to_owned(), homes.rustup_home().to_owned()),
++            ("MISE_CARGO_HOME".to_owned(), homes.cargo_home().to_owned()),
++            ("RUSTUP_TOOLCHAIN".to_owned(), toolchain),
++        ]);
++        let steps = render(&parts, &["cargo", "release-assets"])?;
++        let StepKind::Internal { env, .. } = &steps[1].kind else {
++            return Err(fail("generated private fetch step kind drifted"));
++        };
++        for (key, value) in &parts.toolchain {
++            if env.get(key) != Some(value) {
++                return Err(fail("generated private fetch toolchain changed"));
++            }
++        }
++        if env.get(PRIVATE_FETCH_TOKEN_ENV).map(String::as_str) != Some(PRIVATE_TOKEN_OUTPUT_EXPR)
++        {
++            return Err(fail("generated private fetch token binding changed"));
++        }
++    }
++    Ok(())
++}
++
++pub(super) fn check_rejects_unowned_toolchain_expressions() -> Result<(), Box<dyn Error>> {
++    for (key, value) in [
++        ("MISE_CARGO_HOME", "${{ runner.temp }}/velnor/rustup"),
++        ("MISE_RUSTUP_HOME", "${{ runner.temp }}/velnor/cargo"),
++        ("RUSTUP_HOME", "${{ runner.temp }}/velnor/rustup"),
++        ("CARGO_HOME", "${{ runner.temp }}/velnor/cargo"),
++        ("MISE_NO_CONFIG", "${{ env.VELNOR_TOOL_RUST }}"),
++        ("MISE_RUSTUP_HOME", "${{ runner.temp }}/velnor/rustup/extra"),
++        ("RUSTUP_TOOLCHAIN", "${{ env.VELNOR_TOOL_RUST }}-nightly"),
++        ("MISE_RUSTUP_HOME", "${{ secrets.FIXTURE_APP_PRIVATE_KEY }}"),
++        ("MISE_RUSTUP_HOME", "${{ secrets['FIXTURE_APP_PRIVATE_KEY'] }}"),
++        ("RUSTUP_TOOLCHAIN", "${{ github.token }}"),
++        ("RUSTUP_TOOLCHAIN", "${{ github['token'] }}"),
++        ("MISE_CARGO_HOME", "${{ steps.deps-token.outputs.token }}"),
++        (
++            "MISE_CARGO_HOME",
++            "${{ steps['deps-token']['outputs']['token'] }}",
++        ),
++        (
++            "MISE_CARGO_HOME",
++            "${{ runner.temp }}/velnor/cargo${{ secrets.KEY }}",
++        ),
++    ] {
++        let mut parts = valid_parts();
++        parts.toolchain.insert(key.to_owned(), value.to_owned());
++        reject_parts("unowned toolchain expression", &parts, &["cargo"])?;
++    }
++    Ok(())
++}

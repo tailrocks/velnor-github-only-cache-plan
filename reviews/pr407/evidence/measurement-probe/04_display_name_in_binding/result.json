@@ -1,0 +1,61 @@
+{
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "scripts.hosted_phase_measurement.measure_hosted_run",
+    "--repository",
+    "fixture-owner/fixture-repo",
+    "--run-json",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/run.json",
+    "--jobs-json",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/jobs.json",
+    "--logs-zip",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/logs.zip",
+    "--artifact-json",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/artifact.json",
+    "--artifact-id",
+    "777",
+    "--final-artifact",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/final.zip",
+    "--out",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/report.json"
+  ],
+  "case": "04_display_name_in_binding",
+  "cwd": "/workspace/scratch/226f2776372f/pr407-review",
+  "environment_override": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 2,
+  "expected_error_substring": "bad producer_job",
+  "expected_exit": 2,
+  "fixtures": [
+    {
+      "bytes": 95,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/run.json",
+      "sha256": "63990691c6aef676d835cd6f273d14141e2b4bf7493996c6bdd296b19add0544"
+    },
+    {
+      "bytes": 481,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/jobs.json",
+      "sha256": "57bcaf45ba787a0e1c19c25944847e15685a115b0d8f7da82a0f47d49713384e"
+    },
+    {
+      "bytes": 22,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/logs.zip",
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    {
+      "bytes": 442,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/artifact.json",
+      "sha256": "efb1ebae2ecf5fe91d40e42f31cc29927c0d52553c5e911a41784f8dea4fcad6"
+    },
+    {
+      "bytes": 1149,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/04_display_name_in_binding/final.zip",
+      "sha256": "0b57181cfcd1627b7a7cbca5fa1d464f29e1945e1fba6ecc45817762c23d0f84"
+    }
+  ],
+  "stderr": "measurement collection failed: observation m-aaaaaaaaaaaaaaaa/tasks/task-r4242-a1-m-aaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb.observation.json: bad producer_job\n",
+  "stdout": ""
+}

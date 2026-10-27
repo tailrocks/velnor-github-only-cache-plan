@@ -1,0 +1,27 @@
+{
+  "source": ".github/workflows/ci.yml:Recover state snapshot",
+  "argv": [
+    "/bin/bash",
+    "--noprofile",
+    "--norc",
+    "-e",
+    "-o",
+    "pipefail",
+    "-c",
+    "<verbatim run from YAML>"
+  ],
+  "run": "sh -c 'unset ACTIONS_ID_TOKEN_REQUEST_TOKEN ACTIONS_ID_TOKEN_REQUEST_URL ACTIONS_RUNTIME_TOKEN GITHUB_TOKEN MISE_GITHUB_TOKEN GH_TOKEN GH_HOST GH_CONFIG_DIR; set -eu; case \"$RUNNER_TEMP\" in /*) ;; *) printf '\\''%s\\n'\\'' '\\''RUNNER_TEMP must be absolute'\\'' >&2; exit 1 ;; esac; payload=\"$RUNNER_TEMP/velnor-gc1/transport/state/payload.tar.gz\"; root=\"$RUNNER_TEMP/velnor-gc1/state\"; parent=\"$RUNNER_TEMP/velnor-gc1\"; if [ ! -f \"$payload\" ] || [ -L \"$payload\" ]; then printf '\\''%s\\n'\\'' '\\''velnor: state snapshot no_entry'\\''; exit 0; fi; if [ ! -s \"$payload\" ]; then printf '\\''%s\\n'\\'' '\\''::warning::cache_corrupt: state payload empty; building cold'\\''; rm -f \"$payload\"; exit 0; fi; if [ -L \"$root\" ]; then printf '\\''%s\\n'\\'' '\\''::warning::cache_corrupt: state root is a symlink; building cold'\\''; exit 0; fi; rm -rf \"$root\"; mkdir -p \"$parent\"; if tar -xzf \"$payload\" -C \"$parent\"; then if [ -d \"$root\" ] && [ ! -L \"$root\" ]; then printf '\\''%s\\n'\\'' '\\''velnor: state snapshot recovered'\\''; else printf '\\''%s\\n'\\'' '\\''::warning::cache_corrupt: state payload missed the state root; building cold'\\''; rm -rf \"$root\"; rm -f \"$payload\"; fi; else printf '\\''%s\\n'\\'' '\\''::warning::cache_corrupt: state payload unreadable; building cold'\\''; rm -rf \"$root\"; rm -f \"$payload\"; fi'",
+  "archive_members": [
+    "state/ordinary.o",
+    "tools/sentinel"
+  ],
+  "exit_code": 0,
+  "stdout": "velnor: state snapshot recovered\n",
+  "stderr": "",
+  "normal_state_bytes": "expected-state\n",
+  "sibling_before": "verified-tool-input\n",
+  "sibling_after": "archive-overwrite\n",
+  "expected_fixed_sibling": "verified-tool-input\n",
+  "normal_restore_passed": true,
+  "ownership_preserved": false
+}

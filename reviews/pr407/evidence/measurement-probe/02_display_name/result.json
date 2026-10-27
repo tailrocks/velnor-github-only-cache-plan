@@ -1,0 +1,61 @@
+{
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "scripts.hosted_phase_measurement.measure_hosted_run",
+    "--repository",
+    "fixture-owner/fixture-repo",
+    "--run-json",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/run.json",
+    "--jobs-json",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/jobs.json",
+    "--logs-zip",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/logs.zip",
+    "--artifact-json",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/artifact.json",
+    "--artifact-id",
+    "777",
+    "--final-artifact",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/final.zip",
+    "--out",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/report.json"
+  ],
+  "case": "02_display_name",
+  "cwd": "/workspace/scratch/226f2776372f/pr407-review",
+  "environment_override": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 2,
+  "expected_error_substring": "has no authenticated job record",
+  "expected_exit": 2,
+  "fixtures": [
+    {
+      "bytes": 95,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/run.json",
+      "sha256": "63990691c6aef676d835cd6f273d14141e2b4bf7493996c6bdd296b19add0544"
+    },
+    {
+      "bytes": 481,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/jobs.json",
+      "sha256": "57bcaf45ba787a0e1c19c25944847e15685a115b0d8f7da82a0f47d49713384e"
+    },
+    {
+      "bytes": 22,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/logs.zip",
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    {
+      "bytes": 442,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/artifact.json",
+      "sha256": "518f7380715003e10ac78db777ede25a090c88d31a2b0c57627a6fec1981f6de"
+    },
+    {
+      "bytes": 1145,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/02_display_name/final.zip",
+      "sha256": "77e026a7ec3c29fffc45707fdfa75bfa90644721434aa1cd2fc2c12f83cb4568"
+    }
+  ],
+  "stderr": "measurement collection failed: observation m-aaaaaaaaaaaaaaaa/tasks/task-r4242-a1-m-aaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb.observation.json: producer job/attempt ('rust-velnor-actions-actionlint-write', 1) has no authenticated job record\n",
+  "stdout": ""
+}

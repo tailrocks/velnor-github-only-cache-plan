@@ -1,0 +1,61 @@
+{
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "scripts.hosted_phase_measurement.measure_hosted_run",
+    "--repository",
+    "fixture-owner/fixture-repo",
+    "--run-json",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/run.json",
+    "--jobs-json",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/jobs.json",
+    "--logs-zip",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/logs.zip",
+    "--artifact-json",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/artifact.json",
+    "--artifact-id",
+    "777",
+    "--final-artifact",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/final.zip",
+    "--out",
+    "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/report.json"
+  ],
+  "case": "03_retained_attempt",
+  "cwd": "/workspace/scratch/226f2776372f/pr407-review",
+  "environment_override": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exit_code": 2,
+  "expected_error_substring": "belongs to a different run/attempt/source",
+  "expected_exit": 2,
+  "fixtures": [
+    {
+      "bytes": 95,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/run.json",
+      "sha256": "6e6665bedc0a2606545829ffd844eb72880f442fa81e0cc0fd190a43549175e4"
+    },
+    {
+      "bytes": 477,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/jobs.json",
+      "sha256": "5f5db4797d2b1d50df6a471cd795243f5cb1dd6c60813a4f7a5ef93dffc2d290"
+    },
+    {
+      "bytes": 22,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/logs.zip",
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    {
+      "bytes": 442,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/artifact.json",
+      "sha256": "7847a7d7d442d33aa287508889b8ab2034afb2bb2613c25ac1f49ca482d38ca8"
+    },
+    {
+      "bytes": 1145,
+      "path": "/workspace/scratch/226f2776372f/pr407-review-notes/measurement-probe/03_retained_attempt/final.zip",
+      "sha256": "637345623713028bfff5f7778a1a31c4e7eeedba55606af36035ebd15270afa6"
+    }
+  ],
+  "stderr": "measurement collection failed: job 101 belongs to a different run/attempt/source\n",
+  "stdout": ""
+}

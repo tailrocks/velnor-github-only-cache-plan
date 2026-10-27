@@ -1,0 +1,12 @@
+{
+  "repository": "actions/runner",
+  "commit": "80ca6ea6c936dc9532d0d86625f862585e800f75",
+  "path": "src/Sdk/DTPipelines/Pipelines/ObjectTemplating/PipelineTemplateConverter.cs",
+  "start_line": 721,
+  "end_line": 734,
+  "content": "            var hasStatusFunction = node.Traverse().Any(x =>\n            {\n                if (x is Function function)\n                {\n                    return String.Equals(function.Name, PipelineTemplateConstants.Always, StringComparison.OrdinalIgnoreCase) ||\n                        String.Equals(function.Name, PipelineTemplateConstants.Cancelled, StringComparison.OrdinalIgnoreCase) ||\n                        String.Equals(function.Name, PipelineTemplateConstants.Failure, StringComparison.OrdinalIgnoreCase) ||\n                        String.Equals(function.Name, PipelineTemplateConstants.Success, StringComparison.OrdinalIgnoreCase);\n                }\n\n                return false;\n            });\n\n            return hasStatusFunction ? condition : $\"{PipelineTemplateConstants.Success}() && ({condition})\";",
+  "encoding": "utf-8",
+  "sha": "0381463f3d57f6e027dbe634cc44eb9135d7280c",
+  "display_url": "https://github.com/actions/runner/blob/80ca6ea6c936dc9532d0d86625f862585e800f75/src/Sdk/DTPipelines/Pipelines/ObjectTemplating/PipelineTemplateConverter.cs",
+  "display_title": "PipelineTemplateConverter.cs"
+}

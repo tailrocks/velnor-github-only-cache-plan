@@ -1,0 +1,77 @@
+d8f108613addaac46883e80c6a8a3fc43882091e
+100644 5537131bea475c7107695903f33426bce721f330 1	.github/velnor/task-execution-manifest-v1.json
+100644 0445fd8f2004c334eacc2e06ceede2de0556a248 2	.github/velnor/task-execution-manifest-v1.json
+100644 37307cb703f54d52d3bd2a93b4a599ed73e3d696 3	.github/velnor/task-execution-manifest-v1.json
+100644 c0af68bf15313cd1248fddadfbe6de9fb1835265 1	crates/velnor-actions-workflow-renderer/Cargo.toml
+100644 d524da5e9994fc4b142bf4fd404e92ecd80c639e 2	crates/velnor-actions-workflow-renderer/Cargo.toml
+100644 ed24b549d37f2d0fed6f43a8bebe5e88bf7fd2e7 3	crates/velnor-actions-workflow-renderer/Cargo.toml
+100644 7b29fc65da66dbf4b5a8be7d48557e852e9fe47c 1	docs/proposed/opentofu-goldens/MANIFEST.sha256
+100644 4ebf93f02d20197ab2e8b190d6f1626efdd2b939 2	docs/proposed/opentofu-goldens/MANIFEST.sha256
+100644 22b0f9020120ec8a18c5b32bd2280f8b8053efdb 3	docs/proposed/opentofu-goldens/MANIFEST.sha256
+100644 53e6fc86385b5075d82ff005d764855802463289 1	docs/proposed/opentofu-goldens/cases/dogfood/plan.txt
+100644 74121dea49f48e68b52db42a5e0f0ed1d2a0b1c7 2	docs/proposed/opentofu-goldens/cases/dogfood/plan.txt
+100644 721894e3c5fae94090e6c113d43c7c15bb58b594 3	docs/proposed/opentofu-goldens/cases/dogfood/plan.txt
+100644 5537131bea475c7107695903f33426bce721f330 1	docs/proposed/opentofu-goldens/cases/dogfood/preview/.github/velnor/task-execution-manifest-v1.json
+100644 0445fd8f2004c334eacc2e06ceede2de0556a248 2	docs/proposed/opentofu-goldens/cases/dogfood/preview/.github/velnor/task-execution-manifest-v1.json
+100644 37307cb703f54d52d3bd2a93b4a599ed73e3d696 3	docs/proposed/opentofu-goldens/cases/dogfood/preview/.github/velnor/task-execution-manifest-v1.json
+100644 750ebbc45640fa3bdef23f5c05a355b9ec3540dc 1	docs/proposed/opentofu-goldens/cases/dogfood/tree.sha256
+100644 b4a632f75feacb2a38732d66ab6b2afe559893c3 2	docs/proposed/opentofu-goldens/cases/dogfood/tree.sha256
+100644 b2f984c81dd109e46583035e1c34d16750f581cc 3	docs/proposed/opentofu-goldens/cases/dogfood/tree.sha256
+100644 927353de201aff2eac7ec002eacd1b980322c606 1	docs/proposed/opentofu-goldens/cases/empty-suite/tree.sha256
+100644 e50169a2d61aa3b43837120f829f8df76206fa33 2	docs/proposed/opentofu-goldens/cases/empty-suite/tree.sha256
+100644 4c91e5d406305b4b8b4b15213163e30901a1eaaf 3	docs/proposed/opentofu-goldens/cases/empty-suite/tree.sha256
+100644 aa188ddd09b47bcd9d6cd31a9972901e18b8db29 1	docs/proposed/opentofu-goldens/cases/mbx-nextest/preview/.github/workflows/ci.yml
+100644 466a79b364a1ea71166585d3d005927238b3eb49 2	docs/proposed/opentofu-goldens/cases/mbx-nextest/preview/.github/workflows/ci.yml
+100644 00f1ac54620f631b37503afd4e1ef0f8f0aab6bb 3	docs/proposed/opentofu-goldens/cases/mbx-nextest/preview/.github/workflows/ci.yml
+100644 7f05058719d9b29bab43c781be8784ffa7696187 1	docs/proposed/opentofu-goldens/cases/mbx-nextest/tree.sha256
+100644 991096510bfee6913cb907fac00bb4d31ce98b6a 2	docs/proposed/opentofu-goldens/cases/mbx-nextest/tree.sha256
+100644 1a67033036d3e9edea3db2dba6ae42c2cfe8bf3a 3	docs/proposed/opentofu-goldens/cases/mbx-nextest/tree.sha256
+100644 a9cc4fb083315bf3ea04aeb0f7474ca2915ce106 1	docs/proposed/opentofu-goldens/cases/minimal-cargo/tree.sha256
+100644 9714046167e17bc64432e31acc045b2cd4da43a1 2	docs/proposed/opentofu-goldens/cases/minimal-cargo/tree.sha256
+100644 1029efbe6b4f28c0079fae63c5f81450d5aec28f 3	docs/proposed/opentofu-goldens/cases/minimal-cargo/tree.sha256
+100644 afbc61a7680ccfe9ee6b27449283e174c3456716 1	docs/proposed/opentofu-goldens/cases/nested/tree.sha256
+100644 88862307e5053daab7290dc7e086440d6e036110 2	docs/proposed/opentofu-goldens/cases/nested/tree.sha256
+100644 13ccbc9c283012898fc1d11e0c637a25eb65132c 3	docs/proposed/opentofu-goldens/cases/nested/tree.sha256
+
+Auto-merging .github/velnor/task-execution-manifest-v1.json
+CONFLICT (content): Merge conflict in .github/velnor/task-execution-manifest-v1.json
+Auto-merging .github/workflows/ci.yml
+Auto-merging .github/workflows/product-release-generator.yml
+Auto-merging .velnor/config.toml
+Auto-merging crates/velnor-actions-contract/src/workflow/mod.rs
+Auto-merging crates/velnor-actions-workflow-renderer/Cargo.toml
+CONFLICT (content): Merge conflict in crates/velnor-actions-workflow-renderer/Cargo.toml
+Auto-merging crates/velnor-actions-workflow-renderer/src/bun_assets_jobs.rs
+Auto-merging crates/velnor-actions-workflow-renderer/src/bun_member_jobs.rs
+Auto-merging crates/velnor-actions-workflow-renderer/src/bun_suite_jobs.rs
+Auto-merging crates/velnor-actions-workflow-renderer/src/document.rs
+Auto-merging crates/velnor-actions-workflow-renderer/src/native_authority/graph.rs
+Auto-merging crates/velnor-actions-workflow-renderer/src/verification_jobs.rs
+Auto-merging docs/proposed/opentofu-goldens/MANIFEST.sha256
+CONFLICT (content): Merge conflict in docs/proposed/opentofu-goldens/MANIFEST.sha256
+Auto-merging docs/proposed/opentofu-goldens/cases/dogfood/generate.stderr.txt
+Auto-merging docs/proposed/opentofu-goldens/cases/dogfood/plan.txt
+CONFLICT (content): Merge conflict in docs/proposed/opentofu-goldens/cases/dogfood/plan.txt
+Auto-merging docs/proposed/opentofu-goldens/cases/dogfood/preview/.github/velnor/task-execution-manifest-v1.json
+CONFLICT (content): Merge conflict in docs/proposed/opentofu-goldens/cases/dogfood/preview/.github/velnor/task-execution-manifest-v1.json
+Auto-merging docs/proposed/opentofu-goldens/cases/dogfood/preview/.github/workflows/ci.yml
+Auto-merging docs/proposed/opentofu-goldens/cases/dogfood/preview/.github/workflows/product-release-generator.yml
+Auto-merging docs/proposed/opentofu-goldens/cases/dogfood/tree.sha256
+CONFLICT (content): Merge conflict in docs/proposed/opentofu-goldens/cases/dogfood/tree.sha256
+Auto-merging docs/proposed/opentofu-goldens/cases/empty-suite/plan.txt
+Auto-merging docs/proposed/opentofu-goldens/cases/empty-suite/preview/.github/workflows/ci.yml
+Auto-merging docs/proposed/opentofu-goldens/cases/empty-suite/tree.sha256
+CONFLICT (content): Merge conflict in docs/proposed/opentofu-goldens/cases/empty-suite/tree.sha256
+Auto-merging docs/proposed/opentofu-goldens/cases/mbx-nextest/plan.txt
+Auto-merging docs/proposed/opentofu-goldens/cases/mbx-nextest/preview/.github/workflows/ci.yml
+CONFLICT (content): Merge conflict in docs/proposed/opentofu-goldens/cases/mbx-nextest/preview/.github/workflows/ci.yml
+Auto-merging docs/proposed/opentofu-goldens/cases/mbx-nextest/tree.sha256
+CONFLICT (content): Merge conflict in docs/proposed/opentofu-goldens/cases/mbx-nextest/tree.sha256
+Auto-merging docs/proposed/opentofu-goldens/cases/minimal-cargo/plan.txt
+Auto-merging docs/proposed/opentofu-goldens/cases/minimal-cargo/preview/.github/workflows/ci.yml
+Auto-merging docs/proposed/opentofu-goldens/cases/minimal-cargo/tree.sha256
+CONFLICT (content): Merge conflict in docs/proposed/opentofu-goldens/cases/minimal-cargo/tree.sha256
+Auto-merging docs/proposed/opentofu-goldens/cases/nested/plan.txt
+Auto-merging docs/proposed/opentofu-goldens/cases/nested/preview/.github/workflows/ci.yml
+Auto-merging docs/proposed/opentofu-goldens/cases/nested/tree.sha256
+CONFLICT (content): Merge conflict in docs/proposed/opentofu-goldens/cases/nested/tree.sha256

@@ -1,0 +1,12 @@
+{
+  "blocked_event_policy": "socket.*, subprocess.*, os.system, os.exec, os.posix_spawn, os.spawn, os.fork, os.forkpty",
+  "calibrated_blocked_events": [
+    "socket.connect",
+    "subprocess.Popen",
+    "os.system",
+    "os.exec"
+  ],
+  "hook_active_before_program_compilation": true,
+  "program_blocked_events": [],
+  "program_exit_code": 0
+}

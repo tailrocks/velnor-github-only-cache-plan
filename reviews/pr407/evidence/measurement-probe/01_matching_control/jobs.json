@@ -1,0 +1,16 @@
+{
+  "jobs": [
+    {
+      "conclusion": "success",
+      "head_sha": "0123456789abcdef0123456789abcdef01234567",
+      "html_url": "https://github.com/fixture-owner/fixture-repo/actions/runs/4242/job/101",
+      "id": 101,
+      "name": "rust-velnor-actions-actionlint-write",
+      "run_attempt": 1,
+      "run_id": 4242,
+      "run_url": "https://api.github.com/repos/fixture-owner/fixture-repo/actions/runs/4242",
+      "status": "completed"
+    }
+  ],
+  "total_count": 1
+}

@@ -1,0 +1,21 @@
+--- a/crates/velnor-actions-orchestrator/src/cache_execution_context.rs
++++ b/crates/velnor-actions-orchestrator/src/cache_execution_context.rs
+@@ -69,8 +69,16 @@
+             return Err(internal("execution_root_inside_checkout"));
+         }
+     }
+-    for (index, first) in all.iter().enumerate() {
+-        for second in &all[index + 1..] {
++    let disjoint_roots = [
++        roots.transport_root.as_path(),
++        roots.source_root.as_path(),
++        roots.tool_root.as_path(),
++        roots.cargo_home.as_path(),
++        roots.rustup_home.as_path(),
++        roots.observation_root.as_path(),
++    ];
++    for (index, first) in disjoint_roots.iter().enumerate() {
++        for second in &disjoint_roots[index + 1..] {
+             if first == second || first.starts_with(second) || second.starts_with(first) {
+                 return Err(internal("execution_roots_overlap"));
+             }

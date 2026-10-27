@@ -1,0 +1,279 @@
+{
+  "actual_counters": {
+    "cache_steps": [],
+    "cache_transfer_observations": [],
+    "cache_transfer_totals_by_phase": {},
+    "cargo_download_bytes": null,
+    "cargo_download_bytes_unknown_reason": "Cargo log output does not provide authoritative per-package transferred byte counts.",
+    "cargo_download_package_lines": [],
+    "fresh_compiler_units": null,
+    "fresh_compiler_units_unknown_reason": "The retained run has no complete compiler-unit receipt; Compiling lines and MBX lookup counters are not unit totals.",
+    "link_duration_ms": null,
+    "link_duration_unknown_reason": "No separate linker start/end event is present; Cargo build/test step spans combine compiler and link work.",
+    "lock_wait_ms": null,
+    "lock_wait_unknown_reason": "Hosted APIs and retained logs contain no separate lock-wait measurement; task report zero sentinels are unavailable telemetry.",
+    "mbx_object_cache_summaries": [],
+    "mbx_object_cache_summary_totals": {
+      "lookup_totals": {
+        "bypassed": 0,
+        "hits": 0,
+        "misses": 0,
+        "not_looked_up": 0
+      },
+      "observation_count": 0,
+      "remote_downloaded_bytes": 0,
+      "remote_uploaded_bytes": 0,
+      "scope": "sum of actual MBX summary counters only; zero is not compiler freshness or full cache-transfer telemetry"
+    },
+    "mise_download_progress": [],
+    "native_cpu": null,
+    "native_cpu_unknown_reason": "Local compiler observer receipts lack exact hosted run/job/attempt/source identity and are not joinable to this run.",
+    "pinned_action_refs_observed_in_logs": [],
+    "runner_queue_duration_ms": null,
+    "runner_queue_duration_unknown_reason": "The retained workflow-run and jobs APIs expose no queue-start/end pair or dependency-wait split.",
+    "tool_download_bytes": null,
+    "tool_download_bytes_unknown_reason": "Pinned Mise progress output has human-readable progress, not a stable authoritative byte counter.",
+    "tool_download_duration_ms": null,
+    "tool_download_duration_unknown_reason": "Mise log lines contain progress snapshots, not a unique completed transfer interval; enclosing Prepare pinned tools API step span is reported by phase."
+  },
+  "jobs": [
+    {
+      "completed_at": null,
+      "conclusion": "success",
+      "created_at": null,
+      "created_to_started_ms_unclassified": null,
+      "duration_ms_from_api_timestamps": null,
+      "head_sha": "0123456789abcdef0123456789abcdef01234567",
+      "job_id": 101,
+      "job_name": "rust-velnor-actions-actionlint-write",
+      "queue_duration_ms": null,
+      "queue_unknown_reason": "GitHub jobs response has no queue timestamp; created-to-started can include dependency wait and scheduler/runner startup.",
+      "run_attempt": 1,
+      "run_id": 4242,
+      "runner_id": null,
+      "runner_labels": [],
+      "runner_name": null,
+      "started_at": null,
+      "status": "completed",
+      "steps": []
+    }
+  ],
+  "legacy_task_report_telemetry": {
+    "reason": "No extracted task report directory was supplied.",
+    "status": "unavailable"
+  },
+  "log_coverage": {
+    "completed_steps_without_per_step_log": [],
+    "note": "Missing step logs leave only the API span; they are not backfilled from aggregate job logs."
+  },
+  "measurement_policy": {
+    "bytes": "log-reported cumulative received/uploaded counters only; artifact/cache stored size is never presented as network transfer",
+    "compiler": "Cargo Compiling text and MBX not-looked-up/miss counts do not estimate total fresh compiler/link work",
+    "durations": "GitHub Actions run/job/step API start and completion timestamps only",
+    "unknowns": "null plus reason when an API/log counter cannot isolate a requested phase"
+  },
+  "observed_lifecycle": {
+    "byte_channels": {
+      "cache_transfer_bytes": null,
+      "cache_transfer_bytes_unknown_reason": "Authoritative only in actual_counters.cache_transfer_totals_by_phase; the lifecycle view never re-sums them.",
+      "mbx_object_cache_summaries": null,
+      "mbx_object_cache_summaries_unknown_reason": "Corroborating observations only in actual_counters.mbx_object_cache_summary_totals; never promoted into compiler or cache-transfer counts.",
+      "origin_acquisition_bytes": null,
+      "origin_acquisition_bytes_unknown_reason": "Owned observation bindings do not join to origin receipts in this collector; origin bytes stay unknown here.",
+      "separation_rule": "Origin bytes, cache bytes, and historical MBX summaries are kept separate and never summed together."
+    },
+    "dedup_key": [
+      "repository",
+      "run_id",
+      "actual job id",
+      "actual attempt",
+      "observation session",
+      "task report id"
+    ],
+    "dedup_scope": "each real job, attempt, and bound task report is counted exactly once; a retained job contributes its original work once and a rerun contributes its new work in addition to earlier work",
+    "effective_required": {
+      "bound_task_report_count": 1,
+      "covered_job_attempt_count": 1,
+      "covered_job_attempts": [
+        {
+          "actual_attempt": 1,
+          "bound_task_reports": [
+            "task-r4242-a1-m-aaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb"
+          ],
+          "job_id": 101,
+          "job_name": "rust-velnor-actions-actionlint-write"
+        }
+      ],
+      "scope": "exactly the retained-or-rerun jobs accepted for the current verdict"
+    },
+    "executed_lifecycle": {
+      "by_conclusion": {
+        "success": 1
+      },
+      "job_count": 1,
+      "jobs": [
+        {
+          "conclusion": "success",
+          "job_id": 101,
+          "job_name": "rust-velnor-actions-actionlint-write",
+          "run_attempt": 1,
+          "status": "completed"
+        }
+      ],
+      "scope": "every supplied authenticated job record counted once; includes bootstrap, helpers, preparation, replay, and failed or cancelled attempts with no role or conclusion filter"
+    },
+    "head_sha": "0123456789abcdef0123456789abcdef01234567",
+    "join": {
+      "joined": [
+        {
+          "effective_job_conclusion": "success",
+          "effective_job_id": 101,
+          "observation_session_id": "review-fixture-session",
+          "producer_attempt": 1,
+          "producer_job": "rust-velnor-actions-actionlint-write",
+          "task_report_id": "task-r4242-a1-m-aaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb"
+        }
+      ],
+      "method": "each owned observation resolved through the authenticated effective-job map by actual producer job/attempt; forged or stale attempts fail instead of joining",
+      "observation_count": 1,
+      "status": "verified"
+    },
+    "missing_coverage": {
+      "disposition": "unknown",
+      "jobs_without_bound_observation": [],
+      "task_reports_without_observation": [],
+      "unknown_reason": "Jobs and task reports without a bound observation stay unknown; they are never counted as zero work."
+    },
+    "process_counts": {
+      "compiler_executions": null,
+      "compiler_executions_unknown_reason": "Owned bindings carry identity, not per-process compiler events; unobserved process work stays unknown, never zero.",
+      "native_process_executions": null,
+      "native_process_executions_unknown_reason": "Absolute native calls and unobserved build-script network access are not covered by owned bindings; they stay unknown, never zero."
+    },
+    "repository": "fixture-owner/fixture-repo",
+    "run_id": 4242,
+    "status": "verified"
+  },
+  "phase_map": {
+    "configured_normalized_name_map": {
+      "build test executables": "test_build",
+      "check cargo sources": "cargo_source_check",
+      "check generated files": "generated_files_check",
+      "checkout": "checkout",
+      "clippy": "clippy",
+      "doctests": "doctests",
+      "documentation": "documentation",
+      "download every expected matrix artifact": "report_download",
+      "export mbx single bundle": "mbx_bundle_export",
+      "fetch cargo sources": "cargo_fetch",
+      "fetch cargo sources crates velnor runner cargo toml": "cargo_fetch",
+      "format": "format",
+      "import mbx single bundle": "mbx_bundle_import",
+      "merge reports": "report_merge",
+      "plan": "plan",
+      "post checkout": "checkout_post",
+      "post restore mbx objects": "mbx_object_post_upload",
+      "prepare mbx bundle key": "mbx_bundle_key",
+      "prepare pinned tools": "tool_provision",
+      "prepare rust components": "rust_component_provision",
+      "publish final report": "final_report_publish",
+      "publish plan": "plan_publish",
+      "restore cargo sources": "cargo_source_restore",
+      "restore mbx objects": "mbx_object_restore",
+      "restore mbx single bundle": "mbx_bundle_restore",
+      "save cargo sources": "cargo_source_save",
+      "save mbx single bundle": "mbx_bundle_save",
+      "set up job": "runner_setup",
+      "setup mise": "mise_setup",
+      "unit and integration tests": "unit_integration_tests",
+      "upload crate reports": "report_upload"
+    },
+    "normalization": "case-fold, replace punctuation with spaces, collapse tokens, then exact whole-name lookup",
+    "observed_step_name_map": []
+  },
+  "phase_worker_time": {},
+  "run_identity": {
+    "conclusion": null,
+    "event": null,
+    "head_sha": "0123456789abcdef0123456789abcdef01234567",
+    "repository": "fixture-owner/fixture-repo",
+    "run_attempt": 1,
+    "run_id": 4242,
+    "status": null,
+    "workflow_id": null,
+    "workflow_path": null
+  },
+  "schema": "velnor.hosted-phase-measurement.v4",
+  "source_receipts": {
+    "final_report_artifact": {
+      "api_digest": "sha256:77e026a7ec3c29fffc45707fdfa75bfa90644721434aa1cd2fc2c12f83cb4568",
+      "archive_receipt": {
+        "file_name": "final.zip",
+        "label": "final_report_artifact_zip",
+        "sha256": "77e026a7ec3c29fffc45707fdfa75bfa90644721434aa1cd2fc2c12f83cb4568",
+        "size_bytes": 1145
+      },
+      "archive_size_bytes": 1145,
+      "artifact_api_receipt": {
+        "file_name": "artifact.json",
+        "label": "actions_artifacts_api",
+        "sha256": "518f7380715003e10ac78db777ede25a090c88d31a2b0c57627a6fec1981f6de",
+        "size_bytes": 442
+      },
+      "artifact_id": 777,
+      "artifact_name": "velnor-final-r4242-a1",
+      "head_sha": "0123456789abcdef0123456789abcdef01234567",
+      "report_counts": {},
+      "report_payload_receipt": {
+        "file_name": "final-report.json",
+        "sha256": "1f4c403206051483674f126dda47aa95593d0f46c7ab33bf4a3ad54f8a859f9d",
+        "size_bytes": 88
+      },
+      "report_status": "passed",
+      "workflow_run_id": 4242
+    },
+    "jobs_api": {
+      "file_name": "jobs.json",
+      "label": "actions_jobs_api_page",
+      "sha256": "5f5db4797d2b1d50df6a471cd795243f5cb1dd6c60813a4f7a5ef93dffc2d290",
+      "size_bytes": 477
+    },
+    "logs_archive": {
+      "entry_count_method": "ZIP count includes all archive entries; candidates are immediate job-folder .txt files, including summary files; joins require exact API job and step archive paths.",
+      "file_name": "logs.zip",
+      "joined_api_step_log_count": 0,
+      "label": "actions_run_logs_zip",
+      "selected_two_part_txt_candidate_count": 0,
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+      "size_bytes": 22,
+      "source_endpoint": "GET /repos/fixture-owner/fixture-repo/actions/runs/4242/logs",
+      "zip_entry_count_total": 0
+    },
+    "run_metadata": {
+      "file_name": "run.json",
+      "label": "actions_run_api_projection",
+      "sha256": "63990691c6aef676d835cd6f273d14141e2b4bf7493996c6bdd296b19add0544",
+      "size_bytes": 95
+    },
+    "workflow": {
+      "reason": "Both contents API response and exact workflow bytes are required.",
+      "status": "unavailable"
+    }
+  },
+  "timeline": {
+    "first_job_id": null,
+    "first_job_started_at": null,
+    "last_job_completed_at": null,
+    "last_job_id": null,
+    "observed_job_span_envelope_ms": null,
+    "observed_job_span_method": "latest job completion minus earliest job start; envelope only, not a DAG critical path",
+    "run_created_at": null,
+    "run_created_to_first_job_start_ms_unclassified": null,
+    "runner_queue_duration_ms": null,
+    "runner_queue_unknown_reason": "The retained workflow-run and jobs APIs expose no queue-start/end pair or dependency-wait split.",
+    "workflow_critical_path_evidence": null,
+    "workflow_critical_path_ms": null,
+    "workflow_critical_path_status": "unavailable",
+    "workflow_critical_path_unknown_reason": "workflow DAG is not verified"
+  }
+}

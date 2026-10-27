@@ -1,0 +1,16 @@
+{
+  "artifacts": [
+    {
+      "digest": "sha256:637345623713028bfff5f7778a1a31c4e7eeedba55606af36035ebd15270afa6",
+      "id": 777,
+      "name": "velnor-final-r4242-a2",
+      "size_in_bytes": 1145,
+      "url": "https://api.github.com/repos/fixture-owner/fixture-repo/actions/artifacts/777",
+      "workflow_run": {
+        "head_sha": "0123456789abcdef0123456789abcdef01234567",
+        "id": 4242
+      }
+    }
+  ],
+  "total_count": 1
+}

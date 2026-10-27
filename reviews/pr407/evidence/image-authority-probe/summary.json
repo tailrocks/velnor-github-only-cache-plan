@@ -1,0 +1,112 @@
+{
+  "authority_module_hashes": {
+    "job_image_authority_identity.py": "13478083667a400ede0a64310fba1ca847eb9dc55cb3c4feeacf2f41aef8350e",
+    "job_image_authority_oci.py": "c7250a7ed8b75c932d0f35b2eb6eca27401b51289d87947828f7a41f8db13478",
+    "job_image_authority_publish.py": "2f80ee7e8432b36389e408393fdcf7f16e06d98f96fe03e5f046cb7d3ffad6bb",
+    "job_image_authority_record.py": "2770c01cd541d2f3ae4d81d1a37fb46f6f1ce55d5afe2624da2a7303267c5cf3",
+    "job_image_authority_registry.py": "83cd4a3cb3333420679f342132fe2fedce54b567a736a74443d00232e3350b97",
+    "job_image_authority_tar.py": "5358172cfba01c65104a7ff75a375bff6a429f90f77702286107e1405df756d6"
+  },
+  "extraction": {
+    "constant": "EVIDENCE_PROGRAM",
+    "exact_program_bytes": 1568,
+    "exact_program_sha256": "33e050d2088384d8526dadf52ba630dd429f8777f5b5e0409658c833b6ad77bb",
+    "path": "/workspace/scratch/226f2776372f/pr407-review/crates/velnor-actions-workflow-renderer/src/job_image_authority.rs",
+    "program_bytes_match_literal": true,
+    "source_file_sha256": "49e80be399b6609e84a008e10fe64208d04e8526306cd973cc6f91430cdf31a5",
+    "source_first_line": 106,
+    "source_last_line": 157
+  },
+  "fixture_bytes_unchanged_between_cases": true,
+  "fixture_construction_basis": "gc1_t48_archive.rs:14-109; deterministic USTAR, one local hello.txt layer",
+  "fixture_hashes": {
+    "candidate.json": "5d35a092197207596fdec8e18c064402eef49b1c833ca49b99f62c3189fb409d",
+    "candidate.oci.tar": "21d5995b4f234abab7dc14e56e5b01a6e1bb258eb427dbf6a27e227d509d0285"
+  },
+  "network_and_subprocess_boundary": "Parent launches one Python child per case. Audit hooks block all socket and subprocess events inside the exact authority body.",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "results": [
+    {
+      "audit": {
+        "blocked_event_policy": "socket.*, subprocess.*, os.system, os.exec, os.posix_spawn, os.spawn, os.fork, os.forkpty",
+        "calibrated_blocked_events": [
+          "socket.connect",
+          "subprocess.Popen",
+          "os.system",
+          "os.exec"
+        ],
+        "hook_active_before_program_compilation": true,
+        "program_blocked_events": [],
+        "program_exit_code": 0
+      },
+      "candidate_source": "1111111111111111111111111111111111111111",
+      "candidate_source_matches_environment": true,
+      "case": "matching-source",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/image-authority-probe/audit_wrapper.py",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/image-authority-probe/EVIDENCE_PROGRAM.py",
+        "/workspace/scratch/226f2776372f/pr407-review/crates/velnor-actions-workflow-renderer/src",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/image-authority-probe/candidate.json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/image-authority-probe/candidate.oci.tar",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/image-authority-probe/matching-source.evidence.json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/image-authority-probe/matching-source.audit.json"
+      ],
+      "environment_source": "1111111111111111111111111111111111111111",
+      "evidence_ci": {
+        "run_attempt": 2,
+        "run_id": 7
+      },
+      "evidence_digest_reference": "ghcr.io/tailrocks/velnor-job@sha256:2dd4e1a3bfc73a6a851d693c7f1cb0243d3ab463ee3457292b847aa3d9577f6a",
+      "evidence_matches_environment": true,
+      "evidence_source": "1111111111111111111111111111111111111111",
+      "evidence_status": "PASS",
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "fixed authority body assembled the publication evidence\n"
+    },
+    {
+      "audit": {
+        "blocked_event_policy": "socket.*, subprocess.*, os.system, os.exec, os.posix_spawn, os.spawn, os.fork, os.forkpty",
+        "calibrated_blocked_events": [
+          "socket.connect",
+          "subprocess.Popen",
+          "os.system",
+          "os.exec"
+        ],
+        "hook_active_before_program_compilation": true,
+        "program_blocked_events": [],
+        "program_exit_code": 0
+      },
+      "candidate_source": "1111111111111111111111111111111111111111",
+      "candidate_source_matches_environment": false,
+      "case": "mismatched-source",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/image-authority-probe/audit_wrapper.py",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/image-authority-probe/EVIDENCE_PROGRAM.py",
+        "/workspace/scratch/226f2776372f/pr407-review/crates/velnor-actions-workflow-renderer/src",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/image-authority-probe/candidate.json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/image-authority-probe/candidate.oci.tar",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/image-authority-probe/mismatched-source.evidence.json",
+        "/workspace/scratch/226f2776372f/pr407-review-notes/image-authority-probe/mismatched-source.audit.json"
+      ],
+      "environment_source": "2222222222222222222222222222222222222222",
+      "evidence_ci": {
+        "run_attempt": 2,
+        "run_id": 7
+      },
+      "evidence_digest_reference": "ghcr.io/tailrocks/velnor-job@sha256:2dd4e1a3bfc73a6a851d693c7f1cb0243d3ab463ee3457292b847aa3d9577f6a",
+      "evidence_matches_environment": true,
+      "evidence_source": "2222222222222222222222222222222222222222",
+      "evidence_status": "PASS",
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "fixed authority body assembled the publication evidence\n"
+    }
+  ],
+  "reviewed_revision": "586bdb2be3b1d203abbdd19a09bff8b188c20cc3",
+  "rust_or_hosted_execution": false
+}
