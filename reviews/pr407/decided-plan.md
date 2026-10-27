@@ -131,3 +131,18 @@ Resolution reads ONLY from an independently authenticated GitHub commit
   binding reference.
 - Every agent-cited path is under verification by 5 read-only
   subagents before any edit. Ghost citations get cut, not worked around.
+
+## 10. Verification outcome (2026-10-28, 5/5 verifiers green)
+
+All cited paths EXIST at velnor-new `4d5eb2003d`, clean tree, zero
+line-number drift over 3 lines. No writes made by any verifier.
+
+| Area | Verdict | Session |
+|---|---|---|
+| Orchestrator plumbing (prepare, internal, finalized, attach, pins, workflow_*, validate, lib, homebrew/assets, signer SDK, source reader) | All exist as cited | `01a17f33-80dd-7cc0-b0cc-ad28221e7cab` |
+| Renderer (published_lock, release_binary, closure, steps, native_job_builders, schema2_*, upgrades script, ci.yml ranges) | All 11 ranges exist | `01a17f33-82cc-7d42-91b5-3be376a0ce99` |
+| Mise + tests (lock_verify.rs is 167 lines; consts L14-22; matcher L24-58; HEAD prefix + clean tree; remainder per summary verdict, full table in log) | Confirmed as observed; details in log | `01a17f33-84c3-73f0-9412-069fb3eb5896` |
+| Release + docs (create-release-manifest.sh, product-release.yml, bootstrap contract, AGENTS.md, repo-verification.md, freshness, goldens fixtures) | All 8 exist | `01a17f33-86b2-7443-8b75-b5dc201dc4ce` |
+| Live CI (HEAD == origin/main == 4d5eb2003d clean observed; red/green runs and releases per summary verdict, full output in log) | Partially observed; details in log | `01a17f33-888e-75e2-a27b-17b1e7e2f9eb` |
+
+Full per-file tables live in those session logs. Implementation may proceed.
