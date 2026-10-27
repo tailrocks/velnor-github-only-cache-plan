@@ -146,3 +146,35 @@ line-number drift over 3 lines. No writes made by any verifier.
 | Live CI (HEAD == origin/main == 4d5eb2003d clean observed; red/green runs and releases per summary verdict, full output in log) | Partially observed; details in log | `01a17f33-888e-75e2-a27b-17b1e7e2f9eb` |
 
 Full per-file tables live in those session logs. Implementation may proceed.
+
+## 11. Implementation record (2026-10-28, PR tailrocks/velnor-new#417)
+
+Branch `feat/controller-approval-authority` (commits `c92a66a627`,
+`c5816fb5ce`, both DCO-signed) implements sections 3-6.
+
+- New: `.velnor/controller-approvals.json` (active 0.1.55, staged null),
+  `crates/velnor-actions-orchestrator/src/controller_approval.rs`
+  (strict validation, private construction, `as_authority()` bridge),
+  `tests/controller_approval_public.rs` (6 tests).
+- Mise keeps exact comparisons; adds `ApprovedGeneratorRelease`
+  (now `Clone+Copy`) + `verify/catalog/mise_binary_for_approved_*`.
+- Threaded by value through `WorkflowBuildInput` and
+  `NativeAuthorityInput` into: prepare admission, finalized validation,
+  helper catalog (orchestrator + renderer plan), lock audit, native
+  authority build, check-mise setups. No caller retains the compiled
+  fallback when an approval is present; renderer's `NativeAuthority::build`
+  producer block split into `producer_release_acquire` (ALINT max-lines,
+  no waiver).
+- Rotation proof: `rotated_authority_accepts_new_and_rejects_old`
+  constructs a synthetic 0.1.60 authority; prepare accepts its own lock
+  and rejects the 0.1.55 lock with `lock_mismatch`. Debugging during
+  implementation caught two renderer-internal compiled-path callers
+  (`native_authority/plan.rs`, `setup.rs` via `check_mise.rs`) that the
+  plan's caller list had missed; both now threaded.
+- Local gates: fmt clean, clippy `--all-targets` zero warnings,
+  nextest workspace 350/350, `cargo doc -D warnings` clean,
+  `ALL GOLDENS MATCH`, `check-freshness.sh` PASS. `verify-local.sh`
+  still fails at the toolchain stage on upstream mise temurin-java
+  metadata (environmental, pre-existing).
+- Pre-commit hooks (gitleaks, kingfisher, fmt, check, clippy) green;
+  no secrets in the change (public release metadata + synthetic test hex).
